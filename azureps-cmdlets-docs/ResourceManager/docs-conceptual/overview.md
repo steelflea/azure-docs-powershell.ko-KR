@@ -9,15 +9,14 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 05/15/2017
-ms.openlocfilehash: dbcc818ecc06d3206b8ccd6f8743c670c86cead0
-ms.sourcegitcommit: 5f2c794bfa44ec4ffacdd73f548288874210a498
+ms.date: 07/26/2017
+ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/27/2017
 ---
-# Azure PowerShell 개요
-<a id="overview-of-azure-powershell" class="xliff"></a>
+# <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
 Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) 모델을 사용하는 cmdlet 집합을 제공합니다.
 
@@ -34,17 +33,15 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 > [!NOTE] > 변환할 수 없는 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요.
 
 
-### PowerShell에 대한 도움말이 필요하십니까?
-<a id="need-help-with-powershell" class="xliff"></a>
+### <a name="need-help-with-powershell"></a>PowerShell에 대한 도움말이 필요하십니까?
 
 PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 수 있습니다. PowerShell을 시작하려면 [PowerShell을 사용하여 스크립팅](https://technet.microsoft.com/library/bb978526.aspx)을 참조하세요.
 
 [PowerShell 기본 사항: (1부) PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) 비디오를 시청할 수도 있습니다.
 
-## 다른 Azure PowerShell 모듈
-<a id="other-azure-powershell-modules" class="xliff"></a>
+## <a name="other-azure-powershell-modules"></a>다른 Azure PowerShell 모듈
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
 * [Azure Information Protection](/powershell/azure/aip/)
-* [Azure Service Fabric](/powershell/azure/oservice-fabric/)
+* [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
