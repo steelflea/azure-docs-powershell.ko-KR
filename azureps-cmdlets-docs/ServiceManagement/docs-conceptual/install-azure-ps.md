@@ -9,11 +9,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: c51c727c1cb022eca59f819c7f24d8e058c677da
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 164af369d49e3044e5409c28d8b6145ebc067313
+ms.sourcegitcommit: 020066d68d4ab68da162a4ae0cb4e239241f950f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -35,7 +35,7 @@ Name          Version Path
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
 
-PowerShellGet을 설치하지 않은 경우 [PowerShellGet을 가져오는 방법](install-azurerm-ps.md#how-to-get-powershellget)을 참조하세요.
+PowerShellGet을 설치하지 않은 경우 [PowerShellGet을 가져오는 방법](#how-to-get-powershellget)을 참조하세요.
 
 ## <a name="step-2-install-azure-powershell"></a>2단계: Azure PowerShell 설치
 
@@ -76,3 +76,20 @@ Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은
 Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](http://www.windowsazure.com/documentation/scripts/)를 참조하세요.
 
 Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](http://go.microsoft.com/fwlink/p/?linkid=320210)을 참조하세요.
+
+### <a name="how-to-get-powershellget"></a>PowerShellGet을 가져오는 방법
+
+|OS 버전|설치 지침|
+|---|---|
+|Windows 10 또는 Windows Server 2016을 사용합니다.|OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.|
+|PowerShell 5로 업그레이드하려고 합니다.|[최신 버전의 WMF 설치](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
+|PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
+
+<a id="helpmechoose"></a>
+### <a name="checking-the-version-of-azure-powershell"></a>Azure PowerShell 버전 확인
+
+가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
+
+```powershell
+Get-Module AzureRM -list | Select-Object Name,Version,Path
+```
