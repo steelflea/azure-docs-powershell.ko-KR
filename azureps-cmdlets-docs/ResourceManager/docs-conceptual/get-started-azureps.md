@@ -10,41 +10,36 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 03/30/2017
-ms.openlocfilehash: 4bfa14f4f139fa8c35d4bb51ae81baea819188ce
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: f1c13317f0b42b547166a8130dd8c29bed5759c9
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/22/2017
 ---
-<a id="getting-started-with-azure-powershell" class="xliff"></a>
-# Azure PowerShell 시작
+# <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
 Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 Azure Resource Manager에 대해 작동하는 자동화 스크립트를 빌드하는 작업을 위해 만들어졌습니다. 이 문서에서는 Azure PowerShell을 시작하는 방법 및 핵심 개념을 설명합니다.
 
+## <a name="install-azure-powershell"></a>Azure Powershell 설치
 
-<a id="install-azure-powershell" class="xliff"></a>
-## Azure Powershell 설치
-첫 번째 단계는 최신 버전의 Azure PowerShell을 설치하는 것입니다.  최신 버전은 4.1.0입니다.
+첫 번째 단계는 최신 버전의 Azure PowerShell을 설치하는 것입니다. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-azureps.md)를 참조하세요.
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
-
 2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM` 명령을 실행합니다.
 
-
-<a id="log-in-to-azure" class="xliff"></a>
-## Azure에 로그인
+## <a name="log-in-to-azure"></a>Azure에 로그인
 
 대화형으로 로그인합니다.
 
-1. `Login-AzureRmAccount`을 입력합니다.  Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-EnvironmentName' 옵션을 사용하면 Azure China 또는 Azure Germany에 로그인할 수 있습니다.
+1. `Login-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-EnvironmentName' 옵션을 사용하면 Azure China 또는 Azure Germany에 로그인할 수 있습니다.
+
    예: Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 
 2. 계정과 연결된 메일 주소 및 암호를 입력합니다. Azure가 자격 증명 정보를 인증 및 저장한 후 창을 닫습니다.
 
 Azure 계정에 로그인하면 Azure PowerShell cmdlet을 사용하여 구독에서 관리자 리소스에 액세스할 수 있습니다.
 
-<a id="create-a-resource-group" class="xliff"></a>
-## 리소스 그룹 만들기
+## <a name="create-a-resource-group"></a>리소스 그룹 만들기
 
 모든 설정이 완료되었으니, 이제부터 Azure PowerShell을 사용하여 Azure 내에 리소스를 만들어 보겠습니다.
 
@@ -64,13 +59,11 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-<a id="create-a-windows-virtual-machine" class="xliff"></a>
-## Windows 가상 컴퓨터 만들기
+## <a name="create-a-windows-virtual-machine"></a>Windows 가상 컴퓨터 만들기
 
 리소스 그룹을 만들었으므로 그 안에 Windows VM을 만들어 보겠습니다. VM을 만들려면 새 먼저 필요한 리소스를 만들고 구성에 할당해야 했습니다. 그런 다음 해당 구성을 사용하여 VM을 만들 수 있습니다.
 
-<a id="create-the-required-network-resources" class="xliff"></a>
-### 필요한 네트워크 리소스 만들기
+### <a name="create-the-required-network-resources"></a>필요한 네트워크 리소스 만들기
 
 먼저 가상 네트워크 만들기 프로세스에 사용할 서브넷 구성을 만들어야 합니다. 또한 이 VM에 연결할 수 있도록 공용 IP 주소를 만듭니다. 네트워크 보안 그룹을 만들어서 공용 주소에 대한 액세스를 보호합니다. 마지막으로 이전 리소스를 모두 사용하여 가상 NIC를 만듭니다.
 
@@ -106,8 +99,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-<a id="create-the-virtual-machine" class="xliff"></a>
-### 가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
 
 먼저 OS의 자격 증명 집합이 필요합니다.
 
@@ -158,13 +150,11 @@ mstsc /v:xx.xxx.xx.xxx
 로그인할 VM을 만들 때 사용한 것과 동일한 사용자 이름/암호 조합을 제공합니다.
 
 
-<a id="create-a-linux-virtual-machine" class="xliff"></a>
-## Linux Virtual Machine 만들기
+## <a name="create-a-linux-virtual-machine"></a>Linux Virtual Machine 만들기
 
 Linux VM을 만들려면 새 먼저 필요한 리소스를 만들고 구성에 할당해야 했습니다. 그런 다음 해당 구성을 사용하여 VM을 만들 수 있습니다. 이미 이전에 설명한 대로 리소스 그룹을 만들었다고 가정합니다. 또한 `id_rsa.pub`라는 이름의 SSH 공개 키가 사용자 프로필의 .ssh 디렉터리에 있어야 합니다.
 
-<a id="create-the-required-network-resources" class="xliff"></a>
-### 필요한 네트워크 리소스 만들기
+### <a name="create-the-required-network-resources"></a>필요한 네트워크 리소스 만들기
 
 먼저 가상 네트워크 만들기 프로세스에 사용할 서브넷 구성을 만들어야 합니다. 또한 이 VM에 연결할 수 있도록 공용 IP 주소를 만듭니다. 네트워크 보안 그룹을 만들어서 공용 주소에 대한 액세스를 보호합니다. 마지막으로 이전 리소스를 모두 사용하여 가상 NIC를 만듭니다.
 
@@ -204,8 +194,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-<a id="create-the-virtual-machine" class="xliff"></a>
-### 가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
 
 이제 필요한 리소스를 만들었으므로 VM을 만들 수 있습니다. 이 단계에서는 VM 구성 개체를 만든 다음 구성을 사용하여 VM을 만듭니다.
 
@@ -261,8 +250,7 @@ applicable law.
 my-login@MyLinuxVM:~$
 ```
 
-<a id="creating-other-resources-in-azure" class="xliff"></a>
-## Azure에서 다른 리소스 만들기
+## <a name="creating-other-resources-in-azure"></a>Azure에서 다른 리소스 만들기
 
 지금까지 리소스 그룹, Linux VM 및 Windows Server VM을 만드는 방법을 살펴보았습니다. 여러 다른 유형의 Azure 리소스도 만들 수 있습니다.
 
@@ -293,8 +281,7 @@ New-AzureRmWebApp -Name MyWebApp43432 -AppServicePlan MyAppServicePlan -Resource
 New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-<a id="listing-deployed-resources" class="xliff"></a>
-## 배포된 리소스 나열
+## <a name="listing-deployed-resources"></a>배포된 리소스 나열
 
 `Get-AzureRmResource` cmdlet을 사용하여 Azure에서 실행되는 리소스를 나열할 수 있습니다. 다음 예제에서는 새 리소스 그룹에서 생성된 리소스를 표시합니다.
 
@@ -323,8 +310,7 @@ MYvNET2                                               westeurope Microsoft.Netwo
 micromyresomywi032907510                              westeurope Microsoft.Storage/storageAccounts
 ```
 
-<a id="deleting-resources" class="xliff"></a>
-## 리소스 삭제
+## <a name="deleting-resources"></a>리소스 삭제
 
 Azure 계정을 정리하려면 이 예제에서 만든 리소스를 제거합니다. `Remove-AzureRm*` cmdlet을 사용하여 더 이상 필요 없는 리소스를 삭제할 수 있습니다. 만든 Windows VM을 제거하려면 다음 명령을 사용합니다.
 
@@ -354,13 +340,11 @@ Are you sure you want to remove resource group 'myResourceGroup'
 
 이 작업을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
-<a id="get-samples" class="xliff"></a>
-## 샘플 가져오기
+## <a name="get-samples"></a>샘플 가져오기
 
 Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Linux VM](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Windows VM](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) 및 [SQL Database](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)에 대한 가장 일반적인 스크립트를 확인하세요.
 
-<a id="next-steps" class="xliff"></a>
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 * [Azure PowerShell을 사용하여 로그인](authenticate-azureps.md)
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
