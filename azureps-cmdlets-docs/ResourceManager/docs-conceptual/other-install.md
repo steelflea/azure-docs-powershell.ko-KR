@@ -10,15 +10,41 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 368404bcb5218814b4965bb1bcda1e2876441d2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 9cee582f74b7f3260c6ae167a8ac358d360ad8ab
+ms.sourcegitcommit: 45587b5091293288e16cfae8ac412e0d42f8f450
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="other-installation-methods"></a>다른 설치 방법
 
 Azure PowerShell에는 여러 설치 방법이 있습니다. PowerShell 갤러리와 PowerShellGet을 사용하는 것이 좋습니다. Azure PowerShell은 웹 플랫폼 설치 관리자(WebPI)를 사용하거나 [GitHub](https://github.com/Azure/azure-powershell/releases/latest)에서 사용할 수 있는 MSI 파일을 사용하여 설치할 수 있습니다.
+
+## <a name="docker"></a>Docker
+
+Microsoft는 Azure PowerShell로 미리 구성된 Docker 이미지를 유지합니다.
+
+`docker run`으로 컨테이너를 실행합니다.
+
+```powershell
+docker run azuresdk/azure-powershell
+```
+
+또한 Microsoft는 PowerShell Core 컨테이너로 cmdlet의 하위 집합을 유지합니다.
+
+Mac/Linux의 경우 `latest` 이미지를 사용합니다.
+
+```bash
+docker run azuresdk/azure-powershell-core:latest
+```
+
+Windows의 경우 `nanoserver` 이미지를 사용합니다.
+
+```powershell
+docker run azuresdk/azure-powershell-core:nanoserver
+```
+
+Azure PowerShell은 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 `Install-Module`을 통해 이미지에 설치됩니다.
 
 ## <a name="install-using-the-web-platform-installer"></a>웹 플랫폼 설치 관리자를 사용하여 설치
 
