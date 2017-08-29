@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="ff2d7-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="ff2d7-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="ff2d7-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="ff2d7-103">Release notes</span></span>
 
 <span data-ttu-id="ff2d7-104">Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="ff2d7-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="ff2d7-105">1.2.9 버전</span><span class="sxs-lookup"><span data-stu-id="ff2d7-105">Version 1.2.9</span></span>
-<a id="version-129" class="xliff"></a>
+## <a name="version-129"></a><span data-ttu-id="ff2d7-105">1.2.9 버전</span><span class="sxs-lookup"><span data-stu-id="ff2d7-105">Version 1.2.9</span></span>
 
 <span data-ttu-id="ff2d7-106">이 릴리스의 변경 내용</span><span class="sxs-lookup"><span data-stu-id="ff2d7-106">Changes This Release</span></span>
 

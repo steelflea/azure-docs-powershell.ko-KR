@@ -1,6 +1,6 @@
 ---
-title: "<span data-ttu-id=\"36249-101\">쿼리 결과 서식 지정 | Microsoft Docs</span><span class=\"sxs-lookup\"><span data-stu-id=\"36249-101\">Formatting query results | Microsoft Docs</span></span>"
-description: "<span data-ttu-id=\"36249-102\">Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"36249-102\">How to query for resources in Azure and format the results.</span></span>"
+title: "쿼리 결과 서식 지정 | Microsoft Docs"
+description: "Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다."
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="36249-103">쿼리 결과 서식 지정</span><span class="sxs-lookup"><span data-stu-id="36249-103">Formatting query results</span></span>
-<a id="formatting-query-results" class="xliff"></a>
+# <a name="formatting-query-results"></a><span data-ttu-id="36249-103">쿼리 결과 서식 지정</span><span class="sxs-lookup"><span data-stu-id="36249-103">Formatting query results</span></span>
 
 <span data-ttu-id="36249-104">기본적으로 각 PowerShell cmdlet은 미리 정의된 출력의 서식을 지정하여 쉽게 읽을 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="36249-104">By default each PowerShell cmdlet has predefined formatting of output making it easy to read.</span></span>  <span data-ttu-id="36249-105">또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="36249-105">PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:</span></span>
 
@@ -28,8 +27,7 @@ ms.lasthandoff: 06/29/2017
 | `Format-Table`  | `ConvertTo-Json` |
 | `Format-Wide`   | `ConvertTo-Xml`  |
 
-## <span data-ttu-id="36249-108">서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="36249-108">Formatting examples</span></span>
-<a id="formatting-examples" class="xliff"></a>
+## <a name="formatting-examples"></a><span data-ttu-id="36249-108">서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="36249-108">Formatting examples</span></span>
 
 <span data-ttu-id="36249-109">이 예제에서는 기본 구독에 있는 Azure VM의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="36249-109">In this example we get a list of Azure VMs in our default subscription.</span></span>  <span data-ttu-id="36249-110">Get-AzureRmVM 명령은 출력을 기본적으로 테이블 형식으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="36249-110">The Get-AzureRmVM command defaults output into a table format.</span></span>
 
@@ -75,8 +73,7 @@ Location          : westeurope
 ResourceGroupName : MYWESTEURG
 ```
 
-## <span data-ttu-id="36249-116">다른 데이터 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="36249-116">Converting to other data types</span></span>
-<a id="converting-to-other-data-types" class="xliff"></a>
+## <a name="converting-to-other-data-types"></a><span data-ttu-id="36249-116">다른 데이터 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="36249-116">Converting to other data types</span></span>
 
 <span data-ttu-id="36249-117">또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.</span><span class="sxs-lookup"><span data-stu-id="36249-117">PowerShell also offers multiple output format you can use to meet your needs.</span></span>  <span data-ttu-id="36249-118">다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 컴퓨터의 특성을 사용하고 출력을 데이터베이스 또는 스프레드시트로 쉽게 가져오는 CSV 형식으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="36249-118">In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and and convert the output to CSV format for easy import into a database or spreadsheet.</span></span>
 

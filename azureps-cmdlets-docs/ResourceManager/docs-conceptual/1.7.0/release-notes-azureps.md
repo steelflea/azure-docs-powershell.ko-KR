@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="bd189-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="bd189-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="bd189-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="bd189-103">Release notes</span></span>
 
 <span data-ttu-id="bd189-104">Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="bd189-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="bd189-105">1.7.0 버전</span><span class="sxs-lookup"><span data-stu-id="bd189-105">Version 1.7.0</span></span>
-<a id="version-170" class="xliff"></a>
+## <a name="version-170"></a><span data-ttu-id="bd189-105">1.7.0 버전</span><span class="sxs-lookup"><span data-stu-id="bd189-105">Version 1.7.0</span></span>
 
 * <span data-ttu-id="bd189-106">**모든 cmdlet에 대해 -Force, -Confirm 및 $ConfirmPreference 매개 변수의 동작을 변경합니다. PowerShell 지침에 따라 이 구현을 변경하고 있습니다. 대부분의 cmdlet에 대해 Force 매개 변수를 제거하고 ShouldProcess 프롬프트를 건너뛰므로 사용자가 PowerShell 스크립트에 '-Confirm: $ false' 매개 변수를 포함해야 합니다.**</span><span class="sxs-lookup"><span data-stu-id="bd189-106">**Behavioral change for -Force, –Confirm and $ConfirmPreference parameters for all cmdlets. We are changing this implementation to be in line with PowerShell guidelines. For most cmdlets, this means removing the Force parameter and to skip the ShouldProcess prompt, users will need to include the parameter: ‘-Confirm:$false’ in their PowerShell scripts.**</span></span> <span data-ttu-id="bd189-107">이 변경 내용은 다음 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="bd189-107">This changes are addressing following issues:</span></span>
   - <span data-ttu-id="bd189-108">–WhatIf 기능의 올바른 구현 - 사용자가 실제로 변경하지 않고 cmdlet 또는 스크립트의 영향을 결정할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd189-108">Correct implementation of –WhatIf functionality, allowing a user to determine the effects of a cmdlet or script without making any actual changes</span></span>

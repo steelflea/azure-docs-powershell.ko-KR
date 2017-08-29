@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="2b13a-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="2b13a-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="2b13a-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="2b13a-103">Release notes</span></span>
 
 <span data-ttu-id="2b13a-104">Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="2b13a-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="2b13a-105">2.2.0 버전</span><span class="sxs-lookup"><span data-stu-id="2b13a-105">Version 2.2.0</span></span>
-<a id="version-220" class="xliff"></a>
+## <a name="version-220"></a><span data-ttu-id="2b13a-105">2.2.0 버전</span><span class="sxs-lookup"><span data-stu-id="2b13a-105">Version 2.2.0</span></span>
 * <span data-ttu-id="2b13a-106">Compute</span><span class="sxs-lookup"><span data-stu-id="2b13a-106">Compute</span></span>
   - <span data-ttu-id="2b13a-107">AzureDiskEncryptionForLinux 확장에서 암호화 상태 쿼리 에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="2b13a-107">Add support for querying encryption status from the AzureDiskEncryptionForLinux extension</span></span>
 * <span data-ttu-id="2b13a-108">DataFactory</span><span class="sxs-lookup"><span data-stu-id="2b13a-108">DataFactory</span></span>
