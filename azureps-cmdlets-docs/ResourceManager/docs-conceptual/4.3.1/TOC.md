@@ -1,9 +1,14 @@
 # [Azure PowerShell](../overview.md)
+
 ## [설치](../install-azurerm-ps.md)
+### [macOS 및 Linux에 설치](../install-azurermps-maclinux.md)
 ### [다른 설치 방법](../other-install.md)
+
 ## [시작](../get-started-azureps.md)
+
 ## [로그인](../authenticate-azureps.md)
 ### [서비스 주체 만들기](../create-azure-service-principal-azureps.md)
+
 ## [쿼리](../queries-azureps.md)
 ## [서식 지정](../formatting-output.md)
 ## [구독](../manage-subscriptions-azureps.md)
