@@ -23,7 +23,7 @@ ARM Cmdlet용 갤러리 모듈: [링크](https://www.powershellgallery.com/packa
     * 일부 Automation cmdlet(예: Get-AzureRmAutomationVariable, Get-AzureRmAutomationJob)을 호출한 후 자세한 정보 표시 스트림 작동이 중지되는 문제가 해결되었습니다.
     * NodeConfiguration 빌드 버전 관리에 대한 지원이 StartAzureAutomationDscCompilationJob 및 ImportAzureAutomationDscNodeConfiguration에서 추가되었습니다.
     * 기존 문제에 대한 버그 수정 - 별칭 문제 해결은 #3775이며 runOn 별칭 및 HybridWorkers에 대한 지원
-* Compute
+* 계산
     * Set-AzureRmVMAEMExtension: 새로운 프리미엄 디스크 크기에 대한 지원 추가
     * Set-AzureRmVMAEMExtension: M 시리즈에 대한 지원 추가
     * ForceUpdateTag 매개 변수를 Add-AzureRmVmssExtension에 추가
