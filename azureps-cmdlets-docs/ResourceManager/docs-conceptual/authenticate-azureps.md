@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: f6d249ca5bb09c4fe8445ba5b339ffa6012815ed
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="log-in-with-azure-powershell"></a>Azure PowerShell을 사용하여 로그인
 
@@ -38,7 +38,7 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
     Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
-    TenantId를 가져오려면 대화형으로 로그인한다음 구독에서 TenantId를 가져옵니다.
+    TenantId를 가져오려면 대화형으로 로그인한 다음 구독에서 TenantId를 가져옵니다.
 
     ```powershell
     Get-AzureRmSubscription
@@ -52,6 +52,12 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
     SubscriptionName      : My Production Subscription
     CurrentStorageAccount :
     ```
+
+### <a name="log-in-using-an-azure-vm-managed-service-identity"></a>Azure VM 관리 서비스 ID를 사용하여 로그인
+
+MSI(관리 서비스 ID)는 Azure Active Directory의 미리 보기 기능입니다. 로그인에 MSI 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다.
+
+MSI에 대한 자세한 내용은 [로그인 및 토큰 획득에 대한 Azure VM MSI(관리 서비스 ID)를 사용하는 방법](/azure/active-directory/msi-how-to-get-access-token-using-msi)을 참조하세요.
 
 ## <a name="log-in-to-another-cloud"></a>다른 클라우드로 로그인
 

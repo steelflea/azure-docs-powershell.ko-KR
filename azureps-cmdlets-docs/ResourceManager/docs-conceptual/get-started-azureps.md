@@ -9,22 +9,41 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 03/30/2017
-ms.openlocfilehash: f1c13317f0b42b547166a8130dd8c29bed5759c9
-ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
-Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 Azure Resource Manager에 대해 작동하는 자동화 스크립트를 빌드하는 작업을 위해 만들어졌습니다. 이 문서에서는 Azure PowerShell을 시작하는 방법 및 핵심 개념을 설명합니다.
+Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 Azure Resource Manager에 대해 작동하는 자동화 스크립트를 빌드하는 작업을 위해 만들어졌습니다. [Azure Cloud Shell](/azure/cloud-shell/overview)과 함께 브라우저에서 사용하거나 로컬 컴퓨터에 설치하여 PowerShell 세션에서 사용할 수 있습니다. 이 문서에서는 Azure CLI 2.0을 시작하는 방법 및 핵심 개념을 설명합니다.
+
+## <a name="connect"></a>연결
+
+가장 간단하게 시작하는 방법은 [Cloud Shell을 시작](/azure/cloud-shell/quickstart)하는 것입니다.
+
+1. Azure Portal의 위쪽 탐색 모음에서 Cloud Shell을 시작합니다.
+
+   ![셸 아이콘](~/media/get-started-azureps/shell-icon.png)
+
+2. 사용하려는 구독을 선택하고 저장소 계정을 만듭니다.
+
+   ![저장소 계정 만들기](~/media/get-started-azureps/storage-prompt.png)
+
+저장소를 만들면 Cloud Shell에서 PowerShell 세션을 브라우저에서 엽니다.
+
+![PowerShell을 위한 Cloud Shell](~/media/get-started-azureps/cloud-powershell.png)
+
+또한 Azure PowerShell을 설치하여 PowerShell 세션에서 로컬로 사용할 수 있습니다.
 
 ## <a name="install-azure-powershell"></a>Azure Powershell 설치
 
 첫 번째 단계는 최신 버전의 Azure PowerShell을 설치하는 것입니다. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-azureps.md)를 참조하세요.
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
+
 2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM` 명령을 실행합니다.
 
 ## <a name="log-in-to-azure"></a>Azure에 로그인
@@ -51,7 +70,7 @@ Azure의 westeurope 지역에 "MyResourceGroup"이라는 이름의 리소스 그
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```
+```Output
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -123,7 +142,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 
 VM이 완전히 생성되어 사용 준비를 마치면 `New-AzureRmVM` 명령이 결과를 출력합니다.
 
-```
+```Output
 RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 --------- ------------------- ---------- ------------
                          True         OK OK
@@ -135,7 +154,7 @@ RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 $publicIp | Select-Object Name,IpAddress
 ```
 
-```
+```Output
 Name                  IpAddress
 ----                  ---------
 mypublicdns1400512543 xx.xx.xx.xx
@@ -143,12 +162,11 @@ mypublicdns1400512543 xx.xx.xx.xx
 
 Windows 기반 시스템을 사용하는 경우 명령줄에서 mstsc 명령을 사용하여 다음과 같은 일을 할 수 있습니다.
 
-```
+```powershell
 mstsc /v:xx.xxx.xx.xxx
 ```
 
 로그인할 VM을 만들 때 사용한 것과 동일한 사용자 이름/암호 조합을 제공합니다.
-
 
 ## <a name="create-a-linux-virtual-machine"></a>Linux Virtual Machine 만들기
 
@@ -219,7 +237,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 ssh xx.xxx.xxx.xxx
 ```
 
-```
+```Output
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -247,7 +265,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
-my-login@MyLinuxVM:~$
+my-login@MyLinuxVM:../../..$
 ```
 
 ## <a name="creating-other-resources-in-azure"></a>Azure에서 다른 리소스 만들기
@@ -291,7 +309,7 @@ Get-AzureRmResource |
     Select-Object Name,Location,ResourceType
 ```
 
-```
+```Output
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -320,7 +338,7 @@ Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 
 리소스를 제거하려는지 확인하는 메시지가 표시됩니다.
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -332,7 +350,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -351,5 +369,5 @@ Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Lin
 * [Azure PowerShell을 사용하여 Azure에서 서비스 주체 만들기](create-azure-service-principal-azureps.md)
 * 이전 버전에서 마이그레이션하는 방법에 대한 릴리스 정보는 [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)를 참고하세요.
 * 커뮤니티에서 도움말을 가져옵니다.
-  + [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
