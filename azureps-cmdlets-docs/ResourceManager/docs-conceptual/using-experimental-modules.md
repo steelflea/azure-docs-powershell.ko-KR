@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 4a8a74977440fa89b89843bbc95e43d622a58474
-ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
+ms.openlocfilehash: 7a01957040be7c0498ef4f0e9b8f7297119221a5
+ms.sourcegitcommit: 9d2d35944106bdb6758853b050089bc804e6b9d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 
@@ -35,7 +35,20 @@ Azure PowerShell 팀은 Azure의 개발자 도구(특히 CLI)에 중점을 두�
 
 ## <a name="how-to-install-an-experimental-module"></a>실험적 모듈 설치 방법
 
-실험적 모듈은 기존 Azure PowerShell 모듈과 마찬가지로 PowerShell 갤러리에 게시됩니다. 실험적 모듈을 설치하려면 관리자 권한 PowerShell 세션에서 다음 명령을 사용합니다.
+실험적 모듈은 기존 Azure PowerShell 모듈과 마찬가지로 PowerShell 갤러리에 게시됩니다. 실험적 모듈 목록을 보려면 다음 명령을 실행하십시오.
+
+```powershell
+Find-Module AzureRM.*.Experiments
+```
+
+```Output
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
+1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+```
+
+실험적 모듈을 설치하려면 관리자 권한 PowerShell 세션에서 다음 명령을 사용합니다.
 
 ```powershell
 Install-Module AzureRM.Compute.Experiments
@@ -108,4 +121,10 @@ Receive-Job $job
 
 ```powershell
 Send-Feedback
+```
+
+### <a name="uninstall-the-experimental-modules"></a>실험적 모듈 제거
+
+```powershell
+Uninstall-Module AzureRM.Compute.Experiments
 ```
