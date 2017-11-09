@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.workload: 
 ms.date: 07/26/2017
 ms.openlocfilehash: d8a891673df343551cbd805016c2d25ee4e31c8c
-ms.sourcegitcommit: 9d2d35944106bdb6758853b050089bc804e6b9d2
+ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -37,7 +37,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * CognitiveServices
   * Cognitive Services Management SDK 버전 2.0.0과 통합합니다.
   * 이제 Get-AzureRmCognitiveServicesAccount가 페이징을 올바르게 지원할 수 있습니다.
-* 계산
+* Compute
   * 실행 명령 기능:
     - 새 cmdlet: ‘Invoke-AzureRmVMRunCommand’는 VM에서 실행 명령을 호출합니다.
     - 새 cmdlet: ‘Get-AzureRmVMRunCommandDocument’는 사용 가능한 실행 명령 문서를 표시합니다.
@@ -190,7 +190,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - 규칙이 가리키는 가상 네트워크를 변경하는 Set-AzureRmSqlServerVirtualNetworkRule cmdlet 추가.
     - Azure SQL Server에 대한 가상 네트워크 규칙을 제거하는 Remove-AzureRmSqlServerVirtualNetworkRule cmdlet 추가.
     - Azure SQL Server에 대한 새 가상 네트워크 규칙을 만드는 New-AzureRmSqlServerVirtualNetworkRule cmdlet 추가.
-* 웹 사이트
+* Websites
   * App Service 요금제에 대한 PremiumV2 계층 추가
 * Azure.Storage
   * Azure Storage 클라이언트 라이브러리 8.4.0 및 Azure Storage DataMovement 라이브러리 0.6.1로 업그레이드
@@ -220,7 +220,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   * 일부 Automation cmdlet(예: Get-AzureRmAutomationVariable, Get-AzureRmAutomationJob)을 호출한 후 자세한 정보 표시 스트림 작동이 중지되는 문제가 해결되었습니다.
   * NodeConfiguration 빌드 버전 관리에 대한 지원이 StartAzureAutomationDscCompilationJob 및 ImportAzureAutomationDscNodeConfiguration에서 추가되었습니다.
   * 기존 문제에 대한 버그 수정 - 별칭 문제 해결은 #3775이며 runOn 별칭 및 HybridWorkers에 대한 지원
-* 계산
+* Compute
   * Set-AzureRmVMAEMExtension: 새로운 프리미엄 디스크 크기에 대한 지원 추가
   * Set-AzureRmVMAEMExtension: M 시리즈에 대한 지원 추가
   * ForceUpdateTag 매개 변수를 Add-AzureRmVmssExtension에 추가
@@ -323,7 +323,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     * Cognitive Services Management SDK 버전 1.0.0과 통합합니다.
     * 계정 이름 길이 확인 버그를 수정합니다.
 * Compute
-    * 이미지 디스크에 대한 저장소 계정 형식 지원:
+    * 이미지 디스크에 대한 Storage 계정 형식 지원:
         - Set-AzureRmImageOsDisk 및 Add-AzureRmImageDataDisk에 'StorageAccountType' 매개 변수가 추가되었습니다.
     * VMSS IP 구성에서 PrivateIP 및 PublicIP 기능:
         - New-AzureRmVmssIpConfig에 'PrivateIPAddressVersion', 'PublicIPAddressConfigurationName', 'PublicIPAddressConfigurationIdleTimeoutInMinutes', 'DnsSetting' 이름이 추가되었습니다.
@@ -344,13 +344,13 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
         - New-AzureRmVmssConfig에 'LicenseType' 매개 변수가 추가되었습니다.
     * RecoveryPolicyMode 지원:
         - New-AzureRmVmssConfig에 'RecoveryPolicyMode' 매개 변수가 추가되었습니다.
-    * 계산 리소스 SKU 기능:
+    * Compute 리소스 SKU 기능:
         - 새 cmdlet인 'Get-AzureRmComputeResourceSku'는 모든 계산 리소스 SKU를 나열합니다.
 * DataFactories
     * New-AzureRmDataFactoryGatewayKey를 사용하지 않습니다.
     * New-AzureRmDataFactoryGatewayAuthKey 및 Get-AzureRmDataFactoryGatewayAuthKey를 추가하여 게이트웨이 인증 주요 기능을 도입합니다.
 * DataLakeAnalytics
-    * 다음 명령을 통해 계산 정책 CRUD에 대한 지원을 추가합니다.
+    * 다음 명령을 통해 Compute 정책 CRUD에 대한 지원을 추가합니다.
         - New-AzureRMDataLakeAnalyticsComputePolicy
         - Get-AzureRMDataLakeAnalyticsComputePolicy
         - Remove-AzureRMDataLakeAnalyticsComputePolicy
@@ -481,7 +481,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * IotHub
     * IoTHub cmdlet에 라우팅 지원을 추가합니다.
 * KeyVault
-  * KeyVault 관리되는 저장소 계정 키를 지원하는 새 cmdlet
+  * KeyVault 관리되는 Storage 계정 키를 지원하는 새 cmdlet
     * Get-AzureKeyVaultManagedStorageAccount
     * Add-AzureKeyVaultManagedStorageAccount
     * Remove-AzureKeyVaultManagedStorageAccount
@@ -547,9 +547,9 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   - Cmdlet Get-AzureRmBillingInvoice 업데이트
   - 새 속성 BillingPeriodNames
   - 목록 보기에서 출력
-* 계산
+* Compute
   - 프리미엄 Managed Disks를 지원하도록 Set-AzureRmVMAEMExtension 및 Test-AzureRmVMAEMExtension cmdlet이 업데이트되었습니다.
-  - IaaS VM에 대한 암호화 설정 백업 및 실패 시 복원
+  - IaaS VM에 대한 암호화 설정 Backup 및 실패 시 복원
   - ChefServiceInterval 옵션 이름이 ChefDaemonInterval로 바뀌었습니다. 그렇지만 이전 이름도 계속 사용할 수 있습니다.
   - PS VM 개체에서 중복된 DataDiskNames 및 NetworkInterfaceIDs 속성을 제거합니다.
   - DataDiskNames 및 NetworkInterfaceIDs 매개 변수를 Remove-AzureRmVMDataDisk 및 Remove-AzureRmVMNetworkInterface에서 각각 옵션으로 지정되었습니다.
@@ -613,10 +613,10 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   - KeyVault 비밀에 대한 백업/복원 지원 추가
     + 비밀을 백업 및 복원할 수 있으며 키에 대해 현재 지원되는 기능과 일치합니다.
 
-  - 키 및 비밀에 대한 백업 cmdlet은 이제 해당 개체를 입력 매개 변수로 수락합니다.
+  - 키 및 비밀에 대한 Backup cmdlet은 이제 해당 개체를 입력 매개 변수로 수락합니다.
     + 호출자는 검색 및 백업 작업을 연쇄적으로 진행할 수 있음: Get-AzureKeyVaultKey -VaultName myVault -Name myKey | Backup-AzureKeyVaultKey
 
-  - 이제 백업 cmdlet은 기존 파일을 덮어쓰기 위한 -Force 스위치를 지원합니다.
+  - 이제 Backup cmdlet은 기존 파일을 덮어쓰기 위한 -Force 스위치를 지원합니다.
     + 기존 파일을 덮어쓰려고 해도 더 이상 오류가 throw되지 않으며 대신, 사용자에게 진행 방법을 선택하라는 메시지가 표시됩니다.
 * LogicApp
   - 교환 컨트롤 번호 재해 복구 cmdlet에 대한 새 매개 변수:

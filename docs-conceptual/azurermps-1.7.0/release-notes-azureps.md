@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.workload: 
 ms.date: 05/18/2017
 ms.openlocfilehash: 0a3f152751fee569d3ac5fba6bcff8c1737f7b8c
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -41,18 +41,18 @@ My-CmdletWithConfirmation –Confirm:$false -Force
   - Move-AzureService, Move-AzureStorageAccount 및 Move-AzureVirtualNetwork에 대한 -Validate 매개 변수
   - 확장 cmdlet의 name 및 version 매개 변수는 이전과 마찬가지로 선택 사항입니다.
   - New-AzureVM은 VM 개체에서 라이선스 유형을 가져올 수 있습니다.
-* Azure 저장소
+* Azure Storage
   - Tags 매개 변수를 Tag로 변경 및 매개 변수 별칭 Tags 추가
     + New-AzureRmStorageAccount
     + Set-AzureRmStorageAccount
 * Azure 네트워크
-  - 가상 네트워크 피어링에 대한 새 cmdlet 추가
+  - Virtual Network 피어링에 대한 새 cmdlet 추가
 * Azure Redis Cache
   - Reset-AzureRmRedisCache에 대한 새 cmdlet 추가
   - Export-AzureRmRedisCache에 대한 새 cmdlet 추가
   - Import-AzureRmRedisCache에 대한 새 cmdlet 추가
   - vNet에 대한 매개 변수 변경을 포함하도록 New-AzureRmRedisCache cmdlet 수정
-* Azure SQL DB 백업/복원
+* Azure SQL DB Backup/복원
   - LTR(장기 보존) 백업 기능에 대한 cmdlet
   - Get-AzureRmSqlServerBackupLongTermRetentionVault
   - Get-AzureRmSqlDatabaseBackupLongTermRetentionPolicy
@@ -104,13 +104,13 @@ My-CmdletWithConfirmation –Confirm:$false -Force
 * Web Apps
   - 일반 교환 및 미리 보기 포함 교환에 대한 Swap-AzureRmWebAppSlot cmdlet 추가
   - 자동 교환을 지원하도록 Set-AzureRmWebAppSlot cmdlet 확장
-* Azure API 관리
+* Azure API Management
   - AzureChinaCloud에 대한 Azure API Management 배포 cmdlet 수정.
   - 기본적으로 Git 액세스를 사용하도록 설정되므로 Set-AzureRmApiManagementTenantGitAccess cmdlet 제거.
-* Azure Recovery Services 백업
+* Azure Recovery Services Backup
   - Azure SQL 워크로드 지원 추가
   - 암호화된 Azure VM 백업 및 복원 지원 추가
   - Backup-AzureRmRecoveryServicesBackupItem - 복구 지점에 대한 선택적 보존 시간 기능 추가
   - Get-AzureRmRecoveryServicesBackupContainer 및 Get-AzureRmRecoveryServicesBackupItem cmdlet의 보조 필터 관련 버그 수정
-* Azure 자동화
+* Azure Automation
   - Get-AzureRmAutomationHybridWorkerGroup 추가

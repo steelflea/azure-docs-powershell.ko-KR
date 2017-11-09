@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
+ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="log-in-with-azure-powershell"></a>Azure PowerShell을 사용하여 로그인
 
@@ -38,7 +38,7 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
     Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
-    TenantId를 가져오려면 대화형으로 로그인한 다음 구독에서 TenantId를 가져옵니다.
+    TenantId를 가져오려면 대화형으로 로그인한다음 구독에서 TenantId를 가져옵니다.
 
     ```powershell
     Get-AzureRmSubscription
