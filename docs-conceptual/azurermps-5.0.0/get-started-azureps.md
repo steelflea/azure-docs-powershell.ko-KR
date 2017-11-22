@@ -1,20 +1,4 @@
----
-title: "Azure PowerShell 시작 | Microsoft Docs"
-description: 
-services: azure
-author: sdwheeler
-ms.author: sewhee
-manager: carmonm
-ms.product: azure
-ms.service: azure-powershell
-ms.devlang: powershell
-ms.topic: get-started-article
-ms.date: 08/31/2017
-ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+-- 제목: Azure PowerShell 시작 | Microsoft Docs description: services: azure author: sdwheeler ms.author: sewhee manager: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 08/31/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -26,15 +10,15 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. Azure Portal의 위쪽 탐색 모음에서 Cloud Shell을 시작합니다.
 
-   ![셸 아이콘](~/media/get-started-azureps/shell-icon.png)
+   ![셸 아이콘](/media/get-started-azureps/shell-icon.png)
 
 2. 사용하려는 구독을 선택하고 저장소 계정을 만듭니다.
 
-   ![저장소 계정 만들기](~/media/get-started-azureps/storage-prompt.png)
+   ![저장소 계정 만들기](/media/get-started-azureps/storage-prompt.png)
 
 저장소를 만들면 Cloud Shell에서 PowerShell 세션을 브라우저에서 엽니다.
 
-![PowerShell을 위한 Cloud Shell](~/media/get-started-azureps/cloud-powershell.png)
+![PowerShell을 위한 Cloud Shell](/media/get-started-azureps/cloud-powershell.png)
 
 또한 Azure PowerShell을 설치하여 PowerShell 세션에서 로컬로 사용할 수 있습니다.
 
