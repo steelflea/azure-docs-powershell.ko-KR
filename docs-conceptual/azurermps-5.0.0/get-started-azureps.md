@@ -1,4 +1,4 @@
--- 제목: Azure PowerShell 시작 | Microsoft Docs description: services: azure author: sdwheeler ms.author: sewhee manager: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 08/31/2017
+-- 제목: Azure PowerShell 시작 | Microsoft Docs description: services: azure author: sdwheeler ms.author: sewhee manager: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 11/15/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -28,7 +28,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
 
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM` 명령을 실행합니다.
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
 
 ## <a name="log-in-to-azure"></a>Azure에 로그인
 
