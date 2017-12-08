@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
-ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -26,15 +26,15 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. Azure Portal의 위쪽 탐색 모음에서 Cloud Shell을 시작합니다.
 
-   ![셸 아이콘](/media/get-started-azureps/shell-icon.png)
+   ![셸 아이콘](~/media/get-started-azureps/shell-icon.png)
 
 2. 사용하려는 구독을 선택하고 저장소 계정을 만듭니다.
 
-   ![저장소 계정 만들기](/media/get-started-azureps/storage-prompt.png)
+   ![저장소 계정 만들기](~/media/get-started-azureps/storage-prompt.png)
 
 저장소를 만들면 Cloud Shell에서 PowerShell 세션을 브라우저에서 엽니다.
 
-![PowerShell을 위한 Cloud Shell](/media/get-started-azureps/cloud-powershell.png)
+![PowerShell을 위한 Cloud Shell](~/media/get-started-azureps/cloud-powershell.png)
 
 또한 Azure PowerShell을 설치하여 PowerShell 세션에서 로컬로 사용할 수 있습니다.
 
@@ -44,7 +44,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
 
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM` 명령을 실행합니다.
 
 ## <a name="log-in-to-azure"></a>Azure에 로그인
 
@@ -278,7 +278,7 @@ my-login@MyLinuxVM:../../..$
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-다음 명령을 사용하여 인프라에 대한 새 개인 Virtual Network(일반적으로 Azure 내에서는 "VNet"이라고 함)를 만들 수도 있습니다.
+다음 명령을 사용하여 인프라에 대한 새 개인 가상 네트워크(일반적으로 Azure 내에서는 "VNet"이라고 함)를 만들 수도 있습니다.
 
 ```powershell
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
