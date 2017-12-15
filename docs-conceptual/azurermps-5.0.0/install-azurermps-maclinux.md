@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
 ms.openlocfilehash: 94b39c18acaca7a4b17b5207feed025442665acc
-ms.sourcegitcommit: 358d260a867c6ee2e8700b91f776ba4f1b0e24a5
+ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>macOS 및 Linux에서 Azure PowerShell 설치 및 구성
 
@@ -79,7 +79,7 @@ Login-AzureRMAccount
   - 가상 컴퓨터
   - App Service(웹 사이트)
   - SQL Database
-  - 저장소
+  - Storage
   - 네트워크
 
 ## <a name="next-steps"></a>다음 단계
