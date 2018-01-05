@@ -8,7 +8,7 @@
           href: install-azurermps-maclinux.md
         - name: 다른 설치 방법
           href: other-install.md
-    - name: 시작
+    - name: 시작하기
       href: get-started-azureps.md
     - name: Cloud Shell
       href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
@@ -37,11 +37,13 @@
       items:
         - name: 실험 모듈 사용
           href: using-experimental-modules.md
+        - name: PowerShell 작업을 사용하여 병렬로 cmdlet 실행
+          href: using-psjobs.md
     - name: 릴리스 정보
       href: release-notes-azureps.md
 - name: 샘플 스크립트
   items:
-    - name: Linux Virtual Machines
+    - name: Linux 가상 머신
       href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: Windows Virtual Machines
       href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json

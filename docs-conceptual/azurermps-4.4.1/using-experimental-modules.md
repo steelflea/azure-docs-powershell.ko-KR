@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 7a01957040be7c0498ef4f0e9b8f7297119221a5
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.openlocfilehash: c11e4503c07b0a0c4a71021bc511da723098188e
+ms.sourcegitcommit: 42bfd513fe646494d3d9eb0cfc35b049f7e1fbb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 
@@ -26,12 +26,7 @@ Azure PowerShell 팀은 Azure의 개발자 도구(특히 CLI)에 중점을 두�
 
 이러한 모듈은 기존 Azure PowerShell 모듈과 함께 설치할 수 있습니다. cmdlet 이름은 더 짧은 이름을 제공하여 이름이 기존의 실험용이 아닌 cmdlet과 상충하는 것을 방지하기 위해 더 짧아졌습니다.
 
-실험적 모듈은 다음 명명 규칙을 사용합니다.
-
-- AzureRM.Compute.Experiments
-- AzureRM.Websites.Experiments
-
-이 명명 규칙은 미리 보기 모듈의 이름 지정인 `AzureRM.*.Preview`와 비슷합니다. 미리 보기 모듈은 실험적 모듈과는 다릅니다. 미리 보기 모듈은 미리 보기 제품으로만 사용할 수 있는 Azure 서비스의 새로운 기능을 구현합니다. 미리 보기 모듈은 기존 Azure PowerShell 모듈을 대신하며 동일한 cmdlet 및 매개 변수 이름을 사용합니다.
+실험적 모듈은 다음 명명 규칙을 사용합니다. `AzureRM.*.Experiments` 이 명명 규칙은 미리 보기 모듈의 이름 지정인 `AzureRM.*.Preview`와 비슷합니다. 미리 보기 모듈은 실험적 모듈과는 다릅니다. 미리 보기 모듈은 미리 보기 제품으로만 사용할 수 있는 Azure 서비스의 새로운 기능을 구현합니다. 미리 보기 모듈은 기존 Azure PowerShell 모듈을 대신하며 동일한 cmdlet 및 매개 변수 이름을 사용합니다.
 
 ## <a name="how-to-install-an-experimental-module"></a>실험적 모듈 설치 방법
 
@@ -42,10 +37,10 @@ Find-Module AzureRM.*.Experiments
 ```
 
 ```Output
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
-1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+Version Name                         Repository Description
+------- ----                         ---------- -----------
+1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
+1.0.0   AzureRM.Websites.Experiments PSGallery  Create and deploy web applications using Azure App Services.
 ```
 
 실험적 모듈을 설치하려면 관리자 권한 PowerShell 세션에서 다음 명령을 사용합니다.
@@ -74,7 +69,7 @@ Azure CLI 2.0은 최종 사용자가 더 쉽게 시나리오를 “시작”할 
 
 - 더 짧은 이름 - cmdlet의 이름(예: `New-AzureRmVM` => `New-AzVm`) 및 매개 변수 이름(예: `-ResourceGroupName` => `-Rg`)를 포함합니다. “이전” cmdlet과의 호환성에 대한 별칭을 사용합니다. _이전 버전과 호환되는_ 매개 변수 집합을 제공합니다.
 
-- 스마트한 기본값 - 스마트한 기본값을 만들어 “필요한” 정보를 채웁니다. 예:
+- 스마트한 기본값 - 스마트한 기본값을 만들어 “필요한” 정보를 채웁니다. 예: 
   - 리소스 그룹
   - 위치
   - 종속 리소스
@@ -101,30 +96,3 @@ Azure CLI 2.0은 최종 사용자가 더 쉽게 시나리오를 “시작”할 
 - 크기 기본값 - 리소스 “크기”는 다양한 리소스 제공자가 서로 다른 이름을 사용하기 때문에 사용자가 혼란스러울 수 있습니다(예: “Standard\_DS1\_v2” 또는 “S1”). 그러나 대부분의 사용자는 비용에 더 민감합니다. 따라서 가격 책정 일정에 따라 “범용” 크기를 정의하는 것이 적합합니다. 사용자가 특정 크기를 정할 수도 있고, 아니면 Azure PowerShell에서 리소스 예산에 따라 _최상의 옵션_을 선택하도록 할 수도 있습니다.
 
 - 출력 형식 - Azure PowerShell은 현재 `PSObject`를 반환하고 약간의 콘솔 출력이 있습니다. Azure PowerShell은 “스마트한 기본값” 사용에 관해 사용자에게 몇 가지 정보를 표시해야 할 수도 있습니다.
-
-## <a name="try-using-the-experiments"></a>실험 사용해 보기
-
-### <a name="install"></a>설치
-
-```powershell
-Install-Module AzureRM.Compute.Experiments
-```
-
-### <a name="create-a-vm"></a>VM 만들기
-
-```powershell
-$job = New-AzVm -Name MyVm -AsJob
-Receive-Job $job
-```
-
-### <a name="send-us-feedback"></a>피드백 보내기
-
-```powershell
-Send-Feedback
-```
-
-### <a name="uninstall-the-experimental-modules"></a>실험적 모듈 제거
-
-```powershell
-Uninstall-Module AzureRM.Compute.Experiments
-```
