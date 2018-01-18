@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ms.openlocfilehash: 916cf8590de89762bade4f01ce5a502383d51796
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: d320fd5a2f468445c9e5aaa8d28dc363ece12ffc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="formatting-query-results"></a>쿼리 결과 서식 지정
 
@@ -42,7 +42,7 @@ MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610
 MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
 ```
 
-반환되는 열을 제한하려는 경우 `Format-Table` cmdlet을 사용할 수 있습니다. 다음 예제에서는 가상 컴퓨터의 동일한 목록을 가져오지만 VM의 이름, 리소스 그룹 및 VM의 위치에 대한 출력을 제한합니다.  `-Autosize` 매개 변수는 데이터의 크기에 따라 열 크기를 지정합니다.
+반환되는 열을 제한하려는 경우 `Format-Table` cmdlet을 사용할 수 있습니다. 다음 예제에서는 가상 머신의 동일한 목록을 가져오지만 VM의 이름, 리소스 그룹 및 VM의 위치에 대한 출력을 제한합니다.  `-Autosize` 매개 변수는 데이터의 크기에 따라 열 크기를 지정합니다.
 
 ```powershell
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
@@ -75,7 +75,7 @@ ResourceGroupName : MYWESTEURG
 
 ## <a name="converting-to-other-data-types"></a>다른 데이터 형식으로 변환
 
-또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.  다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 컴퓨터의 특성을 사용하고 출력을 데이터베이스 또는 스프레드시트로 쉽게 가져오는 CSV 형식으로 변환합니다.
+또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.  다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 머신의 특성을 사용하고 출력을 데이터베이스 또는 스프레드시트로 쉽게 가져오는 CSV 형식으로 변환합니다.
 
 ```powershell
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation

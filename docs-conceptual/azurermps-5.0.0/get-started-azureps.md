@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
 ms.openlocfilehash: cbe8507a89c048351dab64e28552596ed802bf21
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: d320fd5a2f468445c9e5aaa8d28dc363ece12ffc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -78,7 +78,7 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-## <a name="create-a-windows-virtual-machine"></a>Windows 가상 컴퓨터 만들기
+## <a name="create-a-windows-virtual-machine"></a>Windows Virtual Machine 만들기
 
 리소스 그룹을 만들었으므로 그 안에 Windows VM을 만들어 보겠습니다. VM을 만들려면 새 먼저 필요한 리소스를 만들고 구성에 할당해야 했습니다. 그런 다음 해당 구성을 사용하여 VM을 만들 수 있습니다.
 
@@ -118,7 +118,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 머신 만들기
 
 먼저 OS의 자격 증명 집합이 필요합니다.
 
@@ -212,7 +212,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 머신 만들기
 
 이제 필요한 리소스를 만들었으므로 VM을 만들 수 있습니다. 이 단계에서는 VM 구성 개체를 만든 다음 구성을 사용하여 VM을 만듭니다.
 
