@@ -37,10 +37,11 @@
       items:
         - name: 실험 모듈 사용
           href: using-experimental-modules.md
-        - name: PowerShell 작업을 사용하여 병렬로 cmdlet 실행
-          href: using-psjobs.md
     - name: 릴리스 정보
       href: release-notes-azureps.md
+      items:
+        - name: Azure PowerShell 5.x의 주요 변경 내용
+          href: migration-guide.5.0.0.md
 - name: 샘플 스크립트
   items:
     - name: Linux 가상 머신
