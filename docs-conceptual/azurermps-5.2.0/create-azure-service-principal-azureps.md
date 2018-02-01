@@ -12,10 +12,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: 6eda2d2a729331b212938aa2681d0188a25b734a
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -112,7 +112,7 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-축하합니다. 이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
+축하합니다! 이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
 
 ## <a name="managing-roles"></a>역할 관리
 

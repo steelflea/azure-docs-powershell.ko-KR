@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
 ms.openlocfilehash: 8ef20796b64b16c78a653e293a57d5e752d89710
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell 세션 간 사용자 로그인 유지
 
@@ -83,7 +83,7 @@ PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso
 
 앞의 예제는 현재 자격 증명을 사용하여 새 컨텍스트 대상인 ‘Contoso 구독 1’을 추가합니다. 새 컨텍스트는 ‘Contoso1’이라고 합니다. 컨텍스트에 대한 이름을 제공하지 않은 경우 계정 ID 및 구독 ID를 사용하는 기본 이름이 사용됩니다.
 
-기존 컨텍스트 이름을 바꾸려면 `Rename-AzureRmContext` cmdlet을 사용합니다. 예:
+기존 컨텍스트 이름을 바꾸려면 `Rename-AzureRmContext` cmdlet을 사용합니다. 예: 
 
 ```powershell
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
@@ -91,7 +91,7 @@ PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Co
 
 이 예제에서는 자동 이름 `[user1@contoso.org; 123456-7890-1234-564321]`을 사용하는 컨텍스트 이름을 간단한 이름인 ‘Contoso2’로 바꿉니다. 또한 컨텍스트를 관리하는 cmdlet은 신속하게 컨텍스트를 선택할 수 있도록 탭 완성 기능을 사용합니다.
 
-마지막으로, 컨텍스트를 제거하려면 `Remove-AzureRmContext` cmdlet을 사용합니다.  예:
+마지막으로, 컨텍스트를 제거하려면 `Remove-AzureRmContext` cmdlet을 사용합니다.  예: 
 
 ```powershell
 PS C:\> Remove-AzureRmContext Contoso2
