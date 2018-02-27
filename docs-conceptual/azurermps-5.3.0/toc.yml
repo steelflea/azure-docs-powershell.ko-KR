@@ -37,6 +37,8 @@
       items:
         - name: 실험 모듈 사용
           href: using-experimental-modules.md
+        - name: PowerShell 작업
+          href: using-psjobs.md
     - name: 릴리스 정보
       href: release-notes-azureps.md
       items:
