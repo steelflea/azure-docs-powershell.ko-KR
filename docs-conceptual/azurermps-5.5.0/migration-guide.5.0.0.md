@@ -388,7 +388,7 @@ $consumergroup = Get-AzureRmEventHubConsumerGroup <parameters>
 
 ### <a name="add-azurermlogalertrule"></a>**Add-AzureRMLogAlertRule**
 - **Add-AzureRMLogAlertRule** cmdlet이 더 이상 사용되지 않습니다.
-- 이 cmdlet을 사용하는 10월 1일 이후에는 이 기능이 활동 로그 경고로 전환되므로 더 이상 유효하지 않습니다. 자세한 내용은 https://aka.ms/migratemealerts를 참조하세요.
+- 이 cmdlet을 사용하는 10월 1일 이후에는 이 기능이 활동 로그 경고로 전환되므로 더 이상 유효하지 않습니다. 자세한 내용은 https://aka.ms/migratemealerts을 참조하세요.
 
 ### <a name="get-azurermusage"></a>**Get-AzureRMUsage**
 - **Get-AzureRMUsage** cmdlet이 더 이상 사용되지 않습니다.
