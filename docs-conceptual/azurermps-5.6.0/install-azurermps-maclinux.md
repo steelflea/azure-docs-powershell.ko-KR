@@ -1,6 +1,6 @@
 ---
-title: "macOS 및 Linux에서 Azure PowerShell 설치 및 구성 | Microsoft Docs"
-description: "macOS 및 Linux에서 Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다."
+title: macOS 및 Linux에서 Azure PowerShell 설치 및 구성 | Microsoft Docs
+description: macOS 및 Linux에서 Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/12/2018
 ms.openlocfilehash: 64a86dfd4af7f3f0a91501e9a096ff190f7100cb
-ms.sourcegitcommit: 20af779cd523c758d40e23d60eb989a4ef982d5c
+ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>macOS 및 Linux에서 Azure PowerShell 설치 및 구성
 
