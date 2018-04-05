@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: 0a445a7db84c8deb6518b826b4096983669c5961
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: dfc1efa752c9c9fa42ad5904adacd83c2dc333b8
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 
@@ -23,7 +23,7 @@ Azure PowerShell은 Azure에 대한 네트워크 호출 만들기 및 대기에 
 
 ## <a name="context-persistence-and-psjobs"></a>컨텍스트 지속성 및 PSJob
 
-PSJob은 별도의 프로세스로 실행되므로 Azure 연결에 대한 정보를 작성한 작업과 적절하게 공유해야 합니다. `Login-AzureRmAccount`로 Azure 계정을 PowerShell 세션에 연결하면 컨텍스트를 작업에 전달할 수 있습니다.
+PSJob은 별도의 프로세스로 실행되므로 Azure 연결에 대한 정보를 작성한 작업과 적절하게 공유해야 합니다. `Connect-AzureRmAccount`로 Azure 계정을 PowerShell 세션에 연결하면 컨텍스트를 작업에 전달할 수 있습니다.
 
 ```powershell
 $creds = Get-Credential

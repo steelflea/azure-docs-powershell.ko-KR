@@ -11,11 +11,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 6eda2d2a729331b212938aa2681d0188a25b734a
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: fb192583ccb47ce790b305cf1ac5a687ff811d1d
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -98,7 +98,7 @@ Type                  : ServicePrincipal
 
 ```powershell
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
-Login-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 새 PowerShell 세션에서 이 명령을 실행합니다. 성공적으로 로그인한 후에 다음과 같은 출력이 표시됩니다.

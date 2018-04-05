@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: f07dee0eed106e39879d58ae06ff08b787faa531
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="log-in-with-azure-powershell"></a>Azure PowerShell을 사용하여 로그인
 
@@ -22,7 +22,7 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
 
 ## <a name="interactive-log-in"></a>대화형 로그인
 
-1. `Login-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다.
+1. `Connect-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다.
 
 2. 계정과 연결된 메일 주소 및 암호를 입력합니다. Azure가 자격 증명 정보를 인증 및 저장한 후 창을 닫습니다.
 
@@ -35,7 +35,7 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
 2. 서비스 주체를 사용하여 로그인합니다.
 
     ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     TenantId를 가져오려면 대화형으로 로그인한다음 구독에서 TenantId를 가져옵니다.
@@ -64,7 +64,7 @@ MSI에 대한 자세한 내용은 [로그인 및 토큰 획득에 대한 Azure V
 Azure Cloud Services는 다양한 정부의 데이터 처리 규정에 부합되는 여러 다른 환경을 제공합니다. Azure 계정에 있으면 하나는 정부 클라우드에 속할 경우 로그인 시 해당 환경을 지정해야 합니다. 예를 들어 계정이 중국 클라우드에 있으면 다음 명령을 사용하여 로그온합니다.
 
 ```powershell
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 사용 가능한 환경 목록을 가져오려면 다음 명령을 사용합니다.

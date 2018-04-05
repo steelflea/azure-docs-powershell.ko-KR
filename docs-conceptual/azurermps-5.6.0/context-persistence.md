@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 8ef20796b64b16c78a653e293a57d5e752d89710
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: 4b2b3b690a8c5d6951b24d49091154c6fb479fe3
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell 세션 간 사용자 로그인 유지
 
@@ -73,7 +73,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>컨텍스트 생성, 선택, 이름 바꾸기 및 제거
 
-컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Add-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 로그인 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
+컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 로그인 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
 
 로그인한 후 새 컨텍스트를 추가하려면 `Set-AzureRmContext`(또는 해당 별칭인 `Select-AzureRmSubscription`)를 사용합니다.
 
