@@ -1,6 +1,6 @@
 ---
-title: "Azure PowerShell 시작 | Microsoft Docs"
-description: 
+title: Azure PowerShell 시작 | Microsoft Docs
+description: ''
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 08/31/2017
-ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
-ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
+ms.date: 11/15/2017
+ms.openlocfilehash: 5f1bd0c780b027b2b5779c70fa3145c5dfdc3bb4
+ms.sourcegitcommit: 4ebdeea3c472d94c1aedb10b9d85bf2e76826e83
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -44,7 +44,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
 
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM` 명령을 실행합니다.
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
 
 ## <a name="log-in-to-azure"></a>Azure에 로그인
 
@@ -78,7 +78,7 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-## <a name="create-a-windows-virtual-machine"></a>Windows 가상 컴퓨터 만들기
+## <a name="create-a-windows-virtual-machine"></a>Windows Virtual Machine 만들기
 
 리소스 그룹을 만들었으므로 그 안에 Windows VM을 만들어 보겠습니다. VM을 만들려면 새 먼저 필요한 리소스를 만들고 구성에 할당해야 했습니다. 그런 다음 해당 구성을 사용하여 VM을 만들 수 있습니다.
 
@@ -118,7 +118,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 머신 만들기
 
 먼저 OS의 자격 증명 집합이 필요합니다.
 
@@ -212,7 +212,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### <a name="create-the-virtual-machine"></a>가상 컴퓨터 만들기
+### <a name="create-the-virtual-machine"></a>가상 머신 만들기
 
 이제 필요한 리소스를 만들었으므로 VM을 만들 수 있습니다. 이 단계에서는 VM 구성 개체를 만든 다음 구성을 사용하여 VM을 만듭니다.
 
@@ -278,7 +278,7 @@ my-login@MyLinuxVM:../../..$
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-다음 명령을 사용하여 인프라에 대한 새 개인 가상 네트워크(일반적으로 Azure 내에서는 "VNet"이라고 함)를 만들 수도 있습니다.
+다음 명령을 사용하여 인프라에 대한 새 개인 Virtual Network(일반적으로 Azure 내에서는 "VNet"이라고 함)를 만들 수도 있습니다.
 
 ```powershell
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
