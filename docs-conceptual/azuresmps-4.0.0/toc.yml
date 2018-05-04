@@ -1,5 +1,0 @@
-- name: 개요
-  href: overview.md
-  items:
-    - name: 설치
-      href: install-azure-ps.md
