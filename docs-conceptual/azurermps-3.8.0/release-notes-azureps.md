@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.workload: 
 ms.date: 05/18/2017
 ms.openlocfilehash: 04f89e8d47d0825d46cb1b8817efbcc0cafa0acd
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 06/29/2017
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -40,7 +40,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     + Get-AzureRmApplicationGatewayAvailableWafRuleSets(별칭: List-AzureRmApplicationGatewayAvailableWafRuleSets)를 추가했습니다.
     + New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration을 업데이트하고, -RuleSetType, -RuleSetVersion 및 -DisabledRuleGroups 매개 변수를 추가했습니다.
     + AzureRmApplicationGatewayWebApplicationFirewallConfiguration을 업데이트하고, -RuleSetType, -RuleSetVersion 및 -DisabledRuleGroups 매개 변수를 추가했습니다.
-  - Virtual Network 게이트웨이 연결에 대한 IPSec 정책 지원 추가
+  - 가상 네트워크 게이트웨이 연결에 대한 IPSec 정책 지원 추가
   - New-AzureRmIpsecPolicy를 추가했습니다.
   - Updated New-AzureRmVirtualNetworkGatewayConnection 업데이트하고, -IpsecPolicies 및 -UsePolicyBasedTrafficSelectors 매개 변수를 추가했습니다.
 * 프로필
