@@ -1,6 +1,6 @@
 ---
-title: "Azure PowerShell 설치 및 구성 | Microsoft Docs"
-description: "Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다."
+title: Azure PowerShell 설치 및 구성 | Microsoft Docs
+description: Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/17/2017
 ms.openlocfilehash: 0c1500a8748a3aa4546c6ce1e8d16a635b056edb
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell 설치 및 구성
 

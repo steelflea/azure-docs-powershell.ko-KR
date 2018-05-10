@@ -1,6 +1,6 @@
 ---
-title: "Azure PowerShell 시작 | Microsoft Docs"
-description: 
+title: Azure PowerShell 시작 | Microsoft Docs
+description: ''
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
 ms.openlocfilehash: cbe8507a89c048351dab64e28552596ed802bf21
-ms.sourcegitcommit: 5fe9a579d2e0d1cb5a05aadaeba5db784f1b18fa
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -367,7 +367,7 @@ Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Lin
 * [Azure PowerShell을 사용하여 로그인](authenticate-azureps.md)
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
 * [Azure PowerShell을 사용하여 Azure에서 서비스 주체 만들기](create-azure-service-principal-azureps.md)
-* 이전 버전에서 마이그레이션하는 방법에 대한 릴리스 정보는 [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)를 참고하세요.
+* 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)
 * 커뮤니티에서 도움말을 가져옵니다.
   * [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
   * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)

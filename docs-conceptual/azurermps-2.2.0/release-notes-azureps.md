@@ -1,6 +1,6 @@
 ---
-title: "Azure PowerShell 변경 로그 | Microsoft Docs"
-description: "Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다."
+title: Azure PowerShell 변경 로그 | Microsoft Docs
+description: Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,20 +9,20 @@ ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
-ms.workload: 
+ms.workload: ''
 ms.date: 05/18/2017
 ms.openlocfilehash: 143d92384fd270711378f6741ba59e88c12833d1
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="release-notes"></a>릴리스 정보
 
 Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 ## <a name="version-220"></a>2.2.0 버전
-* Compute
+* 컴퓨팅
   - AzureDiskEncryptionForLinux 확장에서 암호화 상태 쿼리 에 대한 지원 추가
 * DataFactory
   - 활동 창을 나열하는 새 cmdlet 추가
