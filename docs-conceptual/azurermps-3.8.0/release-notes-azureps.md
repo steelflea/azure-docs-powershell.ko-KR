@@ -1,6 +1,6 @@
 ---
-title: "Azure PowerShell 변경 로그 | Microsoft Docs"
-description: "Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다."
+title: Azure PowerShell 변경 로그 | Microsoft Docs
+description: Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,20 +9,20 @@ ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
-ms.workload: 
+ms.workload: ''
 ms.date: 05/18/2017
 ms.openlocfilehash: 04f89e8d47d0825d46cb1b8817efbcc0cafa0acd
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="release-notes"></a>릴리스 정보
 
 Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 ## <a name="version-380"></a>3.8.0 버전
-* Compute
+* 컴퓨팅
   - Get-* cmdlet의 버그를 수정하여 여러 페이지의 데이터(120개 이상 항목)를 검색할 수 있습니다.
 * DataLakeAnalytics
   - 일부 명령어에 대한 도움말을 수정하여 적절한 verbage와 예제를 제공합니다.
@@ -40,7 +40,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     + Get-AzureRmApplicationGatewayAvailableWafRuleSets(별칭: List-AzureRmApplicationGatewayAvailableWafRuleSets)를 추가했습니다.
     + New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration을 업데이트하고, -RuleSetType, -RuleSetVersion 및 -DisabledRuleGroups 매개 변수를 추가했습니다.
     + AzureRmApplicationGatewayWebApplicationFirewallConfiguration을 업데이트하고, -RuleSetType, -RuleSetVersion 및 -DisabledRuleGroups 매개 변수를 추가했습니다.
-  - 가상 네트워크 게이트웨이 연결에 대한 IPSec 정책 지원 추가
+  - Virtual Network 게이트웨이 연결에 대한 IPSec 정책 지원 추가
   - New-AzureRmIpsecPolicy를 추가했습니다.
   - Updated New-AzureRmVirtualNetworkGatewayConnection 업데이트하고, -IpsecPolicies 및 -UsePolicyBasedTrafficSelectors 매개 변수를 추가했습니다.
 * 프로필
