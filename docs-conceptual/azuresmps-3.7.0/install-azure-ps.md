@@ -2,19 +2,19 @@
 title: Azure PowerShell Service Management 모듈 설치 및 구성 | Microsoft Docs
 description: Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다.
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: f46fe25352c100976dd8fc3b1c48ddfc3926f906
-ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
+ms.openlocfilehash: 6f0f56dd09913ac535552aaa06c8e4431d78c24a
+ms.sourcegitcommit: 5971c92cb023bdd1d71fa2ad0a3b378abfbd092a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
