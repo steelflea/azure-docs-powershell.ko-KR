@@ -1,19 +1,18 @@
 ---
-title: Azure PowerShell을 사용하여 Azure 구독 관리 | Microsoft Docs
+title: Azure PowerShell을 사용하여 Azure 구독 관리
 description: Azure PowerShell을 사용하여 Azure 구독 관리
-keywords: Azure PowerShell, 구독
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: d28da700efbc2927cb3f73ae696759fb1e0c0cd6
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: fbd2fe315efbdfb2147218229d51e983e2b61361
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821958"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323359"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>여러 Azure 구독 관리
 
@@ -21,11 +20,11 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 1. 계정의 모든 구독 목록을 가져옵니다.
 
-    ```powershell
+    ```azurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -50,17 +49,17 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 2. 기본 구독을 설정합니다.
 
-    ```powershell
+    ```azurepowershell-interactive
     Select-AzureRmSubscription -SubscriptionName "My Demos"
     ```
 
 3. `Get-AzureRmContext` cmdlet을 실행하여 변경 내용을 확인합니다.
 
-    ```powershell
+    ```azurepowershell-interactive
     Get-AzureRmContext
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX

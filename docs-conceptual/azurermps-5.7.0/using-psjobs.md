@@ -1,19 +1,18 @@
 ---
 title: PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 description: -AsJob 매개 변수를 사용하여 병렬로 cmdlet을 실행하는 방법입니다.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: df64fabe95b927551c10196d7b6b26a8f400335d
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: a986824d952ccf6cd52dc86418899f3805a38973
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34820275"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323495"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 
@@ -24,14 +23,14 @@ Azure PowerShell은 Azure에 대한 네트워크 호출 만들기 및 대기에 
 
 PSJob은 별도의 프로세스로 실행되므로 Azure 연결에 대한 정보를 작성한 작업과 적절하게 공유해야 합니다. `Connect-AzureRmAccount`로 Azure 계정을 PowerShell 세션에 연결하면 컨텍스트를 작업에 전달할 수 있습니다.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
 ```
 
 그러나 컨텍스트가 `Enable-AzureRmContextAutosave`로 자동 저장되도록 선택한 경우 컨텍스트는 작성한 모든 작업과 자동으로 공유됩니다.
 
-```powershell
+```azurepowershell-interactive
 Enable-AzureRmContextAutosave
 $creds = Get-Credential
 $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
@@ -42,19 +41,19 @@ $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin
 편의를 위해 Azure PowerShell에서는 장기 실행 cmdlet에 `-AsJob` 스위치를 제공합니다.
 `-AsJob` 스위치를 사용하면 PSJob을 보다 쉽게 만들 수 있습니다.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
 ```
 
 `Get-Job` 및 `Get-AzureRmVM`을 사용하여 작업 및 진행률을 언제든지 검사할 수 있습니다.
 
-```powershell
+```azurepowershell-interactive
 Get-Job $job
 Get-AzureRmVM MyVm
 ```
 
-```Output
+```output
 Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
 -- ----                                       -------------         -----   ----------- --------  -------
 1  Long Running Operation for 'New-AzureRmVM' AzureLongRunningJob`1 Running True        localhost New-AzureRmVM
@@ -70,12 +69,12 @@ MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Crea
 > `Receive-Job`은 `-AsJob` 플래그가 없는 것처럼 cmdlet으로부터 결과를 반환합니다.
 > 예를 들어 `Do-Action -AsJob`의 `Receive-Job` 결과는 `Do-Action`의 결과와 같은 형식입니다.
 
-```powershell
+```azurepowershell-interactive
 $vm = Receive-Job $job
 $vm
 ```
 
-```Output
+```output
 ResourceGroupName        : MyVm
 Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
 VmId                     : dff1f79e-a8f7-4664-ab72-0ec28b9fbb5b
@@ -95,7 +94,7 @@ FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 
 한 번에 여러 VM을 만듭니다.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 # Create 10 jobs.
 for($k = 0; $k -lt 10; $k++) {
@@ -110,7 +109,7 @@ Get-AzureRmVM
 
 이 예제에서 `Wait-Job` cmdlet을 사용하면 작업이 실행되는 동안 스크립트가 일시 중지됩니다. 스크립트는 모든 작업이 완료되면 실행을 계속합니다. 이렇게 하면 여러 작업을 병렬로 실행한 다음 완료될 때까지 기다렸다가 계속 진행할 수 있습니다.
 
-```Output
+```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 2      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM

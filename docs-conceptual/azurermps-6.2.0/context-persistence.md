@@ -1,19 +1,18 @@
 ---
 title: PowerShell 세션 간 사용자 로그인 유지
 description: 문서에서는 여러 PowerShell 세션에서 자격 증명 및 기타 사용자 정보를 다시 사용할 수 있도록 하는 Azure PowerShell의 새로운 기능에 설명합니다.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 9b4fd5ff557793a1e63c59188a8c90f4deb8d8d9
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: 5ae4f03207b74df06a2cb81ea1cd0516a4abd2dd
+ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821159"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "34854769"
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell 세션 간 사용자 로그인 유지
 

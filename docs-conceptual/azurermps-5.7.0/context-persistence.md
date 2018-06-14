@@ -1,19 +1,18 @@
 ---
 title: PowerShell 세션 간 사용자 로그인 유지
 description: 문서에서는 여러 PowerShell 세션에서 자격 증명 및 기타 사용자 정보를 다시 사용할 수 있도록 하는 Azure PowerShell의 새로운 기능에 설명합니다.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 678d08c24cf254cd904850071872eea18c6bf6cf
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: 5ae4f03207b74df06a2cb81ea1cd0516a4abd2dd
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821601"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323121"
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell 세션 간 사용자 로그인 유지
 
@@ -76,7 +75,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 로그인한 후 새 컨텍스트를 추가하려면 `Set-AzureRmContext`(또는 해당 별칭인 `Select-AzureRmSubscription`)를 사용합니다.
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
 ```
 
@@ -84,7 +83,7 @@ PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso
 
 기존 컨텍스트 이름을 바꾸려면 `Rename-AzureRmContext` cmdlet을 사용합니다. 예: 
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
 ```
 
@@ -92,7 +91,7 @@ PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Co
 
 마지막으로, 컨텍스트를 제거하려면 `Remove-AzureRmContext` cmdlet을 사용합니다.  예: 
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Remove-AzureRmContext Contoso2
 ```
 
@@ -102,7 +101,7 @@ PS C:\> Remove-AzureRmContext Contoso2
 
 `Disconnect-AzureRmAccount`(`Logout-AzureRmAccount`라고도 함)를 사용하여 사용자 또는 서비스 주체에 대한 모든 자격 증명 및 연결된 컨텍스트를 제거할 수 있습니다. 매개 변수 없이 실행될 때 `Disconnect-AzureRmAccount` cmdlet은 현재 컨텍스트에서 사용자 또는 서비스 주체에 연결된 모든 자격 증명 및 컨텍스트를 제거합니다. 사용자 이름, 서비스 주체 이름 또는 컨텍스트를 특정 보안 주체를 대상으로 전달할 수 있습니다.
 
-```powershell
+```azurepowershell-interactive
 Disconnect-AzureRmAccount user1@contoso.org
 ```
 
@@ -112,7 +111,7 @@ Disconnect-AzureRmAccount user1@contoso.org
 
 예를 들어, 다른 창에 영향을 주지 않고 현재 PowerShell 세션의 기본 컨텍스트 또는 다음에 세션을 열 때 사용되는 컨텍스트를 변경하려면 다음을 사용합니다.
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 ```
 
@@ -120,7 +119,7 @@ PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 
 컨텍스트 자동 저장 설정은 사용자 Azure PowerShell 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 저장됩니다. 일부 종류의 컴퓨터 계정은 이 디렉터리에 액세스하지 못할 수도 있습니다. 이러한 시나리오에서 환경 변수를 사용할 수 있습니다.
 
-```powershell
+```azurepowershell-interactive
 $env:AzureRmContextAutoSave="true" | "false"
 ```
 
