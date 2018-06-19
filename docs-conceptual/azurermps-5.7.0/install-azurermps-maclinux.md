@@ -1,44 +1,39 @@
 ---
-title: macOS 및 Linux에서 Azure PowerShell 설치 및 구성 | Microsoft Docs
-description: macOS 및 Linux에서 Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다.
-services: azure
+title: macOS 또는 Linux에 Azure PowerShell 설치
+description: macOS 또는 Linux에 Azure PowerShell 설치하는 방법
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/12/2018
-ms.openlocfilehash: 4dae78779758f240668db5a809b4c1bc1cfc34c7
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.date: 06/06/2018
+ms.openlocfilehash: 17912c155255b6fdfd3cfb9242163b67d405dc03
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34819918"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323257"
 ---
-# <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>macOS 및 Linux에서 Azure PowerShell 설치 및 구성
+# <a name="install-azure-powershell-on-macos-or-linux"></a>macOS 또는 Linux에 Azure PowerShell 설치
 
-이제 Windows 이외의 플랫폼에서도 PowerShell Core v6 및 Azure PowerShell을 설치할 수 있게 되었습니다.
-macOS 및 Linux에 Azure PowerShell 설치 프로세스는 Windows와 다르지 않지만, PowerShell Core v6을 먼저 설치해야 합니다.
+Windows 이외의 플랫폼에서도 PowerShell Core v6 위에 Azure PowerShell을 실행할 수 있게 되었습니다. Windows용 .NET Framework 기반 표준 Azure PowerShell 대신, 본 제품은 .NET Core용 기반으로서 .Net Core 런타임을 지원하는 모든 플랫폼에서 실행할 수 있습니다.
 
 > [!NOTE]
-
 > 이때 PowerShell Core v6과 .NET Core용 Azure PowerShell은 아직 베타 버전입니다.
 > 이러한 제품에 대한 지원은 제한됩니다. 문제가 있거나 버그를 발견한 경우 GitHub에서 문제를 제출하십시오.
 >
 > * [PowerShell Core v6에 대한 문제](https://github.com/PowerShell/PowerShell/issues)
 > * [Azure PowerShell에 대한 문제](https://github.com/azure/azure-docs-powershell/issues)
 
-## <a name="step-1-install-powershell-core-v6"></a>1단계: PowerShell Core v6 설치
+## <a name="install-powershell-core-v6"></a>PowerShell Core v6 설치
 
-PowerShell Core v6 설치 프로세스는 대상 운영 체제에 따라 달라집니다.
-Windows에 PowerShell Core v6을 설치할 수 있지만 이 문서에서는 macOS 및 Linux에 설치하는 것에 초점을 둡니다. Windows에서 Azure PowerShell을 사용하려는 경우 Windows용 [설치](./install-azurerm-ps.md) 문서를 참조하세요.
-
-Linux 또는 macOS에 **PowerShell Core v6**을 설치하는 것은 Linux 배포 및 OS 버전에 따라 달라집니다.
+Linux 또는 macOS에 PowerShell Core v6을 설치하는 것은 Linux 배포 및 OS 버전에 따라 달라집니다.
 자세한 지침은 다음 문서에서 찾을 수 있습니다.
 
-- [MacOS 및 Linux에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-macos-and-linux)
+- [macOS에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-macos)
+- [Linux에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
-## <a name="step-2-install-azure-powershell-for-net-core"></a>2단계: .NET Core용 Azure PowerShell 설치
+## <a name="install-azure-powershell-for-net-core"></a>.NET Core용 Azure PowerShell 설치
 
 PowerShell Core v6은 PowerShellGet 모듈이 이미 설치되어 제공됩니다. 따라서 PowerShell 갤러리에 게시된 어떤 모듈도 쉽게 설치할 수 있습니다. Azure PowerShell을 설치하려면 새 PowerShell 세션을 열고 다음 명령을 실행합니다.
 
@@ -46,7 +41,7 @@ PowerShell Core v6은 PowerShellGet 모듈이 이미 설치되어 제공됩니�
 Install-Module AzureRM.NetCore
 ```
 
-## <a name="step-3-load-the-azurermnetcore-module"></a>3단계: AzureRM.Netcore 모듈 로드
+## <a name="load-the-azurermnetcore-module"></a>AzureRM.Netcore 모듈 로드
 
 모듈이 설치되면 PowerShell 세션에 모듈을 로드해야 합니다. 모듈은 다음과 같이 `Import-Module` cmdlet을 사용하여 로드됩니다.
 

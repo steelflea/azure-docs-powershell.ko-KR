@@ -1,25 +1,32 @@
 ---
-title: Azure PowerShell 시작 | Microsoft Docs
+title: Azure PowerShell 시작
 description: ''
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: fa9be1722b8260c4737c180eec79ae836235654c
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: cfb7ff30b442bb345931728dab131e1b80e58989
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821890"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323138"
 ---
-# <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
+# <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
-Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 Azure Resource Manager에 대해 작동하는 자동화 스크립트를 빌드하는 작업을 위해 만들어졌습니다. [Azure Cloud Shell](/azure/cloud-shell/overview)과 함께 브라우저에서 사용하거나 로컬 컴퓨터에 설치하여 PowerShell 세션에서 사용할 수 있습니다. 이 문서에서는 Azure CLI 2.0을 시작하는 방법 및 핵심 개념을 설명합니다.
+Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 Azure Resource Manager에 대해 작동하는 자동화 스크립트를 빌드하는 작업을 위해 만들어졌습니다. [Azure Cloud Shell](/azure/cloud-shell/overview)과 함께 브라우저에서 사용하거나 로컬 컴퓨터에 설치하여 사용할 수 있습니다. 이 문서에서는 Azure PowerShell을 시작하는 방법 및 핵심 개념을 설명합니다.
 
-## <a name="connect"></a>연결
+## <a name="install-azure-powershell"></a>Azure Powershell 설치
+
+첫 번째 단계는 최신 버전의 Azure PowerShell을 설치하는 것입니다. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-azureps.md)를 참조하세요.
+
+1. [Azure PowerShell 설치](install-azurerm-ps.md)
+
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
+
+## <a name="azure-cloud-shell"></a>Azure Cloud Shell 
 
 가장 간단하게 시작하는 방법은 [Cloud Shell을 시작](/azure/cloud-shell/quickstart)하는 것입니다.
 
@@ -37,15 +44,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 또한 Azure PowerShell을 설치하여 PowerShell 세션에서 로컬로 사용할 수 있습니다.
 
-## <a name="install-azure-powershell"></a>Azure Powershell 설치
-
-첫 번째 단계는 최신 버전의 Azure PowerShell을 설치하는 것입니다. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-azureps.md)를 참조하세요.
-
-1. [Azure PowerShell 설치](install-azurerm-ps.md)
-
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
-
-## <a name="log-in-to-azure"></a>Azure에 로그인
+## <a name="sign-in-to-azure"></a>Azure에 로그인
 
 대화형으로 로그인합니다.
 

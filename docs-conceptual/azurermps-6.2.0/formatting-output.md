@@ -1,34 +1,33 @@
 ---
-title: 쿼리 결과 서식 지정 | Microsoft Docs
-description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다.
-services: azure
+title: Azure PowerShell cmdlet 출력 형식 지정
+description: Azure powershell cmdlet 출력의 형식을 지정 하는 방법.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
-ms.openlocfilehash: f407d9e999b405f6c649d5353c39b4225698e88b
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.date: 06/07/2018
+ms.openlocfilehash: 833c82903305f99be5ad43f707e22644bb568abe
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34820717"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323053"
 ---
-# <a name="formatting-query-results"></a>쿼리 결과 서식 지정
+# <a name="format-azurepowershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정
 
-기본적으로 각 PowerShell cmdlet은 미리 정의된 출력의 서식을 지정하여 쉽게 읽을 수 있도록 합니다.  또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.
+기본적으로 각 Azure PowerShell cmdlet은 미리 정의된 출력의 형식을 지정하여 쉽게 읽을 수 있도록 합니다.  또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.
 
 | 서식 지정      | 변환       |
 |-----------------|------------------|
-| `Format-Custom` | `ConvertTo-Csv`  |
-| `Format-List`   | `ConvertTo-Html` |
-| `Format-Table`  | `ConvertTo-Json` |
-| `Format-Wide`   | `ConvertTo-Xml`  |
+| [Format-Custom](/powershell/module/microsoft.powershell.utility/format-custom) | [ConvertTo-Csv](/powershell/module/microsoft.powershell.utility/convertto-csv)  |
+| [Format-List](/powershell/module/microsoft.powershell.utility/format-list)   | [ConvertTo-Html](/powershell/module/microsoft.powershell.utility/convertto-html) |
+| [Format-Table](/powershell/module/microsoft.powershell.utility/format-table)  | [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) |
+| [Format-Wide](/powershell/module/microsoft.powershell.utility/format-wide)   | [ConvertTo-Xml](/powershell/module/microsoft.powershell.utility/convertto-xml)  |
 
-## <a name="formatting-examples"></a>서식 지정 예제
+## <a name="format-examples"></a>형식 지정 예제
 
-이 예제에서는 기본 구독에 있는 Azure VM의 목록을 가져옵니다.  Get-AzureRmVM 명령은 출력을 기본적으로 테이블 형식으로 지정합니다.
+이 예제에서는 기본 구독에 있는 Azure VM의 목록을 가져옵니다.  `Get-AzureRmVM` 명령은 출력을 기본적으로 테이블 형식으로 지정합니다.
 
 ```azurepowershell-interactive
 Get-AzureRmVM
@@ -54,7 +53,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-선호하는 목록 형식에서 정보를 볼 수 있습니다. 다음 예제에서는 `Format-List` cmdlet을 사용하여 이를 보여 줍니다.
+또한 출력을 목록으로 나타낼 수 있습니다. 다음 예제에서는 `Format-List` cmdlet을 사용하여 이를 보여 줍니다.
 
 ```azurepowershell-interactive
 Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
@@ -72,9 +71,9 @@ Location          : westeurope
 ResourceGroupName : MYWESTEURG
 ```
 
-## <a name="converting-to-other-data-types"></a>다른 데이터 형식으로 변환
+## <a name="convert-to-other-data-types"></a>다른 데이터 형식으로 변환
 
-또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.  다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 머신의 특성을 가져오고, 출력을 CSV 형식으로 변환하여 데이터베이스 또는 스프레드시트로 쉽게 가져옵니다.
+PowerShell은 또한 명령 출력을 여러 데이터 형식으로 변환할 수도 있습니다. 다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 머신의 특성을 가져오고, 출력을 CSV 형식으로 변환하여 데이터베이스 또는 스프레드시트로 쉽게 가져옵니다.
 
 ```azurepowershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation

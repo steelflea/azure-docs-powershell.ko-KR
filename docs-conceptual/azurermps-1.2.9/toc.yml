@@ -15,27 +15,27 @@
           href: create-azure-service-principal-azureps.md
     - name: 쿼리
       href: queries-azureps.md
-    - name: 서식 지정
+    - name: 형식 출력
       href: formatting-output.md
-    - name: 구독
+    - name: 구독 관리
       href: manage-subscriptions-azureps.md
     - name: 배포
       items:
-        - name: Resource Manager 템플릿을 사용하여 배포
-          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy'
+        - name: Resource Manager 템플릿 배포
+          href: /azure/azure-resource-manager/resource-group-template-deploy
         - name: Resource Manager 템플릿 내보내기
-          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template-powershell'
-        - name: SAS 토큰을 사용하여 개인 Resource Manager 템플릿 배포
-          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token'
+          href: /azure/azure-resource-manager/resource-manager-export-template-powershell
+        - name: 개인 Resource Manager 템플릿 배포
+          href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
     - name: 릴리스 정보
       href: release-notes-azureps.md
 - name: 샘플 스크립트
   items:
     - name: Linux 가상 머신
-      href: 'https://docs.microsoft.com/en-us/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+      href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: Windows Virtual Machines
-      href: 'https://docs.microsoft.com/en-us/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+      href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: Web Apps
-      href: 'https://docs.microsoft.com/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+      href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: SQL Database
-      href: 'https://docs.microsoft.com/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+      href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
