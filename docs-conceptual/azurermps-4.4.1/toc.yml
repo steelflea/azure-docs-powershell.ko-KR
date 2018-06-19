@@ -17,25 +17,25 @@
       items:
         - name: 서비스 주체 만들기
           href: create-azure-service-principal-azureps.md
-        - name: 영구 자격 증명 사용
+        - name: 영구 자격 증명
           href: context-persistence.md
     - name: 쿼리
       href: queries-azureps.md
-    - name: 서식 지정
+    - name: 형식 출력
       href: formatting-output.md
-    - name: 구독
+    - name: 구독 관리
       href: manage-subscriptions-azureps.md
     - name: 배포
       items:
-        - name: Resource Manager 템플릿을 사용하여 배포
+        - name: Resource Manager 템플릿 배포
           href: /azure/azure-resource-manager/resource-group-template-deploy
         - name: Resource Manager 템플릿 내보내기
           href: /azure/azure-resource-manager/resource-manager-export-template-powershell
-        - name: SAS 토큰을 사용하여 개인 Resource Manager 템플릿 배포
+        - name: 개인 Resource Manager 템플릿 배포
           href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
     - name: 개념
       items:
-        - name: 실험 모듈 사용
+        - name: 실험 모듈
           href: using-experimental-modules.md
     - name: 릴리스 정보
       href: release-notes-azureps.md
