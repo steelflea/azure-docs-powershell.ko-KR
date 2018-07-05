@@ -6,7 +6,7 @@
       items:
         - name: macOS 및 Linux에 설치
           href: install-azurermps-maclinux.md
-        - name: MSI 또는 WebPI를 사용하여 설치
+        - name: MSI를 사용하여 설치
           href: other-install.md
         - name: Docker에서 실행
           href: azurerm-ps-in-docker.md
@@ -46,8 +46,8 @@
     - name: 릴리스 정보
       href: release-notes-azureps.md
       items:
-        - name: Azure PowerShell 5.x의 주요 변경 내용
-          href: migration-guide.5.0.0.md
+        - name: Azure PowerShell 6.x의 주요 변경 내용
+          href: migration-guide.6.0.0.md
 - name: 자습서
   items:
     - name: Virtual Machines 만들기
