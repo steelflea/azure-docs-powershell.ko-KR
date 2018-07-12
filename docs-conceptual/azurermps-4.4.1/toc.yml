@@ -21,7 +21,7 @@
           href: context-persistence.md
     - name: 쿼리
       href: queries-azureps.md
-    - name: 형식 출력
+    - name: 출력 형식 지정
       href: formatting-output.md
     - name: 구독 관리
       href: manage-subscriptions-azureps.md
