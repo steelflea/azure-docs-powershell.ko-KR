@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
-ms.openlocfilehash: a779f402fb2b3fccc8269aa30a6fe98a949251d6
-ms.sourcegitcommit: 4c775721461210431bd913f28d1f1e6f1976880a
+ms.openlocfilehash: 6e7d447ea9672c174e3f1d103bc56c11a7f37192
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37091506"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024922"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>macOS 또는 Linux에 Azure PowerShell 설치
 
@@ -30,8 +30,8 @@ Windows 이외의 플랫폼에서도 PowerShell Core v6에서 Azure PowerShell�
 PowerShell Core를 위한 설치 지침은 macOS나 대부분의 Linux 배포와 다릅니다.
 자세한 지침은 다음 문서에서 찾을 수 있습니다.
 
-- [macOS에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [Linux에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-linux)
+* [macOS에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-macos)
+* [Linux에 PowerShell Core 설치](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
 ## <a name="install-azure-powershell-for-net-core"></a>.NET Core용 Azure PowerShell 설치
 
@@ -59,7 +59,7 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the Set-PSRepository cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes� [A] Yes to All� [N] No� [L] No to All� [S] Suspend� [?] Help (default is "N"):
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
 설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.
@@ -83,17 +83,17 @@ macOS 및 Linux에서, `$Profile` 환경 변수를 통해 프로필 작업을 �
 .NET Core용 Azure PowerShell 모듈은 아직 개발 중입니다. 이러한 모듈은 모듈의 Windows 버전에 대해 사용할 수 있는 cmdlet의 집합을 모두 제공하지 않습니다. 다음 함수는 AzureRM.Netcore 모듈에서 구현됩니다.
 
 * 계정 관리
-  - Microsoft 계정, 조직 계정 또는 Microsoft Azure Active Directory를 통해 서비스 사용자로 로그인
-  - Save-AzureRmContext로 자격 증명을 디스크에 저장하고 Import-AzureRmContext를 사용하여 저장된 자격 증명 로드
+  * Microsoft 계정, 조직 계정 또는 Microsoft Azure Active Directory를 통해 서비스 사용자로 로그인
+  * Save-AzureRmContext로 자격 증명을 디스크에 저장하고 Import-AzureRmContext를 사용하여 저장된 자격 증명 로드
 * Environment
-  - 다른 기본 Microsoft Azure 환경 가져오기
-  - 사용자 지정 환경 추가/설정/제거(예: Azure Stack 또는 Windows Azure 팩 환경)
+  * 다른 기본 Microsoft Azure 환경 가져오기
+  * 사용자 지정 환경 추가/설정/제거(예: Azure Stack 또는 Windows Azure 팩 환경)
 * 리소스 관리자 및 서비스 관리 인터페이스를 사용하여 Azure 서비스용 평면 cmdlet 관리
-  - Virtual Machine
-  - App Service(웹 사이트)
-  - SQL Database
-  - Storage
-  - 네트워크
+  * Virtual Machine
+  * App Service(웹 사이트)
+  * SQL Database
+  * Storage
+  * 네트워크
 
 ## <a name="next-steps"></a>다음 단계
 

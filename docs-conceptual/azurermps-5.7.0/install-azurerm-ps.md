@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: c0bb020fc8cc77b96dc7fe6839911a4d80974d9e
-ms.sourcegitcommit: f08f501b75a97ceef59c21f42158bf135a354eaa
+ms.openlocfilehash: 2809d8265af85a786b1b72ab9be3135f166a20e8
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37926249"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025330"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -57,9 +57,9 @@ PowerShellGet이 설치되지 않은 경우, 귀하의 시스템을 위해 아�
 
 > [!NOTE]
 > PowerShellGet을 사용하려면 스크립트를 실행할 수 있게 하는 실행 정책이 필요합니다. PowerShell의 실행 정책에 대한 자세한 내용은 [실행 정책 정보](/powershell/module/microsoft.powershell.core/about/about_execution_policies)(영문)를 참조하세요.
-
+>
 > [!IMPORTANT]
-> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다. 
+> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다.
 
 ## <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 

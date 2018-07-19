@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: c9a2f7b87654de5a50d8e0f06fefc6d362532aaf
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: a5ad1ce6001c9326a5dad135fe5aeea512f70675
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34852899"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025160"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell 설치 및 구성
 
@@ -79,6 +79,7 @@ AzureRM 모듈은 Azure Resource Manager cmdlet의 롤업 모듈입니다. Azure
 이전 버전의 Azure PowerShell이 설치된 경우 오류가 나타날 수 있습니다. 이 문제를 해결하려면 이 문서의 [새 Azure PowerShell 버전으로 업데이트](#update-azps) 섹션을 참조하세요.
 
 ## <a name="step-3-load-the-azurerm-module"></a>3단계: AzureRM 모듈 로드
+
 모듈이 설치되면 PowerShell 세션에 모듈을 로드해야 합니다. 이 작업은 일반(권한이 상승되지 않은) PowerShell 세션에서 수행해야 합니다. 모듈은 다음과 같이 `Import-Module` cmdlet을 사용하여 로드됩니다.
 
 ```powershell
@@ -101,8 +102,7 @@ Azure PowerShell을 사용하는 방법에 대한 자세한 내용은 다음 문
 |PowerShell 5로 업그레이드하려고 합니다.|[최신 버전의 WMF 설치](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
 |PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
-<a id="helpmechoose"></a>
-### <a name="checking-the-version-of-azure-powershell"></a>Azure PowerShell 버전 확인
+### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Azure PowerShell 버전 확인
 
 가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
 
@@ -114,7 +114,7 @@ Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 
 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요. Azure 모듈과 AzureRM 모듈은 공통 종속성을 공유합니다. Azure와 AzureRM 모듈을 둘 다 사용하는 경우 각 패키지의 동일한 버전을 설치해야 합니다.
 
-### <a id="update-azps"></a>새 Azure PowerShell 버전으로 업데이트
+### <a name="div-idupdate-azpsupdating-to-a-new-version-of-azure-powershell"></a><div id="update-azps"/>새 Azure PowerShell 버전으로 업데이트
 
 서비스 관리 모듈을 포함하는 이전 버전의 Azure PowerShell이 설치되어 있는 경우 다음과 같은 오류가 나타날 수 있습니다.
 

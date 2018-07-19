@@ -7,17 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 1584c8166078b7d7d24ce8748307fde0f565b662
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: eb359710efde6b5969ac721e395725a0ce87fddd
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34853069"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024973"
 ---
 # <a name="querying-for-azure-resources"></a>Azure 리소스에 대한 쿼리
 
 기본 제공 cmdlet을 사용하여 PowerShell에서 쿼리를 완료할 수 있습니다. PowerShell에서 cmdlet은 **_동사-명사_** 형태로 이름을 지정합니다. **_Get_** 동사를 사용하는 cmdlet은 cmdlet 쿼리입니다. cmdlet 명사는 cmdlet 동사가 역할을 담당하는 Azure 리소스의 종류입니다.
-
 
 ## <a name="selecting-simple-properties"></a>단순 속성 선택
 
@@ -31,7 +30,7 @@ Get-AzureRmVM
 
 기본 출력의 서식은 자동으로 테이블로 지정됩니다.
 
-```
+```output
 ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----   --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
@@ -44,7 +43,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
-```
+```output
 Name          ResourceGroupName Location
 ----          ----------------- --------
 MyUnbuntu1610 MYWESTEURG        westeurope
@@ -59,7 +58,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
-```
+```output
 Name           OSType
 ----           ------
 MyUnbuntu1610   Linux
@@ -74,7 +73,7 @@ MyWin2016VM   Windows
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
-```
+```output
 ResourceGroupName  Name
 -----------------  ----
 RGDEMO001          KBDemo001VM
@@ -87,7 +86,7 @@ RGDEMO001          KBDemo020
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 
-```
+```output
 ResourceGroupName          Name     Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----     --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610   westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded

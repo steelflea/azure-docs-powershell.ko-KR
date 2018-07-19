@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 5aa3b3fdeff20ea4c6f830f834e61f37d81da07d
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 5354a75e969e084d6457d0566a516705f365476f
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100378"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025415"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -26,7 +26,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
 
-## <a name="azure-cloud-shell"></a>Azure Cloud Shell 
+## <a name="azure-cloud-shell"></a>Azure Cloud Shell
 
 가장 간단하게 시작하는 방법은 [Cloud Shell을 시작](/azure/cloud-shell/quickstart)하는 것입니다.
 
@@ -72,6 +72,7 @@ Enter a username and password for the virtual machine.
 User: localAdmin
 Password for user localAdmin: *********
 ```
+
 다음으로 VM을 만듭니다.
 
 ```azurepowershell-interactive

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 0228db32c313626029d1a54b8d5c2c8ddbfae7a8
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 5354a75e969e084d6457d0566a516705f365476f
+ms.sourcegitcommit: 8b882d1c27d9e323447ff85f56d11bbf5e244d7f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025041"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110707"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -48,7 +48,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 대화형으로 로그인합니다.
 
-1. `Connect-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-Environment' 옵션을 사용하면 Azure China 또는 Azure Germany에 로그인할 수 있습니다.
+1. `Connect-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-Environment' 옵션을 사용하면 Azure China 또는 Azure Germany에 인증할 수 있습니다.
 
    예: Connect-AzureRmAccount -Environment AzureChinaCloud
 

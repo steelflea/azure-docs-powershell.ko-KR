@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: 2444abc6f6f2280645c77c3effcd02db74f4f997
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 3cb6497dd053c7ae5d256ae4b562001ddecaa128
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100242"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025245"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell 설치 및 구성
 
@@ -50,9 +50,9 @@ PowerShellGet을 설치하지 않은 경우 이 문서의 [PowerShellGet을 가�
 
 > [!NOTE]
 > PowerShellGet을 사용하려면 스크립트를 실행할 수 있게 하는 실행 정책이 필요합니다. PowerShell의 실행 정책에 대한 자세한 내용은 [실행 정책 정보](/powershell/module/microsoft.powershell.core/about/about_execution_policies)(영문)를 참조하세요.
-
+>
 > [!IMPORTANT]
-> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다. 
+> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다.
 
 ## <a name="step-2-install-azure-powershell"></a>2단계: Azure PowerShell 설치
 
@@ -85,6 +85,7 @@ AzureRM 모듈은 Azure Resource Manager cmdlet의 롤업 모듈입니다. Azure
 이전 버전의 Azure PowerShell이 설치된 경우 오류가 나타날 수 있습니다. 이 문제를 해결하려면 이 문서의 [새 Azure PowerShell 버전으로 업데이트](#update-azps) 섹션을 참조하세요.
 
 ## <a name="step-3-load-the-azurerm-module"></a>3단계: AzureRM 모듈 로드
+
 모듈이 설치되면 PowerShell 세션에 모듈을 로드해야 합니다. 이 작업은 일반(권한이 상승되지 않은) PowerShell 세션에서 수행해야 합니다. 모듈은 다음과 같이 `Import-Module` cmdlet을 사용하여 로드됩니다.
 
 ```powershell
@@ -111,8 +112,7 @@ Azure PowerShell을 사용하는 방법에 대한 자세한 내용은 다음 문
 |PowerShell 5로 업그레이드하려고 합니다.|[최신 버전의 WMF 설치](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
 |PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
-<a id="helpmechoose"></a>
-### <a name="checking-the-version-of-azure-powershell"></a>Azure PowerShell 버전 확인
+### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Azure PowerShell 버전 확인
 
 가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
 
@@ -124,7 +124,7 @@ Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 
 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요. Azure 모듈과 AzureRM 모듈은 공통 종속성을 공유합니다. Azure와 AzureRM 모듈을 둘 다 사용하는 경우 각 패키지의 동일한 버전을 설치해야 합니다.
 
-### <a id="update-azps"></a>새 Azure PowerShell 버전으로 업데이트
+### <a name="div-idupdate-azpsupdating-to-a-new-version-of-azure-powershell"></a><div id="update-azps"/>새 Azure PowerShell 버전으로 업데이트
 
 서비스 관리 모듈을 포함하는 이전 버전의 Azure PowerShell이 설치되어 있는 경우 다음과 같은 오류가 나타날 수 있습니다.
 

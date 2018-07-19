@@ -8,11 +8,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
 ms.openlocfilehash: 50b05e5f25b6e3e1c815f6b26f1b53b84cd0b7da
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.sourcegitcommit: 8b882d1c27d9e323447ff85f56d11bbf5e244d7f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025279"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110894"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
