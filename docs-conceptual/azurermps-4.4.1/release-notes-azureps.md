@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 07/26/2017
-ms.openlocfilehash: 5c8d9fd2e79dd18ee26493343e038c2a5ed24b26
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: 6f0e304c499fc8bf4909e2825d52cd63b1fcbf5d
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100494"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -151,8 +151,8 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
       - 컨텍스트 지속성을 사용하지 않는 작업에 대한 일반적인 패턴: `Start-Job {param ($context) New-AzureRmVM -AzureRmContext $context [... other parameters]} -ArgumentList (Get-AzureRmContext)`
       - 컨텍스트 지속성을 사용하는 작업에 대한 일반적인 패턴: `Start-Job {New-AzureRmVM [... other parameters]}`
   * 세션 간 로그인 정보 유지, 새 cmdlet:
-    - Enable-AzureRmContextAutosave - 세션 간 로그인 지속성을 사용합니다.
-    - Disable-AzureRmContextAutosave - 세션 간 로그인 지속성을 사용하지 않습니다.
+    - Enable-AzureRmContextAutosave - 세션 간 자격 증명 지속성을 사용합니다.
+    - Enable-AzureRmContextAutosave - 세션 간 자격 증명 지속성을 사용하지 않습니다.
   * 컨텍스트 정보 관리, 새 cmdlet
     - Select-AzureRmContext - 활성 이름의 컨텍스트를 선택합니다.
     - Rename-AzureRmContext - 쉽게 참조할 수 있도록 기존 컨텍스트의 이름을 바꿉니다.

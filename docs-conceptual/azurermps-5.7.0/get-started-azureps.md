@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: cfb7ff30b442bb345931728dab131e1b80e58989
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: a036bb78ddb084dceb3668ab5751951dedd85e15
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100473"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -365,7 +365,7 @@ Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Lin
 
 ## <a name="next-steps"></a>다음 단계
 
-* [Azure PowerShell을 사용하여 로그인](authenticate-azureps.md)
+* [Azure PowerShell로 로그인](authenticate-azureps.md)
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
 * [Azure PowerShell을 사용하여 Azure에서 서비스 주체 만들기](create-azure-service-principal-azureps.md)
 * 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)

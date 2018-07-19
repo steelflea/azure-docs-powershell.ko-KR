@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 12a57f9aaf445fe95f731e09a6dcd174b97aa3fe
+ms.openlocfilehash: 76e08c462bb34bd2b16a11f70f14c4584b72795a
 ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100191"
+ms.locfileid: "38100361"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>PowerShell 세션에 걸쳐 사용자 자격 증명 유지
 
@@ -38,12 +38,10 @@ Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하�
 
 ## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>다음 로그인을 위해 컨텍스트를 자동으로 저장
 
-기본적으로 Azure PowerShell은 PowerShell 세션을 닫을 때마다 컨텍스트 정보를 삭제합니다.
+Azure PowerShell 버전 6.3.0부터는 세션 간에 자동으로 컨텍스트 정보를 유지합니다. PowerShell이 사용자의 컨텍스트 및 자격 증명을 기억하지 않도록 설정하려면 `Disable-AzureRmContextAutoSave`를 사용합니다. PowerShell 세션을 열 때마다 Azure에 로그인해야 합니다.
 
 Azure PowerShell이 PowerShell 세션을 닫은 후 사용자의 컨텍스트를 기억하도록 하려면 `Enable-AzureRmContextAutosave`를 사용합니다. 컨텍스트 및 자격 증명 정보는 사용자 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 숨겨진 특수 폴더에 자동으로 저장됩니다.
 그 후 새로운 PowerShell 세션마다 마지막 세션에 사용된 컨텍스트를 대상으로 합니다.
-
-PowerShell이 사용자의 컨텍스트 및 자격 증명을 기억하지 않도록 설정하려면 `Disable-AzureRmContextAutoSave`를 사용합니다. PowerShell 세션을 열 때마다 Azure에 로그인해야 합니다.
 
 Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 제어가 가능합니다. 변경 내용을 현재 PowerShell 세션(`Process` 범위)에만 적용하거나 또는 모든 PowerShell 세션(`CurrentUser` 범위)에 적용하려는 경우가 있습니다. 이러한 옵션은 [컨텍스트 범위 사용](#Using-Context-Scopes)에서 자세히 설명합니다.
 
@@ -71,7 +69,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>컨텍스트 생성, 선택, 이름 바꾸기 및 제거
 
-컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Add-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
+컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
 
 로그인한 후 새 컨텍스트를 추가하려면 `Set-AzureRmContext`(또는 해당 별칭인 `Select-AzureRmSubscription`)를 사용합니다.
 
@@ -99,10 +97,10 @@ PS C:\> Remove-AzureRmContext Contoso2
 
 ## <a name="removing-credentials"></a>자격 증명 제거
 
-`Remove-AzureRmAccount`(`Logout-AzureRmAccount`라고도 함)를 사용하여 사용자 또는 서비스 주체에 대한 모든 자격 증명 및 연결된 컨텍스트를 제거할 수 있습니다. 매개 변수 없이 실행될 때 `Remove-AzureRmAccount` cmdlet은 현재 컨텍스트에서 사용자 또는 서비스 주체에 연결된 모든 자격 증명 및 컨텍스트를 제거합니다. 사용자 이름, 서비스 주체 이름 또는 컨텍스트를 특정 보안 주체를 대상으로 전달할 수 있습니다.
+`Disconnect-AzureRmAccount`(`Logout-AzureRmAccount`라고도 함)를 사용하여 사용자 또는 서비스 주체에 대한 모든 자격 증명 및 연결된 컨텍스트를 제거할 수 있습니다. 매개 변수 없이 실행될 때 `Disconnect-AzureRmAccount` cmdlet은 현재 컨텍스트에서 사용자 또는 서비스 주체에 연결된 모든 자격 증명 및 컨텍스트를 제거합니다. 사용자 이름, 서비스 주체 이름 또는 컨텍스트를 특정 보안 주체를 대상으로 전달할 수 있습니다.
 
 ```azurepowershell-interactive
-Remove-AzureRmAccount user1@contoso.org
+Disconnect-AzureRmAccount user1@contoso.org
 ```
 
 ## <a name="using-context-scopes"></a>컨텍스트 범위 사용
@@ -133,7 +131,7 @@ $env:AzureRmContextAutoSave="true" | "false"
   변경 내용이 전역 컨텍스트를 변경합니다.
 - [Disable-AzureRmContextAutosave][disable] - 컨텍스트 자동 저장을 해제합니다. 새로운 각 PowerShell 세션은 다시 로그인해야 합니다.
 - [Select-AzureRmContext][select] - 기본값으로 컨텍스트를 선택합니다. 모든 후속 cmdlet이 인증을 위해 이 컨텍스트에서 자격 증명을 사용합니다.
-- [Remove-AzureRmAccount][remove-cred] - 계정과 관련된 자격 증명 및 컨텍스트를 모두 제거합니다.
+- [Disconnect-AzureRmAccount][remove-cred] - 계정과 관련된 자격 증명 및 컨텍스트를 모두 제거합니다.
 - [Remove-AzureRmContext][remove-context] - 명명된 컨텍스트의 이름을 바꿉니다.
 - [Rename-AzureRmContext][rename] - 기존 컨텍스트의 이름을 바꿉니다.
 
@@ -148,11 +146,11 @@ $env:AzureRmContextAutoSave="true" | "false"
 [enable]: /powershell/module/azurerm.profile/Enable-AzureRmContextAutosave
 [disable]: /powershell/module/azurerm.profile/Disable-AzureRmContextAutosave
 [select]: /powershell/module/azurerm.profile/Select-AzureRmContext
-[remove-cred]: /powershell/module/azurerm.profile/Remove-AzureRmAccount
+[remove-cred]: /powershell/module/azurerm.profile/Disconnect-AzureRmAccount
 [remove-context]: /powershell/module/azurerm.profile/Remove-AzureRmContext
 [rename]: /powershell/module/azurerm.profile/Rename-AzureRmContext
 
 <!-- Updated cmdlets -->
-[login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
+[login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
 [import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext

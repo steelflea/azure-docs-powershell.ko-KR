@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: c0bb020fc8cc77b96dc7fe6839911a4d80974d9e
+ms.openlocfilehash: 99c102340e430dbca94538f3bd0e810c79266cd9
 ms.sourcegitcommit: f08f501b75a97ceef59c21f42158bf135a354eaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/09/2018
-ms.locfileid: "37926249"
+ms.locfileid: "37926164"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -24,39 +24,13 @@ Azure 클래식 배포 모델은 본 버전의 Azure PowerShell에서 지원되�
 
 ## <a name="requirements"></a>요구 사항
 
-Azure PowerShell을 설치하려면, PowerShellGet 버전 1.1.2.0 이상이 필요합니다. 귀하의 시스템에서 가능한지 확인하려면 다음 명령을 실행합니다:
+Azure PowerShell 버전 6.0부터 Azure PowerShell은 PowerShell 버전 5.0이 필요합니다. 시스템의 PowerShell 버전을 확인하려면 다음 명령을 실행합니다.
 
 ```powershell
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+$PSVersionTable.PSVersion
 ```
 
-다음과 비슷하게 표시됩니다.
-
-```output
-Name          Version Path
-----          ------- ----
-Name          Version Path
-----          ------- ----
-PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
-PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
-```
-
-PowerShellGet 설치를 업데이트하려면 다음 명령을 실행합니다:
-
-```powershell
-Install-Module PowerShellGet -Force
-```
-
-PowerShellGet이 설치되지 않은 경우, 귀하의 시스템을 위해 아래 표의 지침을 따릅니다.
-
-|시나리오|설치 지침|
-|---|---|
-|윈도우 10<br/>Windows Server 2016|OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.|
-|PowerShell 5로 업그레이드| <ol><li>[최신 버전의 WMF 설치](https://www.microsoft.com/en-us/download/details.aspx?id=54616)</li><li>다음 명령 실행:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|PowerShell 3 또는 PowerShell 4이 설치된 Windows|<ol><il>[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>다음 명령 실행:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-
-> [!NOTE]
-> PowerShellGet을 사용하려면 스크립트를 실행할 수 있게 하는 실행 정책이 필요합니다. PowerShell의 실행 정책에 대한 자세한 내용은 [실행 정책 정보](/powershell/module/microsoft.powershell.core/about/about_execution_policies)(영문)를 참조하세요.
+만료된 버전을 사용하는 경우 [기존 Windows PowerShell 업그레이드](/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell)를 참조합니다.
 
 > [!IMPORTANT]
 > 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다. 

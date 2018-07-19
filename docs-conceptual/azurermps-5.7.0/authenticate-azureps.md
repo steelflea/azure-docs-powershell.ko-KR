@@ -7,16 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: e2eb6767d16dd15529b35b7a4134f4dcdd257d60
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: af39fec226492c9ccf251c996b57e274de783178
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100276"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
-Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간단하게 시작하는 방법은 명령줄에서 대화형으로 로그인하는 것입니다.
+Azure PowerShell에서는 여러 인증 방법을 지원합니다. 가장 간단하게 시작하는 방법은 명령줄에서 대화형으로 로그인하는 것입니다.
 
 ## <a name="sign-in-interactively"></a>대화형으로 로그인
 
@@ -29,7 +29,7 @@ Connect-AzureRmAccount
 실행되는 경우 이 cmdlet은 귀하의 Azure 계정과 연결된 이메일 주소와 암호를 묻는 대화 상자를 표시합니다. 인증될 때, 현재 PowerShell 세션에 해당 정보가 저장됩니다. 대화 상자가 닫히고 모든 Azure PowerShell cmdlet에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 로그인은 현재 PowerShell 세션에 _대해서만_ 적용됩니다. 여러 세션에서 로그인을 유지하려면에 [영구 자격 증명](context-persistence.md) 아티클을 참조합니다.
+> 이 로그인은 현재 PowerShell 세션에 _대해서만_ 적용됩니다. 여러 세션에서 인증을 유지하려면 [영구 자격 증명](context-persistence.md) 아티클을 참조합니다.
 
 ## <a name="sign-in-with-a-service-principal"></a>서비스 주체를 사용하여 로그인
 

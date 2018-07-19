@@ -1,22 +1,22 @@
 ---
-title: PowerShell 세션 간 사용자 로그인 유지
-description: 문서에서는 여러 PowerShell 세션에서 자격 증명 및 기타 사용자 정보를 다시 사용할 수 있도록 하는 Azure PowerShell의 새로운 기능에 설명합니다.
+title: PowerShell 세션간에 사용자 자격 증명 유지
+description: 여러 PowerShell 세션에 걸쳐 Azure 자격 증명 및 다른 정보를 재사용하는 방법에 대해 알아보세요.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 5ae4f03207b74df06a2cb81ea1cd0516a4abd2dd
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: 3107f77987745faa7ec57ea4811c62a38a7b2aa2
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100259"
 ---
-# <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell 세션 간 사용자 로그인 유지
+# <a name="persisting-user-credentials-across-powershell-sessions"></a>PowerShell 세션에 걸쳐 사용자 자격 증명 유지
 
-Azure PowerShell의 2017년 9월 릴리스에서 Azure Resource Manager cmdlet은 새로운 기능인 **Azure 컨텍스트 자동 저장**을 소개합니다. 이 기능을 통해 다음을 비롯한 여러 새로운 사용자 시나리오를 사용할 수 있습니다.
+Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
 
 - 새 PowerShell 세션에서 다시 사용하기 위한 로그인 정보 보존.
 - 장기 실행 cmdlet을 실행하기 위한 더 쉬운 백그라운드 작업 사용.
@@ -36,7 +36,7 @@ Azure PowerShell의 2017년 9월 릴리스에서 Azure Resource Manager cmdlet�
 
 이전 릴리스에서는 새 PowerShell 세션을 열 때마다 Azure 컨텍스트를 만들어야 했습니다. Azure PowerShell v4.4.0부터는 새 PowerShell 세션을 열 때 언제든지 Azure 컨텍스트의 자동 저장 및 다시 사용을 활성화할 수 있습니다.
 
-## <a name="automatically-saving-the-context-for-the-next-login"></a>다음 로그인을 위해 컨텍스트를 자동으로 저장
+## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>다음 로그인을 위해 컨텍스트를 자동으로 저장
 
 기본적으로 Azure PowerShell은 PowerShell 세션을 닫을 때마다 컨텍스트 정보를 삭제합니다.
 
@@ -71,7 +71,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>컨텍스트 생성, 선택, 이름 바꾸기 및 제거
 
-컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 로그인 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
+컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
 
 로그인한 후 새 컨텍스트를 추가하려면 `Set-AzureRmContext`(또는 해당 별칭인 `Select-AzureRmSubscription`)를 사용합니다.
 
@@ -140,7 +140,7 @@ $env:AzureRmContextAutoSave="true" | "false"
 기존 프로필 cmdlet에 대한 변경 내용
 
 - [Add-AzureRmAccount][login] - 프로세스 또는 현재 사용자로 로그인의 범위를 지정할 수 있습니다.
-  로그인한 후 기본 컨텍스트의 이름을 지정할 수 있습니다.
+  인증 후 기본 컨텍스트의 이름을 지정할 수 있습니다.
 - [Import-AzureRmContext][import] - 프로세스 또는 현재 사용자로 로그인의 범위를 지정할 수 있습니다.
 - [Set-AzureRmContext][set-context] - 기존의 명명된 컨텍스트를 선택하고, 프로세스 또는 현재 사용자로 범위를 변경할 수 있습니다.
 

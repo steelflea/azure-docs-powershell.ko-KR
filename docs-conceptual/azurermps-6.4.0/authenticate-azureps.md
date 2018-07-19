@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 6525e41be54c3f6b97812504c436e0ff3f5edf8e
+ms.openlocfilehash: 20194ac2282d602ba61bf130791edac9f4ffae6c
 ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100089"
+ms.locfileid: "38100225"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -55,7 +55,7 @@ MSI에 대한 자세한 내용은 [로그인 및 토큰 획득에 대한 Azure V
 Azure Cloud Services는 다양한 지역의 데이터 처리 규정에 부합하는 다양한 환경을 제공합니다. Azure 계정이 이러한 지역과 관련된 클라우드에 있는 경우, 로그인 시 해당 환경을 지정해야 합니다. 예를 들어 계정이 중국 클라우드에 있으면 다음 명령을 사용하여 로그온합니다.
 
 ```azurepowershell-interactive
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 사용 가능한 환경 목록을 가져오려면 다음 명령을 사용합니다.
