@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
-ms.openlocfilehash: d36952b38a36a5196ee5b38ed048366da5416f0b
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: ff5ee02b11b6f0649e20b056c14fc8a9b3ba6276
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34819986"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025024"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
@@ -31,8 +31,7 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 > [!NOTE]
 > 변환할 수 없는 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요.
 
-
-### <a name="need-help-with-powershell"></a>PowerShell에 대한 도움말이 필요하십니까?
+## <a name="learn-powershell-basics"></a>PowerShell 기본 사항 알아보기
 
 PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 수 있습니다.
 
