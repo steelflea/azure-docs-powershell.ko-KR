@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 5/1/2018
-ms.openlocfilehash: 4f9c99152fd6ddc23aec005c8e8957e545e65246
-ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+ms.date: 05/01/2018
+ms.openlocfilehash: 72a0e9ca8562dc06a1fe2718658172ce9ee20f0e
+ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43250541"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43383943"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
 
@@ -22,7 +22,7 @@ ms.locfileid: "43250541"
 
 - [일반적인 주요 변경 내용](#general-breaking-changes)
     - [요구되는 최소 PowerShell 버전이 5.0으로 향상됨](#minimum-powershell-version-required-bumped-to-50)
-    - [기본적으로 사용되는 컨텍스트 자동 저장](#context-autosaved-enabled-by-default)
+    - [기본적으로 사용되는 컨텍스트 자동 저장](#context-autosave-enabled-by-default)
     - [태그 별칭 제거](#removal-of-tags-alias)
 - [AzureRM.Compute cmdlet의 주요 변경 내용](#breaking-changes-to-azurermcompute-cmdlets)
 - [AzureRM.DataLakeStore cmdlet의 주요 변경 내용](#breaking-changes-to-azurermdatalakestore-cmdlets)
