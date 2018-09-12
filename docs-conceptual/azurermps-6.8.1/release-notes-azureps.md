@@ -7,19 +7,68 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
-ms.date: 5/1/2018
-ms.openlocfilehash: 6043d17df1b5e91521bad31e65372c10ee6a5c6a
-ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+ms.date: 08/28/2018
+ms.openlocfilehash: f4f3141998be14f0b5b223aed1af283534bf061d
+ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43250629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43383841"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
 Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 ---
+## <a name="681---august-2018"></a>6.8.1 - 2018년 8월
+#### <a name="general"></a>일반
+* 기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.
+* 공용 런타임 어셈블리가 업데이트됨
+
+#### <a name="azurermapimanagement"></a>AzureRM.ApiManagement
+* 기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.
+* 문제 https://github.com/Azure/azure-powershell/issues/6603 해결
+    - Import-AzureRmApiManagementApi 및 *-AzureRmApiManagementCertificate cmdlet은 이제 상대 경로를 처리합니다.
+* 문제 https://github.com/Azure/azure-powershell/issues/6879 해결
+    - CertificateInformation은 Set-AzureRmApiManagement cmdlet이 제대로 작동 하게 하는 설정 가능한 속성입니다. 4.0.4-preview nuget으로 업그레이드하여 해결됨
+* 문제 https://github.com/Azure/azure-powershell/issues/6853 해결
+    - 제품에서 이름별 검색에 대해 Odata 필터가 수정됨
+* 문제 https://github.com/Azure/azure-powershell/issues/6814 해결
+    - API에서 이름별 검색에 대해 Odata 필터가 수정됨
+* AzureMonitor 로거에 대한 지원 추가
+
+
+#### <a name="azurermcompute"></a>AzureRM.Compute
+* 오류 출력에 대상이 없는 문제를 해결했습니다.
+* 관리 디스크를 사용하는 VM에 대한 저장소 계정 유형 문제 해결
+* 기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.
+* 예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정
+
+#### <a name="azurermnetwork"></a>AzureRM.Network
+* 기본 cmdlet 출력 표시를 테이블 뷰로 변경
+
+#### <a name="azurermpowerbiembedded"></a>AzureRM.PowerBIEmbedded
+* 일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정
+
+
+#### <a name="azurermresources"></a>AzureRM.Resources
+* MarketPlace에서 관리되는 응용 프로그램 생성 시의 문제 해결.
+
+#### <a name="azurermservicebus"></a>AzureRM.ServiceBus
+* 해결된 문제
+    - https://github.com/Azure/azure-powershell/issues/5058
+    - https://github.com/Azure/azure-powershell/issues/5055
+    - https://github.com/Azure/azure-powershell/issues/6891
+
+#### <a name="azurermtrafficmanager"></a>AzureRM.TrafficManager
+* 다중값 라우팅 메서드에 대한 지원이 추가됨
+    - 다중값 라우팅에 대한 새 매개 변수 'MaxReturn'
+* 서브넷 라우팅 메서드에 대한 지원이 추가됨
+    - 엔드포인트의 IP 주소 범위(서브넷)에 대한 지원
+* 프로필 내 사용자 지정 헤더에 대한 지원이 추가됨
+* 프로필 내 예상 상태 코드 범위에 대한 지원이 추가됨
+* 엔드포인트 내 사용자 지정 헤더에 대한 지원이 추가됨
+
 ## <a name="680---august-2018"></a>6.8.0 - 2018년 8월
 #### <a name="general"></a>일반
 * 기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.
