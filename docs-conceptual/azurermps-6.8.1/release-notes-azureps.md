@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
 ms.openlocfilehash: f4f3141998be14f0b5b223aed1af283534bf061d
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383841"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300836"
 ---
 # <a name="release-notes"></a>릴리스 정보
 

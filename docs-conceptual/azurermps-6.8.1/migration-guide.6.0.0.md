@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 72a0e9ca8562dc06a1fe2718658172ce9ee20f0e
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.openlocfilehash: 227bec0f7eb24b0941e9e21d37524b290c4b83a5
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383943"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46304168"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
 
@@ -41,11 +41,11 @@ ms.locfileid: "43383943"
 
 ### <a name="minimum-powershell-version-required-bumped-to-50"></a>요구되는 최소 PowerShell 버전이 5.0으로 향상됨
 
-이전에는 Azure PowerShell에서 모든 cmdlet을 실행하는 데 PowerShell 버전3.0 _이상_이 필요했습니다. 앞으로 이 요구 사항은 PowerShell 버전 5.0으로 향상됩니다. PowerShell 5.0으로 업그레이드하는 방법에 대한 자세한 내용은 [이 표](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell)를 참조하세요.
+이전에는 Azure PowerShell에서 모든 cmdlet을 실행하는 데 PowerShell 버전3.0 _이상_이 필요했습니다. 앞으로 이 요구 사항은 PowerShell 버전 5.0으로 향상됩니다. PowerShell 5.0으로 업그레이드하는 방법에 대한 자세한 내용은 [이 표](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell)를 참조하세요.
 
 ### <a name="context-autosave-enabled-by-default"></a>기본적으로 사용되는 컨텍스트 자동 저장
 
-컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 저장소입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/en-us/powershell/azure/context-persistence)를 참조하세요.
+컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 저장소입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/powershell/azure/context-persistence)를 참조하세요.
 
 이전에는 컨텍스트 자동 저장이 기본적으로 비활성화되었으므로 먼저 `Enable-AzureRmContextAutosave` cmdlet을 실행하여 컨텍스트 지속성을 설정해야 세션 간에 사용자의 Azure 인증 정보를 저장할 수 있었습니다. 앞으로 컨텍스트 자동 저장은 기본적으로 사용하도록 설정됩니다. 즉, _저장된 컨텍스트 자동 저장 설정이 없는_ 사용자는 다음에 로그인할 때 컨텍스트가 저장됩니다. 사용자는 `Disable-AzureRmContextAutosave` cmdlet을 사용하여 이 기능을 사용하지 않도록 선택할 수 있습니다.
 
@@ -255,8 +255,8 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - 액세스 토큰을 구성하는 개별 매개 변수는 더 이상 허용되지 않습니다. 대신 명시적 토큰 매개 변수(예: `Service` 또는 `Permissions`)를 다른 곳에 정의된 액세스 토큰 샘플에 해당하는 제네릭 `TemplateUri` 매개 변수(아마도 Storage PowerShell cmdlet을 사용하거나 Storage 설명서에 따라 수동으로 구성됨)로 바꿉니다. `ValidityPeriod` 매개 변수는 계속 유지됩니다.
 
 Azure Storage에 대한 공유 액세스 토큰 구성에 대한 자세한 내용은 다음의 각 설명서 페이지를 참조하세요.
-- [서비스 SAS 생성](https://docs.microsoft.com/en-us/rest/api/storageservices/Constructing-a-Service-SAS)
-- [계정 SAS 생성](https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-an-account-sas)
+- [서비스 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
+- [계정 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell
 # Old
