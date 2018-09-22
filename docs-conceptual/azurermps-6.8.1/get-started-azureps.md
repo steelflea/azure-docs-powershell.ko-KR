@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: 5354a75e969e084d6457d0566a516705f365476f
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: 9150089860f0934cb7344cac2cef38546cac28ad
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384093"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300819"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -95,7 +95,7 @@ StorageProfile           : {ImageReference, OsDisk, DataDisks}
 FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
 ```
 
-이 과정은 쉽습니다. 그러나 생성된 다른 항목 및 VM을 구성하는 방법이 궁금할 수 있습니다. 먼저 리소스 그룹에 대해 살펴보겠습니다.
+생성된 다른 항목 및 VM을 구성하는 방법이 궁금할 수 있습니다. 먼저 리소스 그룹에 대해 살펴보겠습니다.
 
 ```azurepowershell-interactive
 Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
@@ -233,7 +233,7 @@ Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azur
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
-이제 VM을 만들었으므로 SSH를 사용하여 앞에서 만든 VM의 공용 IP 주소로 새 Linux VM에 로그온할 수 있습니다.
+VM을 만들었으니, SSH를 사용하여 앞에서 만든 VM의 공용 IP 주소로 새 Linux VM에 로그온할 수 있습니다.
 
 ```bash
 ssh xx.xxx.xxx.xxx
@@ -346,7 +346,8 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-여러 리소스를 한 번에 삭제할 수도 있습니다. 예를 들어 다음 명령은 이 시작 자습서의 모든 샘플에 사용한 "MyResourceGroup" 리소스 그룹을 모두 삭제합니다. 그러면 리소스 그룹 및 내부의 모든 리소스를 제거합니다.
+여러 리소스를 한 번에 삭제할 수도 있습니다. 예를 들어 다음 명령은 지금까지 모든 샘플에 사용한 "MyResourceGroup" 리소스 그룹을 모두 삭제합니다.
+그룹의 모든 리소스도 삭제됩니다.
 
 ```azurepowershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
@@ -358,9 +359,9 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-이 작업을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
+리소스 수 및 유형에 따라 작업을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
-## <a name="get-samples"></a>샘플 가져오기
+## <a name="get-samples"></a>샘플 받기
 
 Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Linux VM](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Windows VM](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) 및 [SQL Database](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)에 대한 가장 일반적인 스크립트를 확인하세요.
 

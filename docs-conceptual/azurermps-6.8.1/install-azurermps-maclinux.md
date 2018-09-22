@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/06/2018
-ms.openlocfilehash: 6e7d447ea9672c174e3f1d103bc56c11a7f37192
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: 8347502df3c9cd6237a44293cfa3e5c051066940
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384045"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300666"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>macOS 또는 Linux에 Azure PowerShell 설치
 
@@ -76,7 +76,7 @@ Connect-AzureRmAccount
 ```
 
 모든 새 PowerShell 세션에 대해 이러한 단계를 반복해야 합니다. `AzureRM` 모듈을 자동으로 가져오려면 PowerShell 프로필을 설정해야 하며, 프로필 설정은 [프로필 정보](/powershell/module/microsoft.powershell.core/about/about_profiles)에서 알아볼 수 있습니다.
-macOS 및 Linux에서, `$Profile` 환경 변수를 통해 프로필 작업을 해야 합니다. Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerShell 세션 간에 사용자 자격 증명 유지](context-persistence.md)를 참조합니다.
+macOS 및 Linux에서, `$Profile` 환경 변수를 통해 프로필 작업을 해야 합니다. 세션 간에 Azure 로그인을 유지하는 방법을 보려면 [PowerShell 세션간에 사용자 자격 증명 유지](context-persistence.md)를 참조하세요.
 
 ## <a name="available-cmdlets"></a>사용할 수 있는 cmdlet
 
@@ -88,7 +88,7 @@ macOS 및 Linux에서, `$Profile` 환경 변수를 통해 프로필 작업을 �
 * Environment
   * 다른 기본 Microsoft Azure 환경 가져오기
   * 사용자 지정 환경 추가/설정/제거(예: Azure Stack 또는 Windows Azure 팩 환경)
-* 리소스 관리자 및 서비스 관리 인터페이스를 사용하여 Azure 서비스용 평면 cmdlet 관리
+* Resource Manager 및 클래식 배포 모델 인터페이스를 사용하여 Azure 서비스용 평면 cmdlet 관리
   * Virtual Machine
   * App Service(웹 사이트)
   * SQL Database

@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/08/2018
-ms.openlocfilehash: daa39ada5b4e969264b6e8596dc7b090bb196fd5
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: da8c8f37d8c60e9555b4627a7b5c3d1d6e7888fa
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383739"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300564"
 ---
 # <a name="query-output-of-azure-powershell-cmdlets"></a>Azure PowerShell cmdlet 쿼리 결과
 
@@ -52,7 +52,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 ## <a name="select-complex-nested-properties"></a>복잡한 중첩 속성 선택
 
-선택하려는 속성이 JSON 출력에서 깊숙이 중첩된 경우 해당 중첩 속성의 전체 경로를 제공해야 합니다. 다음 예제에서는 `Get-AzureRmVM` cmdlet에서 VM 이름 및 OS 형식을 선택하는 방법을 보여 줍니다.
+원하는 속성이 JSON 출력에 중첩된 경우 해당 속성의 전체 경로를 제공해야 합니다. 다음 예제에서는 `Get-AzureRmVM` cmdlet에서 VM 이름 및 OS 형식을 선택하는 방법을 보여 줍니다.
 
 ```azurepowershell-interactive
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}

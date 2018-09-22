@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
-ms.openlocfilehash: e1606ddb02adf1de2cb5496917d61755ac3dad23
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: 3f1c1bab5f9903ee7df813bf1ef043c7107ebe79
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384147"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300938"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>여러 Azure 구독 관리
 
@@ -68,4 +68,4 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
     CurrentStorageAccount :
     ```
 
-기본 구독을 설정한 이후부터는 모든 Azure PowerShell 명령이 기본 구독에 대해 실행됩니다.
+기본 구독을 설정한 후에는 모든 Azure PowerShell 명령이 기본 구독에 대해 실행됩니다.

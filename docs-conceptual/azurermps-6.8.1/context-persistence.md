@@ -6,15 +6,15 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
-ms.openlocfilehash: 9496ad0face2fbf4ecd685a6ee8e810a419b55aa
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/09/2018
+ms.openlocfilehash: 9867efc991f4a9efe880c0f449d9d2be1cddf8ef
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384215"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300632"
 ---
-# <a name="persisting-user-credentials-across-powershell-sessions"></a>PowerShell 세션에 걸쳐 사용자 자격 증명 유지
+# <a name="persist-user-credentials-across-powershell-sessions"></a>PowerShell 세션간에 사용자 자격 증명 유지
 
 Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
 
@@ -34,14 +34,14 @@ Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하�
   그러나 환경 설정을 사용하여 대상 국가, 정부 및 온-프레미스(Azure Stack) 클라우드도 대상으로 지정할 수 있습니다.
 - *자격 증명* - Azure에서 사용자 ID를 확인하고 Azure의 리소스에 액세스하기 위한 사용자의 권한 부여를 확인하는 데 사용되는 정보
 
-이전 릴리스에서는 새 PowerShell 세션을 열 때마다 Azure 컨텍스트를 만들어야 했습니다. Azure PowerShell v4.4.0부터는 새 PowerShell 세션을 열 때 언제든지 Azure 컨텍스트의 자동 저장 및 다시 사용을 활성화할 수 있습니다.
+이전 릴리스에서는 새 PowerShell 세션을 열 때마다 Azure 컨텍스트를 만들어야 했습니다. Azure PowerShell v4.4.0부터는 새 PowerShell 세션을 열 때마다 Azure 컨텍스트를 자동으로 저장할 수 있습니다.
 
-## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>다음 로그인을 위해 컨텍스트를 자동으로 저장
+## <a name="automatically-save-the-context-for-the-next-sign-in"></a>다음 로그인을 위해 컨텍스트를 자동으로 저장
 
-Azure PowerShell 버전 6.3.0부터는 세션 간에 자동으로 컨텍스트 정보를 유지합니다. PowerShell이 사용자의 컨텍스트 및 자격 증명을 기억하지 않도록 설정하려면 `Disable-AzureRmContextAutoSave`를 사용합니다. PowerShell 세션을 열 때마다 Azure에 로그인해야 합니다.
+버전 6.3.0 이상에서 Azure PowerShell은 세션 간에 자동으로 컨텍스트 정보를 유지합니다. PowerShell이 사용자의 컨텍스트 및 자격 증명을 기억하지 않도록 설정하려면 `Disable-AzureRmContextAutoSave`를 사용합니다. PowerShell 세션을 열 때마다 Azure에 로그인해야 합니다.
 
 Azure PowerShell이 PowerShell 세션을 닫은 후 사용자의 컨텍스트를 기억하도록 하려면 `Enable-AzureRmContextAutosave`를 사용합니다. 컨텍스트 및 자격 증명 정보는 사용자 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 숨겨진 특수 폴더에 자동으로 저장됩니다.
-그 후 새로운 PowerShell 세션마다 마지막 세션에 사용된 컨텍스트를 대상으로 합니다.
+새로운 PowerShell 세션마다 마지막 세션에 사용된 컨텍스트가 대상으로 지정됩니다.
 
 Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 제어가 가능합니다. 변경 내용을 현재 PowerShell 세션(`Process` 범위)에만 적용하거나 또는 모든 PowerShell 세션(`CurrentUser` 범위)에 적용하려는 경우가 있습니다. 이러한 옵션은 [컨텍스트 범위 사용](#Using-Context-Scopes)에서 자세히 설명합니다.
 
@@ -69,7 +69,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>컨텍스트 생성, 선택, 이름 바꾸기 및 제거
 
-컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 이후 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
+컨텍스트를 작성하려면 Azure에 로그인해야 합니다. `Connect-AzureRmAccount` cmdlet(또는 해당 별칭인 `Login-AzureRmAccount`)은 Azure PowerShell cmdlet에서 사용하는 기본 컨텍스트를 설정하고, 사용자는 이를 통해 자격 증명에서 허용하는 모든 테넌트 또는 구독에 액세스할 수 있습니다.
 
 로그인한 후 새 컨텍스트를 추가하려면 `Set-AzureRmContext`(또는 해당 별칭인 `Select-AzureRmSubscription`)를 사용합니다.
 
@@ -93,7 +93,7 @@ PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Co
 PS C:\> Remove-AzureRmContext Contoso2
 ```
 
-‘Contoso2’로 명명된 컨텍스트를 잊었습니다. 이 컨텍스트를 `Set-AzureRmContext`를 사용하여 나중에 다시 작성할 수 있습니다.
+‘Contoso2’로 명명된 컨텍스트를 잊었습니다. `Set-AzureRmContext`를 사용하여 나중에 다시 이 컨텍스트를 만들 수 있습니다.
 
 ## <a name="removing-credentials"></a>자격 증명 제거
 
@@ -130,7 +130,7 @@ $env:AzureRmContextAutoSave="true" | "false"
 - [Enable-AzureRmContextAutosave][enable] - powershell 세션 간에 컨텍스트를 저장할 수 있습니다.
   변경 내용이 전역 컨텍스트를 변경합니다.
 - [Disable-AzureRmContextAutosave][disable] - 컨텍스트 자동 저장을 해제합니다. 새로운 각 PowerShell 세션은 다시 로그인해야 합니다.
-- [Select-AzureRmContext][select] - 기본값으로 컨텍스트를 선택합니다. 모든 후속 cmdlet이 인증을 위해 이 컨텍스트에서 자격 증명을 사용합니다.
+- [Select-AzureRmContext][select] - 기본값으로 컨텍스트를 선택합니다. 모든 cmdlet이 인증을 위해 이 컨텍스트에서 자격 증명을 사용합니다.
 - [Disconnect-AzureRmAccount][remove-cred] - 계정과 관련된 자격 증명 및 컨텍스트를 모두 제거합니다.
 - [Remove-AzureRmContext][remove-context] - 명명된 컨텍스트의 이름을 바꿉니다.
 - [Rename-AzureRmContext][rename] - 기존 컨텍스트의 이름을 바꿉니다.

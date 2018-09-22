@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: caacf32af78b98e8d9d455a8c4dd0bbb698d355f
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 71a2554052f5a25ea86fe44b6dcf5d9343c81f3e
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024582"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46301108"
 ---
 # <a name="log-in-with-azure-powershell"></a>Azure PowerShell을 사용하여 로그인
 
@@ -51,11 +51,11 @@ Azure PowerShell에서는 여러 로그인 방법을 지원합니다. 가장 간
     CurrentStorageAccount :
     ```
 
-### <a name="log-in-using-an-azure-vm-managed-service-identity"></a>Azure VM 관리 서비스 ID를 사용하여 로그인
+### <a name="log-in-using-managed-identities-for-azure-resources"></a>Azure 리소스에 대한 관리 ID를 사용하여 로그인
 
-MSI(관리 서비스 ID)는 Azure Active Directory의 미리 보기 기능입니다. 로그인에 MSI 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다.
+Azure 리소스에 대한 관리 ID는 Azure Active Directory의 기능입니다. 로그인에 관리 ID 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다.
 
-MSI에 대한 자세한 내용은 [로그인 및 토큰 획득에 대한 Azure VM MSI(관리 서비스 ID)를 사용하는 방법](/azure/active-directory/msi-how-to-get-access-token-using-msi)을 참조하세요.
+Azure 리소스의 관리 ID에 대한 자세한 내용은 [Azure VM에서 Azure 리소스에 대한 관리 ID를 사용하여 액세스 토큰을 획득하는 방법](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)을 참조하세요.
 
 ## <a name="log-in-to-another-cloud"></a>다른 클라우드로 로그인
 

@@ -1,18 +1,18 @@
 ---
 title: Azure PowerShell 제거
 description: Azure PowerShell의 전체 제거를 수행하는 방법
-ms.date: 06/20/2018
+ms.date: 09/11/2018
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 92af0fdd8db451e2f0f092d66a3e296ad8d6a09e
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.openlocfilehash: 385dd0281185cfb9e7bdd2c98e4c557659fff384
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383671"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300768"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
 
@@ -32,9 +32,9 @@ MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이
 
 ## <a name="uninstall-from-powershell"></a>PowerShell에서 제거하기
 
-PowerShellGet을 사용하여 Azure PowerShell을 설치하는 경우 [Uninstall-module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용할 수 있습니다. 그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다. Azure PowerShell을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다. 여러 버전의 Azure PowerShell이 설치되어 있는 경우 제거가 복잡할 수 있습니다.
+PowerShellGet을 사용하여 Azure PowerShell을 설치하는 경우 [Uninstall-module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용할 수 있습니다. 그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다. Azure PowerShell을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다. 2개 이상의 Azure PowerShell 버전을 설치한 경우 제거가 복잡할 수 있습니다.
 
-다음 스크립트를 사용하면 단일 버전의 Azure PowerShell을 완전히 제거할 수 있습니다. 해당 스크립트는 PowerShell 갤러리를 쿼리하여 종속 하위 모듈의 목록을 가져옵니다. 그런 다음 스크립트는 올바른 버전의 각 하위 모듈을 제거합니다.
+다음 스크립트는 PowerShell 갤러리를 쿼리하여 종속 하위 모듈의 목록을 가져옵니다. 그런 다음 스크립트는 올바른 버전의 각 하위 모듈을 제거합니다.
 
 ```powershell
 function Uninstall-AllModules {

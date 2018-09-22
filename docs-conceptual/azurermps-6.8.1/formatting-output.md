@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/07/2018
-ms.openlocfilehash: 833c82903305f99be5ad43f707e22644bb568abe
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/09/2018
+ms.openlocfilehash: 99c635e7d94731d360b81c10b7f08086652ca81f
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383909"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46301074"
 ---
 # <a name="format-azurepowershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정
 

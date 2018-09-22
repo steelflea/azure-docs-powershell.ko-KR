@@ -1,18 +1,18 @@
 ---
 title: Azure PowerShell로 로그인
-description: Azure PowerShell 사용자나 서비스 주체로 로그인 또는 MSI로 로그인하는 방법.
+description: Azure PowerShell 사용자나 서비스 주체로 로그인 또는 Azure 리소스에 대한 관리 ID로 로그인하는 방법.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: af39fec226492c9ccf251c996b57e274de783178
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 530eafcd0d14dbfd790a22d80c5922f304f4e0b2
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100276"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300700"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -44,11 +44,11 @@ $pscredential = Get-Credential
 Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
 ```
 
-## <a name="sign-in-using-an-azure-vm-managed-service-identity"></a>Azure VM 관리 서비스 ID를 사용하여 로그인
+## <a name="sign-in-using-managed-identities-for-azure-resources"></a>Azure 리소스에 대한 관리 ID를 사용하여 로그인
 
-MSI(관리 서비스 ID)는 Azure Active Directory의 미리 보기 기능입니다. 로그인에 MSI 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다. MSI는 Azure 클라우드에서 실행 중인 가상 머신에서만 사용할 수 있습니다.
+Azure 리소스에 대한 관리 ID는 Azure Active Directory의 기능입니다. 로그인에 관리 ID 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다. 관리 ID는 Azure 클라우드에서 실행 중인 가상 머신에서만 사용할 수 있습니다.
 
-MSI에 대한 자세한 내용은 [로그인 및 토큰 획득에 대한 Azure VM MSI(관리 서비스 ID)를 사용하는 방법](/azure/active-directory/msi-how-to-get-access-token-using-msi)을 참조하세요.
+Azure 리소스의 관리 ID에 대한 자세한 내용은 [Azure VM에서 Azure 리소스에 대한 관리 ID를 사용하여 액세스 토큰을 획득하는 방법](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token)을 참조하세요.
 
 ## <a name="sign-in-to-another-cloud"></a>다른 클라우드로 로그인
 

@@ -6,22 +6,22 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/11/2017
-ms.openlocfilehash: a986824d952ccf6cd52dc86418899f3805a38973
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: a5dfcadf97dffcb8431d8480915b2bf4eda45923
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383603"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46301023"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 
 PowerShell에서는 [PowerShell 작업](/powershell/module/microsoft.powershell.core/about/about_jobs)을 통해 비동기 작업을 지원합니다.
-Azure PowerShell은 Azure에 대한 네트워크 호출 만들기 및 대기에 크게 의존합니다. 개발자는 스크립트에서 Azure에 대해 여러 개의 비중단 호출을 시도하거나 현재 세션을 차단하지 않고 REPL에서 Azure 리소스를 만들고자 하는 경우가 있습니다. 이러한 요구를 해결하기 위해 Azure PowerShell에는 최고 수준의 [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) 지원을 제공합니다.
+Azure PowerShell은 Azure에 대한 네트워크 호출 만들기 및 대기에 크게 의존합니다. 일부 경우에는 비차단 호출을 수행해야 할 수 있습니다. 이러한 요구를 해결하기 위해 Azure PowerShell은 최고 수준의 [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) 지원을 제공합니다.
 
 ## <a name="context-persistence-and-psjobs"></a>컨텍스트 지속성 및 PSJob
 
-PSJob은 별도의 프로세스로 실행되므로 Azure 연결에 대한 정보를 작성한 작업과 적절하게 공유해야 합니다. `Connect-AzureRmAccount`로 Azure 계정을 PowerShell 세션에 연결하면 컨텍스트를 작업에 전달할 수 있습니다.
+PSJob은 개별 프로세스로 실행되므로 Azure 연결을 공유해야 합니다. `Connect-AzureRmAccount`로 Azure 계정에 로그인한 후 작업에 컨텍스트를 전달합니다.
 
 ```azurepowershell-interactive
 $creds = Get-Credential
@@ -63,7 +63,7 @@ ResourceGroupName    Name Location          VmSize  OsType     NIC ProvisioningS
 MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Creating
 ```
 
-이후에 완료되면, `Receive-Job`으로 작업 결과를 얻을 수 있습니다.
+작업이 완료되면 `Receive-Job`으로 작업 결과를 가져옵니다.
 
 > [!NOTE]
 > `Receive-Job`은 `-AsJob` 플래그가 없는 것처럼 cmdlet으로부터 결과를 반환합니다.
@@ -92,7 +92,7 @@ FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 
 ## <a name="example-scenarios"></a>예제 시나리오
 
-한 번에 여러 VM을 만듭니다.
+한 번에 여러 VM을 만들기:
 
 ```azurepowershell-interactive
 $creds = Get-Credential
@@ -107,7 +107,7 @@ Get-Job | Wait-Job
 Get-AzureRmVM
 ```
 
-이 예제에서 `Wait-Job` cmdlet을 사용하면 작업이 실행되는 동안 스크립트가 일시 중지됩니다. 스크립트는 모든 작업이 완료되면 실행을 계속합니다. 이렇게 하면 여러 작업을 병렬로 실행한 다음 완료될 때까지 기다렸다가 계속 진행할 수 있습니다.
+이 예제에서 `Wait-Job` cmdlet을 사용하면 작업이 실행되는 동안 스크립트가 일시 중지됩니다. 스크립트는 모든 작업이 완료되면 실행을 계속합니다. 여러 작업이 병렬로 실행되고 스크립트가 완료될 때까지 기다린 후 작업을 계속합니다.
 
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command

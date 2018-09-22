@@ -6,17 +6,17 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/20/2018
-ms.openlocfilehash: 27ac176d8bd0b142b7740b2ba6793edb500a8af3
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/09/2018
+ms.openlocfilehash: 0ed8f50abbcb2aa00192196f19004446dc696b5d
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383569"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46304015"
 ---
 # <a name="run-azure-powershell-in-a-docker-container"></a>Docker 컨테이너에서 Azure PowerShell 실행
 
-Azure PowerShell을 쉽게 이동 가능한 환경에서 실행되도록 하기 위해, Microsoft는 미리 설치된 Azure PowerShell을 사용하여 Docker 이미지를 게시합니다. 이러한 이미지는 PowerShell Core를 실행하는 Linux 게스트 또는 PowerShell Core 또는 PowerShell 5를 사용하는 Windows 게스트를 제공합니다.
+Microsoft는 Azure PowerShell이 미리 설치된 상태로 Docker 이미지를 게시합니다. 이러한 이미지는 Azure PowerShell 실험에 사용하거나 격리된 환경에서 실행할 수 있습니다. PowerShell Core 및 PowerShell 5를 모두 실행하는 이미지는 다음과 같습니다. 
 
 | Environment | Docker 이미지 |
 |-------------|--------------|
@@ -24,7 +24,7 @@ Azure PowerShell을 쉽게 이동 가능한 환경에서 실행되도록 하기 
 | PowerShell Core(Windows) | [azuresdk/azure-powershell-core:nanoserver](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
 | PowerShell Core(Linux) | [azuresdk/azure-powershell-core:nanoserver](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
 
-이러한 컨테이너 중 하나를 실행하려면 `docker run -it $ImageName`을(를) 사용하여 대화형 터미널을 가져옵니다. 예를 들어 Linux 컨테이너에서 PowerShell Core를 실행하려면 다음을 사용 합니다.
+이러한 컨테이너를 실행하려면 `docker run -it $ImageName`을 사용하여 대화형 터미널을 가져옵니다. 예들를 어 PowerShell Core에서 Linux 컨테이너를 실행하려면 다음을 수행합니다.
 
 ```powershell
 docker run -it azuresdk/azure-powershell-core:latest

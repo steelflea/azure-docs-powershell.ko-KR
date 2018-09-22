@@ -7,30 +7,30 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
-ms.openlocfilehash: 76d690f3a7206857861e1ee26d8284de419dc70a
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/09/2018
+ms.openlocfilehash: 4c1bf93d69e186699f434bb979af56fcb1d20e8a
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383705"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46301142"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
-Azure PowerShell을 사용하여 앱 또는 서비스를 관리하려는 경우 고유한 자격 증명 대신 AAD(Azure Active Directory) 서비스 주체에서 실행해야 합니다. 이 항목에서는 Azure PowerShell을 사용하여 보안 주체를 만드는 과정을 설명합니다.
+Azure PowerShell을 사용하여 앱 또는 서비스를 관리하려는 경우 고유한 자격 증명 대신 AAD(Azure Active Directory) 서비스 주체에서 실행해야 합니다. 이 문서에서는 Azure PowerShell을 사용하여 보안 주체를 만드는 과정을 설명합니다.
 
 > [!NOTE]
 > Azure Portal을 통해 서비스 주체를 만들 수도 있습니다. 자세한 내용은 [포털을 사용하여 리소스에 액세스할 수 있는 Active Directory 응용 프로그램 및 서비스 주체 만들기](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 참조하세요.
 
 ## <a name="what-is-a-service-principal"></a>'서비스 주체'란?
 
-Azure 서비스 주체는 특정 Azure 리소스에 액세스하기 위해 사용자가 만든 앱, 서비스 및 자동화 도구에서 사용하는 보안 ID입니다. 특정한 역할이 있는 '사용자 ID'(사용자 이름과 암호 또는 인증서)이며 엄격하게 제어됩니다. 일반 사용자 ID와 달리 특정 작업만을 수행해야 합니다. 해당 관리 작업을 수행하는 데 필요한 최소 사용 권한 수준을 부여하는 경우 보안이 향상됩니다.
+Azure 서비스 주체는 특정 Azure 리소스에 액세스하기 위해 사용자가 만든 앱, 서비스 및 자동화 도구에서 사용하는 보안 ID입니다. 특정한 역할이 있는 '사용자 ID'(사용자 이름과 암호 또는 인증서)이며 엄격하게 제어됩니다. 일반 사용자 ID와 달리 서비스 주체는 특정 작업만 수행하면 됩니다. 해당 관리 작업을 수행하는 데 필요한 최소 사용 권한 수준을 부여하는 경우 보안이 향상됩니다.
 
 ## <a name="verify-your-own-permission-level"></a>고유한 사용 권한 수준 확인
 
-먼저 Azure Active Directory와 Azure 구독에 대한 충분한 권한이 있어야 합니다. 특히, Active Directory에서 앱을 만들고 서비스 주체에 역할을 할당할 수 있어야 합니다.
+먼저 Azure Active Directory와 Azure 구독에 대한 충분한 권한이 있어야 합니다. Active Directory에서 앱을 만들고 서비스 주체에 역할을 할당할 수 있어야 합니다.
 
-계정에 적절한 사용 권한이 있는지를 확인하는 가장 쉬운 방법은 포털을 통하는 것입니다. [포털에서 필요한 사용 권한 확인](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)을 참조하세요.
+계정에 올바른 사용 권한이 있는지를 확인하는 가장 쉬운 방법은 포털을 통하는 것입니다. [포털에서 필요한 사용 권한 확인](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)을 참조하세요.
 
 ## <a name="create-a-service-principal-for-your-app"></a>앱의 서비스 주체 만들기
 
@@ -41,7 +41,7 @@ Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다
 
 ### <a name="get-information-about-your-application"></a>응용 프로그램에 대한 정보 가져오기
 
-`Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 검색할 수 있습니다.
+`Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 가져올 수 있습니다.
 
 ```azurepowershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
@@ -93,14 +93,14 @@ Type                  : ServicePrincipal
 
 ### <a name="sign-in-using-the-service-principal"></a>서비스 주체를 사용하여 로그인
 
-이제 제공한 *appId* 및 *암호*를 사용하여 앱에 새로운 서비스 주체로 로그인할 수 있습니다. 계정에 테넌트 ID를 제공해야 합니다. 개인 자격 증명을 사용하여 Azure에 로그인하는 경우 테넌트 ID가 표시됩니다.
+이제 제공한 *appId* 및 *암호*를 사용하여 앱에 새로운 서비스 주체로 로그인할 수 있습니다. 또한 서비스 주체에 대한 테넌트 ID가 필요합니다. 개인 자격 증명을 사용하여 Azure에 로그인하는 경우 테넌트 ID가 표시됩니다. 서비스 주체로 로그인하려면 다음 명령을 사용합니다.
 
 ```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
 Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-새 PowerShell 세션에서 이 명령을 실행합니다. 성공적으로 로그인한 후에 다음과 같은 출력이 표시됩니다.
+로그인이 성공한 후 다음과 같은 출력이 표시됩니다.
 
 ```output
 Environment           : AzureCloud

@@ -6,15 +6,15 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/05/2017
-ms.openlocfilehash: ac571363d79c83b268b5c25f65b14f16d4b86e71
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: cb1c49682ea1bfd5fa43baafe4cb0f7fc0c46020
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383773"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300802"
 ---
-# <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
+# <a name="use-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 
 Azure PowerShell 팀은 Azure의 개발자 도구(특히 CLI)에 중점을 두고 Azure PowerShell 환경에 많은 향상된 기능을 실험하고 있습니다.
 
@@ -89,7 +89,7 @@ Azure CLI 2.0은 최종 사용자가 더 쉽게 시나리오를 “시작”할 
 
 예를 들어 “웹앱 만들기” 시나리오에는 기존 git 리포지토리에 “azure” 원격을 자동으로 추가하는 `-Git` 또는 `-AddRemote` 스위치가 있을 수 있습니다.
 
-- 설정 가능한 기본값 - 사용자는 `-ResourceGroupName` 및 `-Location`과 같은 특정 유비쿼터스 매개 변수의 기본값을 설정할 수 있어야 합니다.
+- 설정 가능한 기본값 - 사용자가 `-ResourceGroupName` 및 `-Location`과 같은 일반 매개 변수의 기본값을 설정할 수 있어야 합니다.
 
 - 크기 기본값 - 리소스 “크기”는 다양한 리소스 제공자가 서로 다른 이름을 사용하기 때문에 사용자가 혼란스러울 수 있습니다(예: “Standard\_DS1\_v2” 또는 “S1”). 그러나 대부분의 사용자는 비용에 더 민감합니다. 따라서 가격 책정 일정에 따라 “범용” 크기를 정의하는 것이 적합합니다. 사용자가 특정 크기를 정할 수도 있고, 아니면 Azure PowerShell에서 리소스 예산에 따라 _최상의 옵션_을 선택하도록 할 수도 있습니다.
 

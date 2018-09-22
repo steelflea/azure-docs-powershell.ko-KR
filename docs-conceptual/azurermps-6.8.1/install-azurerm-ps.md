@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/15/2018
-ms.openlocfilehash: 50b05e5f25b6e3e1c815f6b26f1b53b84cd0b7da
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: 970742c91b327a1310ef5097edef40287ebf9f9b
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384011"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46304083"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -74,7 +74,7 @@ Connect-AzureRmAccount
 ```
 
 모든 새 PowerShell 세션에 대해 이러한 단계를 반복해야 합니다. `AzureRM` 모듈을 자동으로 가져오려면 PowerShell 프로필을 설정해야 하며, 프로필 설정은 [프로필 정보](/powershell/module/microsoft.powershell.core/about/about_profiles)에서 알아볼 수 있습니다.
-Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerShell 세션 간에 사용자 자격 증명 유지](context-persistence.md)를 참조합니다.
+세션 간에 Azure 로그인을 유지하는 방법을 보려면 [PowerShell 세션간에 사용자 자격 증명 유지](context-persistence.md)를 참조하세요.
 
 ## <a name="update-the-azure-powershell-module"></a>Azure PowerShell 모듈 업데이트
 
@@ -88,7 +88,7 @@ Azure PowerShell의 이전 버전을 시스템에서 제거하려면, [Azure Pow
 
 ## <a name="use-multiple-versions-of-azure-powershell"></a>여러 버전의 Azure PowerShell 사용
 
-여러 버전의 Azure PowerShell을 설치하는 것은 가능합니다. 온-프레미스 Azure Stack 리소스로 작업하거나 PowerShell 5.0으로 업데이트할 수 없는 이전 버전의 Windows를 실행하거나 Azure 클래식 배포 모델을 사용하는 경우 둘 이상의 버전이 필요할 수 있습니다. 이전 버전을 설치하려면 `-RequiredVersion` 인수를 설치 시 제공합니다.
+Azure PowerShell은 버전을 2개 이상 설치할 수 없습니다. 온-프레미스 Azure Stack 리소스로 작업하거나 이전 버전의 Windows를 실행하거나 Azure 클래식 배포 모델을 사용하는 경우 둘 이상의 버전이 필요할 수 있습니다. 이전 버전을 설치하려면 `-RequiredVersion` 인수를 설치 시 제공합니다.
 
 ```powershell
 # Install version 1.2.9 of Azure PowerShell
@@ -104,7 +104,7 @@ Import-Module -Name AzureRM -RequiredVersion 1.2.9
 
 ## <a name="provide-feedback"></a>피드백 제공
 
-Azure Powershell 사용 중 버그 발생 시, [ GitHub에서 문제 제출](https://github.com/Azure/azure-powershell/issues)을 해 주십시오.
+Azure Powershell 사용 중 버그 발생 시, [ GitHub에서 문제를 제출](https://github.com/Azure/azure-powershell/issues)하세요.
 명령줄에서 피드백을 제공하려면 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 사용해 보세요.
 
 ## <a name="next-steps"></a>다음 단계

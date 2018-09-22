@@ -7,13 +7,13 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 08/31/2017
-ms.openlocfilehash: ef4f9b416454471f8c9476f0bbccbcca20a22000
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.date: 09/11/2018
+ms.openlocfilehash: fcb6213dab12f94796ab0ca9de4d5e391d570f4f
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43384181"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46304134"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
@@ -33,10 +33,10 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 
 ## <a name="learn-powershell-basics"></a>PowerShell 기본 사항 알아보기
 
-PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 수 있습니다.
+PowerShell에 대해 익숙하지 않으면 PowerShell 소개가 도움이 될 수 있습니다.
 
-* [PowerShell 설치](/powershell/scripting/installing-windows-powershell)
-* [PowerShell 스크립팅](/powershell/scripting/scripting-with-windows-powershell)
+* [PowerShell 설치](/powershell/scripting/setup/installing-windows-powershell)
+* [PowerShell 스크립팅](/powershell/scripting/powershell-scripting)
 
 [PowerShell 기본 사항: (1부) PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) 비디오를 시청할 수도 있습니다.
 
