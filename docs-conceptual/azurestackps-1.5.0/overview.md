@@ -8,47 +8,63 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: fb892daeafb1365ea62324392ac806cf9f3d39cf
+ms.openlocfilehash: 18861f0e5232e0b505767aa9609099afe88f9477
 ms.sourcegitcommit: 19dffee617477001f98d43e39a50ce1fad087b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2018
-ms.locfileid: "47179142"
+ms.locfileid: "47178632"
 ---
-# <a name="azure-stack-module-130"></a>Azure Stack 모듈 1.3.0
+# <a name="azure-stack-module-150"></a>Azure Stack 모듈 1.5.0
 
 ## <a name="requirements"></a>Requirements:
-최소 지원 Azure Stack 버전은 1804입니다.
+최소 지원 Azure Stack 버전은 1808입니다.
 
-참고: 이전 버전을 사용하는 경우 1.2.11 버전을 설치하세요.
+참고: 이전 버전을 사용하는 경우 1.4.0 버전을 설치하세요.
 
 ## <a name="known-issues"></a>알려진 문제:
 
-- 경고 닫기에는 Azure Stack 버전 1803이 필요합니다.
-- 일부 저장소 cmdlet는 Azure Stack 버전 1804가 필요합니다.
 - New-AzsOffer는 상태를 공개하여 제안을 만들 수 없습니다. 상태를 변경하려면 Set-AzsOffer cmdlet을 나중에 호출해야 합니다.
 - 재배포하지 않고는 IP 풀을 제거할 수 없습니다.
 
-## <a name="breaking-changes"></a>주요 변경 내용
-1.2.11에서 마이그레이션하는 호환성이 손상되는 변경은 모두 여기 https://aka.ms/azspowershellmigration에 문서화되어 있습니다.
-
 ## <a name="install"></a>설치
 ```
-# Remove previous Versions
+# Remove previous versions of AzureStack modules
+Uninstall-Module -Name AzureStack -Force 
 Uninstall-Module AzureRM.AzureStackAdmin -Force
 Uninstall-Module AzureRM.AzureStackStorage -Force
-Uninstall-Module -Name AzureStack -Force 
+Get-Module Azs.* -ListAvailable | Uninstall-Module -Force
 
 
 # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRm.BootStrapper
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2017-03-09-profile -Force
+Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.3.0
+Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ```
+
+##<a name="release-notes"></a>릴리스 정보
+* 모든 Azure Stack Admin 모듈은 AzureRm.Profile 모듈에 대한 종속성 이상으로 업데이트됩니다.
+* 모든 모듈의 중첩된 리소스 이름 처리에 대한 지원
+* ErrorActionPreference를 Stop으로 재정의되는 모든 모듈에서 버그 수정
+* Azs.Compute.Admin 모듈
+    * 새 할당량 속성이 추가되어 관리 디스크를 지원
+    * 디스크 마이그레이션 관련 cmdlet 또한 추가
+    * 플랫폼 이미지 및 VM 확장 개체의 추가 속성
+* Azs.Fabric.Admin 
+    * 배율 단위 노드를 추가하는 새 cmdlet
+* Azs.Backup.Admin
+    * Set-AzsBackupShare는 이제 cmdlet Set-AzsBackupConfiguration에 대한 별칭입니다.
+    * Get-AzsBackupLocation은 이제 cmdlet Get-AzsBackupConfiguration에 대한 별칭입니다.
+    * Set-AzsBackupConfiguration, BackupShare 매개 변수는 이제 매개 변수 경로에 대한 별칭입니다.
+* Azs.Subscriptions
+    * Get-AzsDelegatedProviderOffer, OfferName 매개 변수는 이제 제안에 대한 별칭입니다.
+* Azs.Subscriptions.Admin
+    * Get-AzsDelegatedProviderOffer, OfferName 매개 변수는 이제 제안에 대한 별칭입니다.
+
 ## <a name="content"></a>콘텐츠:
 ### <a name="azure-bridge"></a>Azure Bridge
 Azure의 이미지를 배포할 수 있게 해주는 Azure Stack AzureBridge 관리자 모듈의 미리 보기 릴리스입니다.
@@ -63,7 +79,7 @@ Azure의 이미지를 배포할 수 있게 해주는 Azure Stack AzureBridge 관
 Azure Stack 시스템의 집계 데이터 사용량을 볼 수 있는 방법을 제공하는 Azure Stack Commerce 관리자 모듈의 미리 보기 릴리스입니다.
 
 ### <a name="compute"></a>컴퓨팅
-컴퓨팅 할당량, 플랫폼 이미지 및 가상 컴퓨터 확장을 관리하는 기능을 제공하는 Azure Stack Compute 관리자 모듈의 미리 보기 릴리스입니다.
+컴퓨팅 할당량, 플랫폼 이미지, 관리 디스크 및 가상 머신 확장을 관리하는 기능을 제공하는 Azure Stack Compute 관리자 모듈의 미리 보기 릴리스입니다.
 
 ### <a name="fabric"></a>Fabric
 관리자가 다음 작업을 위해 인프라 구성 요소를 보고 관리할 수 있게 해주는 Azure Stack Fabric 관리자 모듈의 미리 보기 릴리스입니다.

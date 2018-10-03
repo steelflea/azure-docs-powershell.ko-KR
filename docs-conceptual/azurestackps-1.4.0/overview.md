@@ -1,3 +1,20 @@
+---
+title: Azure Stack Admin PowerShell 개요 | Microsoft Docs
+description: 설치 및 구성에 대한 설명을 포함한 Azure Stack Admin PowerShell 개요입니다.
+author: bganapa
+ms.author: bganapa
+manager: knithinc
+ms.devlang: powershell
+ms.topic: conceptual
+ms.manager: knithinc
+ms.date: 09/21/2018
+ms.openlocfilehash: 72d147f5bc9c882083dda6b33b1c89663fd2eb34
+ms.sourcegitcommit: 19dffee617477001f98d43e39a50ce1fad087b74
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47178802"
+---
 # <a name="azure-stack-module-140"></a>Azure Stack 모듈 1.4.0
 
 ## <a name="requirements"></a>Requirements:
