@@ -7,16 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: abf6aad6a04ffcf15b8fc38b47477caa1a04e015
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: b23d8071c3c91bee1387c54cce1a34004ecdd9ad
+ms.sourcegitcommit: f6f5e256143aa6c097de3e57e930d8badea49f30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025398"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49399164"
 ---
 # <a name="other-installation-methods"></a>다른 설치 방법
 
-Azure PowerShell에는 여러 설치 방법이 있습니다. PowerShell 갤러리와 PowerShellGet을 사용하는 것이 좋습니다. Azure PowerShell은 웹 플랫폼 설치 관리자(WebPI)를 사용하거나 GitHub에서 사용할 수 있는 MSI 파일을 사용하여 Windows에 설치할 수 있습니다. Azure PowerShell은 Docker 컨테이너에도 설치할 수 있습니다.
+Azure PowerShell에는 여러 설치 방법이 있습니다. PowerShell 갤러리와 PowerShellGet을 사용하는 것이 좋습니다. Azure PowerShell은 웹 플랫폼 설치 관리자(WebPI)를 사용하거나 GitHub에서 사용할 수 있는 MSI 파일을 사용하여 Windows에 설치할 수 있습니다.
 
 ## <a name="install-on-windows-using-the-web-platform-installer"></a>웹 플랫폼 설치 관리자를 사용하여 Windows에 설치
 
@@ -64,28 +64,3 @@ Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.ps
 
 Azure PowerShell은 [GitHub](https://github.com/Azure/azure-powershell/releases/latest)에서 사용할 수 있는 MSI 파일을 사용하여 설치할 수 있습니다. 이전 버전의 Azure 모듈이 설치된 경우 설치 관리자에서 자동으로 제거합니다. MSI 패키지는 `$env:ProgramFiles\WindowsPowerShell\Modules`에서 모듈을 설치하지만 특정 버전 폴더를 만들지는 않습니다.
 
-## <a name="install-in-a-docker-container"></a>Docker 컨테이너에 사용
-
-Microsoft는 Azure PowerShell로 미리 구성된 Docker 이미지를 유지합니다.
-
-`docker run`으로 컨테이너를 실행합니다.
-
-```powershell
-docker run azuresdk/azure-powershell
-```
-
-또한 Microsoft는 PowerShell Core 컨테이너로 cmdlet의 하위 집합을 유지합니다.
-
-Mac/Linux의 경우 `latest` 이미지를 사용합니다.
-
-```bash
-docker run azuresdk/azure-powershell-core:latest
-```
-
-Windows의 경우 `nanoserver` 이미지를 사용합니다.
-
-```powershell
-docker run azuresdk/azure-powershell-core:nanoserver
-```
-
-Azure PowerShell은 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 `Install-Module`을 통해 이미지에 설치됩니다.
