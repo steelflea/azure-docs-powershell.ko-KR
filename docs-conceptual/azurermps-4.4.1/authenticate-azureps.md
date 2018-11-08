@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: c3131d3516e50123c48b13dc9e04c0b507a63a58
-ms.sourcegitcommit: ff44dec6418a449757bded3c6ebe0a7d4c05ee6e
+ms.openlocfilehash: d3e467714b1a9e4840f2a34b57eabfa5a2c6eaec
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737393"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51212049"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -22,7 +22,7 @@ Azure PowerShell에서는 여러 인증 방법을 지원합니다. 가장 간단
 
 대화형으로 로그인하려면 [Connect-AzureRmAccount](/powershell/module/azurerm.profile/connect-azurermaccount) cmdlet을 사용합니다.
 
-```azurepowershell
+```azurepowershell-interactive
 Connect-AzureRmAccount
 ```
 

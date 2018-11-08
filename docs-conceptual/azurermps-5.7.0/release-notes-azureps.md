@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: f69a0b79ac17c3a6502abfa9bbc5370693ad508e
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: 1a9d38cd60ba596c085e5ee9f8d815e238362b1f
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854276"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211947"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -29,13 +29,13 @@ ARM Cmdlet용 갤러리 모듈: [링크](https://www.powershellgallery.com/packa
 
 PowerShell 갤러리에서 `AzureRM`을 설치하려면 다음 명령을 실행합니다.
 
-```powershell
+```powershell-interactive
 Install-Module -Name AzureRM -Repository PSGallery -Force
 ```
 
 이전 버전의 `AzureRM`에서 업데이트하려면 다음 명령을 실행합니다.
 
-```powershell
+```powershell-interactive
 Update-Module -Name AzureRM
 ```
 
@@ -667,7 +667,7 @@ Update-Module -Name AzureRM
   - 새 Cmdlet Update-AzureRmPowerBIEmbeddedCapacity - PowerBI Embedded Capacity의 인스턴스를 수정합니다.
 * 프로필
   - USGovernmentActiveDirectoryEndpoint가 https://login.microsoftonline.us/로 업데이트됨
-    - Azure Government 끝점 매핑에 대한 보다 자세한 내용은 다음을 참조하세요. https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
+    - Azure Government 엔드포인트 매핑에 대한 보다 자세한 내용은 다음을 참조하세요. https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
     - cmdlet에 대한 -AsJob 지원이 추가됨. 선택된 cmdlet을 사용하여 백그라운드에서 실행하고 작업을 반환하여 진행률 추적 및 제어
     - -AsJob 매개 변수가 Get-AzureRmSubscription cmdlet에 추가됨
 * RecoveryServices.Backup

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 3a0d3d1d970f4458e66167fb55c840598ce59e13
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 3114f9e9b36dc374f9fb2d402c448cff7fef0aa3
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100429"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211454"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -64,7 +64,7 @@ Azure 계정에 로그인하면 Azure PowerShell cmdlet을 사용하여 구독�
 
 Azure의 westeurope 지역에 "MyResourceGroup"이라는 이름의 리소스 그룹을 만듭니다. 이렇게 하려면 다음 명령을 입력합니다.
 
-```powershell
+```powershell-interactive
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
@@ -84,7 +84,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 
 먼저 가상 네트워크 만들기 프로세스에 사용할 서브넷 구성을 만들어야 합니다. 또한 이 VM에 연결할 수 있도록 공용 IP 주소를 만듭니다. 네트워크 보안 그룹을 만들어서 공용 주소에 대한 액세스를 보호합니다. 마지막으로 이전 리소스를 모두 사용하여 가상 NIC를 만듭니다.
 
-```powershell
+```powershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -120,14 +120,14 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
 
 먼저 OS의 자격 증명 집합이 필요합니다.
 
-```powershell
+```powershell-interactive
 # Create user object
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 ```
 
 이제 필요한 리소스를 만들었으므로 VM을 만들 수 있습니다. 이 단계에서는 VM 구성 개체를 만든 다음 구성을 사용하여 VM을 만듭니다.
 
-```powershell
+```powershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Windows -ComputerName $vmName -Credential $cred |
@@ -148,7 +148,7 @@ RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 
 이제 원격 데스크톱 및 VM의 공용 IP 주소를 사용하여 새로 만든 Windows Server VM에 로그온합니다. 다음 명령은 이전 스크립트에서 만든 공용 IP 주소를 표시합니다.
 
-```powershell
+```powershell-interactive
 $publicIp | Select-Object Name,IpAddress
 ```
 
@@ -160,7 +160,7 @@ mypublicdns1400512543 xx.xx.xx.xx
 
 Windows 기반 시스템을 사용하는 경우 명령줄에서 mstsc 명령을 사용하여 다음과 같은 일을 할 수 있습니다.
 
-```powershell
+```powershell-interactive
 mstsc /v:xx.xxx.xx.xxx
 ```
 
@@ -174,7 +174,7 @@ Linux VM을 만들려면 새 먼저 필요한 리소스를 만들고 구성에 �
 
 먼저 가상 네트워크 만들기 프로세스에 사용할 서브넷 구성을 만들어야 합니다. 또한 이 VM에 연결할 수 있도록 공용 IP 주소를 만듭니다. 네트워크 보안 그룹을 만들어서 공용 주소에 대한 액세스를 보호합니다. 마지막으로 이전 리소스를 모두 사용하여 가상 NIC를 만듭니다.
 
-```powershell
+```powershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -214,7 +214,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
 
 이제 필요한 리소스를 만들었으므로 VM을 만들 수 있습니다. 이 단계에서는 VM 구성 개체를 만든 다음 구성을 사용하여 VM을 만듭니다.
 
-```powershell
+```powershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
@@ -272,13 +272,13 @@ my-login@MyLinuxVM:../../..$
 
 예를 들어 Azure 네트워크 부하 분산 장치를 만든 후 새로 만든 VM과 연결하려면 다음 만들기 명령을 사용합니다.
 
-```powershell
+```powershell-interactive
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 다음 명령을 사용하여 인프라에 대한 새 개인 Virtual Network(일반적으로 Azure 내에서는 "VNet"이라고 함)를 만들 수도 있습니다.
 
-```powershell
+```powershell-interactive
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
 $vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
@@ -288,7 +288,7 @@ Azure 및 Azure PowerShell이 강력한 이유는 클라우드 기반 인프라�
 
 예를 들어 Azure PowerShell을 사용하여 Azure AppService를 만들 수 있습니다. Azure AppService는 인프라에 대한 걱정 없이 웹앱을 호스트하는 훌륭한 방법을 제공하는 관리형 플랫폼 서비스입니다. Azure AppService를 만든 후에는 다음 명령을 사용하여 AppService 내에서 두 개의 새 Azure Web Apps를 만들 수 있습니다.
 
-```powershell
+```powershell-interactive
 # Create an Azure AppService that we can host any number of web apps within
 New-AzureRmAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
 
@@ -301,7 +301,7 @@ New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -Resource
 
 `Get-AzureRmResource` cmdlet을 사용하여 Azure에서 실행되는 리소스를 나열할 수 있습니다. 다음 예제에서는 새 리소스 그룹에서 생성된 리소스를 표시합니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmResource |
   Where-Object ResourceGroupName -eq myResourceGroup |
     Select-Object Name,Location,ResourceType
@@ -330,7 +330,7 @@ micromyresomywi032907510                              westeurope Microsoft.Stora
 
 Azure 계정을 정리하려면 이 예제에서 만든 리소스를 제거합니다. `Remove-AzureRm*` cmdlet을 사용하여 더 이상 필요 없는 리소스를 삭제할 수 있습니다. 만든 Windows VM을 제거하려면 다음 명령을 사용합니다.
 
-```powershell
+```powershell-interactive
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
@@ -344,7 +344,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 
 여러 리소스를 한 번에 삭제할 수도 있습니다. 예를 들어 다음 명령은 이 시작 자습서의 모든 샘플에 사용한 "MyResourceGroup" 리소스 그룹을 모두 삭제합니다. 그러면 리소스 그룹 및 내부의 모든 리소스를 제거합니다.
 
-```powershell
+```powershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 

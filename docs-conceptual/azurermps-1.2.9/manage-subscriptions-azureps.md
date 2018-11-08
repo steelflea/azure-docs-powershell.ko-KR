@@ -8,12 +8,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 00f346c2e90fb6615dd9eac96e13f4cfc243d204
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 8869b700e513d6fc07e69de1dbfe852bd2a52df1
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024480"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211063"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>여러 Azure 구독 관리
 
@@ -21,7 +21,7 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 1. 계정의 모든 구독 목록을 가져옵니다.
 
-    ```powershell
+    ```powershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -50,13 +50,13 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 2. 기본 구독을 설정합니다.
 
-    ```powershell
+    ```powershell-interactive
     Select-AzureRmSubscription -SubscriptionName "My Demos"
     ```
 
 3. `Get-AzureRmContext` cmdlet을 실행하여 변경 내용을 확인합니다.
 
-    ```powershell
+    ```powershell-interactive
     Get-AzureRmContext
     ```
 

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: 3cb6497dd053c7ae5d256ae4b562001ddecaa128
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: e416bcc85f2fe8ca75490116e8ea5c95cbafc7e1
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025245"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211267"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell 설치 및 구성
 
@@ -25,7 +25,7 @@ PowerShell 갤러리에서 Azure PowerShell을 설치하는 것이 기본적인 
 
 PowerShell 갤러리에서 항목을 설치하려면 PowerShellGet 모듈이 필요합니다. 적절한 버전의 PowerShellGet 및 다른 시스템 요구 사항이 있는지 확인합니다. PowerShellGet이 시스템에 설치되어 있는지 확인하려면 다음 명령을 실행합니다.
 
-```powershell
+```powershell-interactive
 Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
@@ -42,7 +42,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 PowerShellGet 버전 1.1.2.0 이상이 필요합니다. PowerShellGet을 업데이트하려면 다음 명령을 사용합니다.
 
-```powershell
+```powershell-interactive
 Install-Module PowerShellGet -Force
 ```
 
@@ -58,7 +58,7 @@ PowerShellGet을 설치하지 않은 경우 이 문서의 [PowerShellGet을 가�
 
 PowerShell 갤러리에서 Azure PowerShell을 설치하려면 상승된 권한이 필요합니다. 상승된 PowerShell 세션에서 다음 명령을 실행합니다.
 
-```powershell
+```powershell-interactive
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module -Name AzureRM -AllowClobber
 ```
@@ -72,7 +72,7 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the Set-PSRepository cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
 ```
 
 설치를 계속하려면 'Yes' 또는 'Yes to All'로 답변합니다.
@@ -88,7 +88,7 @@ AzureRM 모듈은 Azure Resource Manager cmdlet의 롤업 모듈입니다. Azure
 
 모듈이 설치되면 PowerShell 세션에 모듈을 로드해야 합니다. 이 작업은 일반(권한이 상승되지 않은) PowerShell 세션에서 수행해야 합니다. 모듈은 다음과 같이 `Import-Module` cmdlet을 사용하여 로드됩니다.
 
-```powershell
+```powershell-interactive
 Import-Module -Name AzureRM
 ```
 
@@ -116,7 +116,7 @@ Azure PowerShell을 사용하는 방법에 대한 자세한 내용은 다음 문
 
 가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
 
-```powershell
+```powershell-interactive
 Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
@@ -134,15 +134,15 @@ available on this system. This module 'Azure.Storage' may override the existing 
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
 
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1772 char:21
-+ ...          $null = PackageManagement\Install-Package @PSBoundParameters
-+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
-    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
++ ...          $null = PackageManagement\Install-Package @PSBoundParameters
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
 ```
 
 이 오류 메시지에 나오는 것처럼 -AllowClobber 매개 변수를 사용해서 모듈을 설치해야 합니다. 다음 명령을 사용합니다.
 
-```powershell
+```powershell-interactive
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module -Name AzureRM -AllowClobber
 ```
@@ -153,14 +153,14 @@ Install-Module -Name AzureRM -AllowClobber
 
 PowerShellGet 설치 방법은 여러 버전의 설치를 지원하는 유일한 방법입니다. 예를 들어 업데이트할 시간이나 리소스가 없는 이전 버전의 Azure PowerShell을 사용하여 작성한 스크립트가 있을 수 있습니다. 다음 명령에서는 여러 버전의 Azure PowerShell을 설치하는 방법을 보여 줍니다.
 
-```powershell
+```powershell-interactive
 Install-Module -Name AzureRM -RequiredVersion 3.7.0
 Install-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 PowerShell 세션에서 한 버전의 모듈만 로드할 수 있습니다. 새 PowerShell 창을 열고 `Import-Module`을 사용하여 특정 버전의 AzureRM cmdlet을 가져와야 합니다.
 
-```powershell
+```powershell-interactive
 Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 

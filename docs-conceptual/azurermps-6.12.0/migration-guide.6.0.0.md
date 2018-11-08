@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 8b7b1422ba2881ca172e65dba61d4c4808cca7de
-ms.sourcegitcommit: 1f699b72bf544d92459da9d888cc0091f9415b65
+ms.openlocfilehash: a9cd0667e098e6b2c8577d11218b842548bee9d3
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "50972539"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51212844"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
 
@@ -99,7 +99,7 @@ _참고_: 이전에 컨텍스트 자동 저장이 설정되지 않은 사용자 
 **기타**
 - `PSDisk` 및 `PSSnapshot` 형식에 중첩된 SKU 이름 속성이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
-```powershell
+```powershell-interactive
 $disk = Get-AzureRmDisk -ResourceGroupName "MyResourceGroup" -DiskName "MyDiskName"
 $disk.Sku.Name       # This will now return Standard_LRS or Premium_LRS
 
@@ -109,7 +109,7 @@ $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
 
 - `PSVirtualMachine`, `PSVirtualMachineScaleSet` 및 `PSImage` 형식에 중첩된 저장소 계정 유형 속성이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
-```powershell
+```powershell-interactive
 $vm = Get-AzureRmVM -ResourceGroupName "MyResourceGroup" -Name "MyVM"
 $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now return Standard_LRS or Premium_LRS
 ```
@@ -126,7 +126,7 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 **New-AzureRmAvailabilitySet**
 - `Managed` 매개 변수가 `Sku`을 위해 제거되었습니다
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -Location "West US" -Managed
 
@@ -170,7 +170,7 @@ New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -
 **Export-AzureRmDataLakeStoreItem**
 - `PerFileThreadCount` 및 `ConcurrentFileCount` 매개 변수가 제거되었습니다. 앞으로 `Concurrency` 매개 변수를 사용하세요.
 
-```powershell
+```powershell-interactive
 # Old
 Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\test -Recurse -Resume -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -181,7 +181,7 @@ Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\tes
 **Import-AzureRmDataLakeStoreItem**
 - `PerFileThreadCount` 및 `ConcurrentFileCount` 매개 변수가 제거되었습니다. 앞으로 `Concurrency` 매개 변수를 사용하세요.
 
-```powershell
+```powershell-interactive
 # Old
 Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /test -Recurse -Resume -ForceBinary -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -192,7 +192,7 @@ Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /tes
 **Remove-AzureRmDataLakeStoreItem**
 - `Clean` 매개 변수가 제거되었습니다.
 
-```powershell
+```powershell-interactive
 # Old
 Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse -Clean
 
@@ -258,7 +258,7 @@ Azure Storage에 대한 공유 액세스 토큰 구성에 대한 자세한 내�
 - [서비스 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
 - [계정 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
-```powershell
+```powershell-interactive
 # Old
 $sas = Set-AzureKeyVaultManagedStorageSasDefinition -VaultName myVault -Name myKey -Service Blob -Permissions 'rcw' -ValidityPeriod 180d
 
@@ -380,7 +380,7 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - `RedisVersion` 매개 변수가 제거되었습니다.
 - `MaxMemoryPolicy` 매개 변수가 `RedisConfiguration`을 위해 제거되었습니다
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "North Central US" -MaxMemoryPolicy "allkeys-lru"
 
@@ -391,7 +391,7 @@ New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "
 **Set-AzureRmRedisCache**
 - `MaxMemoryPolicy` 매개 변수가 `RedisConfiguration`을 위해 제거되었습니다
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -MaxMemoryPolicy "allkeys-lru"
 
@@ -404,7 +404,7 @@ Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -RedisConfi
 **Find-AzureRmResource**
 - 이 cmdlet은 제거되었으며, 해당 기능이 `Get-AzureRmResource`로 이동되었습니다.
 
-```powershell
+```powershell-interactive
 # Old
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceGroupNameContains "ResourceGroup"
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceNameContains "test"
@@ -417,7 +417,7 @@ Get-AzureRmResource -ResourceType "Microsoft.Web/sites" -Name "*test*"
 **Find-AzureRmResourceGroup**
 - 이 cmdlet은 제거되었으며, 해당 기능이 `Get-AzureRmResourceGroup`으로 이동되었습니다.
 
-```powershell
+```powershell-interactive
 # Old
 Find-AzureRmResourceGroup
 Find-AzureRmResourceGroup -Tag @{ "testtag" = $null }
@@ -432,7 +432,7 @@ Get-AzureRmResourceGroup -Tag @{ "testtag" = "testval" }
 **Get-AzureRmRoleDefinition**
 - `AtScopeAndBelow` 매개 변수가 제거되었습니다.
 
-```powershell
+```powershell-interactive
 
 # Old
 Get-AzureRmRoleDefinition [other required parameters] -AtScopeAndBelow

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: eb359710efde6b5969ac721e395725a0ce87fddd
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 9a7627a25f9bbd196b1d615229e45a6e1ce7a7d9
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024599"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51213004"
 ---
 # <a name="querying-for-azure-resources"></a>Azure 리소스에 대한 쿼리
 
@@ -24,7 +24,7 @@ Azure PowerShell에는 각 cmdlet에 대해 정의된 기본 형식이 있습니
 
 `Get-AzureRmVM` cmdlet을 사용하여 계정에서 VM 목록을 쿼리합니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM
 ```
 
@@ -39,7 +39,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 
 `Select-Object` cmdlet을 사용하여 흥미로운 특정 속성을 선택할 수 있습니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
@@ -54,7 +54,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 선택하려는 속성이 JSON 출력에서 깊숙이 중첩된 경우 해당 중첩 속성의 전체 경로를 제공해야 합니다. 다음 예제에서는 `Get-AzureRmVM` cmdlet에서 VM 이름 및 OS 형식을 선택하는 방법을 보여 줍니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -69,7 +69,7 @@ MyWin2016VM   Windows
 
 `Where-Object` cmdlet을 사용하면 속성 값에 기반하여 결과를 필터링할 수 있습니다. 다음 예제에서 필터는 해당 이름에 "RGD"라는 텍스트가 포함된 VM만 선택합니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
@@ -82,7 +82,7 @@ RGDEMO001          KBDemo020
 
 다음 예제의 결과는 vmSize 'Standard_DS1_V2'가 포함된 VM을 반환합니다.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/05/2018
-ms.openlocfilehash: e7d27c6f6d980c54e45620b179cf2e26ffed17f0
-ms.sourcegitcommit: 1f699b72bf544d92459da9d888cc0091f9415b65
+ms.openlocfilehash: f60ea1c608be4b1c8319d53303713ba039276abc
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "50972658"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51212894"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>macOS 또는 Linux에 Azure PowerShell 설치
 
@@ -46,7 +46,7 @@ pwsh
 
 Azure PowerShell을 설치하려면 다음 명령을 실행합니다:
 
-```powershell
+```powershell-interactive
 Install-Module Az
 ```
 
@@ -75,7 +75,7 @@ Are you sure you want to install the modules from 'PSGallery'?
 
 기존 `AzureRM` 모듈과의 호환성을 위해, 새 `Az` 모듈은 `AzureRM` cmdlet에 대해 이전 버전과 호환되는 별칭을 만들 수 있습니다. 처음으로 모듈을 사용하기 전에 다음 명령 사용하여 이러한 별칭을 설정합니다.
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module Az
 # Enable AzureRM aliases for the user
@@ -95,7 +95,7 @@ Enable-AzureRmAlias -Scope CurrentUser
 
 Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 PowerShell 세션에 `Az`을 로드한 후 Azure 자격 증명으로 로그인합니다. 모듈 가져오기는 상승된 권한이 필요하지 __않습니다__.
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module Az
 # Connect to Azure with an interactive dialog for sign-in
