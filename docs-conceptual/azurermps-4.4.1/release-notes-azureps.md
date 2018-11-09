@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 07/26/2017
-ms.openlocfilehash: 6f0e304c499fc8bf4909e2825d52cd63b1fcbf5d
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 563f84c3af98de066611dd80102e552b31f12883
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100494"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51274928"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -93,11 +93,11 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     * Remove-AzureKeyVaultCertificate
     * Undo-AzureKeyVaultCertificateRemoval
 * 네트워크
-  * Virtual Network 서브넷에 끝점 서비스 지원 추가됨
+  * Virtual Network 서브넷에 엔드포인트 서비스 지원 추가됨
     - Add-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
     - New-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
     - Set-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
-  * 위치에서 사용할 수 있는 목록 끝점 서비스에 cmdlet 추가됨
+  * 위치에서 사용할 수 있는 목록 엔드포인트 서비스에 cmdlet 추가됨
     - Get-AzureRmVirtualNetworkAvailableEndpointService
   * 다음 commandlet에 외부 radius 기반 P2S 인증을 구성하는 기능 추가됨
     - New-AzureVirtualNetworkGateway
@@ -262,14 +262,15 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
       - Remove-AzureRMRoleDefinition
       - Set-AzureRMRoleDefinition
 * ServiceBus
-    * NameSpace, 큐 및 토픽의 AuthorizationRules에 대한 새로운 commandlet이 아래에 추가되었습니다. 매개 변수 집합에 따라 권한 부여 규칙 작업이 수행됩니다.
-     - New-AzureRmServiceBusAuthorizationRule - 기존 ServiceBus NameSpace/큐/토픽에 새 AuthorizationRule을 추가합니다.
-     - Get-AzureRmServiceBusAuthorizationRule - 기존 ServiceBus NameSpace/큐/토픽에 대한 AuthorizationRule / AuthorizationRule 목록을 가져옵니다.
-     - Set-AzureRmServiceBusAuthorizationRule - ServiceBus NameSpace/큐/토픽의 기존 AuthorizationRule 속성을 업데이트합니다.
-     - New-AzureRmServiceBusKey - 기존 ServiceBus NameSpace/큐/토픽의 AuthorizationRule에 대한 새로운 주/보조 키를 생성합니다.
-     - Get-AzureRmServiceBusKey - 기존 ServiceBus NameSpace/큐/토픽의 AuthorizationRule에 대한 주/보조 키를 가져옵니다.
-     - Remove-AzureRmServiceBusNamespaceAuthorizationRule - ServiceBus NameSpace/큐/토픽의 기존 AuthorizationRule을 삭제합니다.
-    * 리소스 그룹 속성이 NamespceAttributes에 추가됨
+  * NameSpace, 큐 및 토픽의 AuthorizationRules에 대한 새로운 commandlet이 아래에 추가되었습니다. 매개 변수 집합에 따라 권한 부여 규칙 작업이 수행됩니다.
+    - New-AzureRmServiceBusAuthorizationRule - 기존 ServiceBus NameSpace/큐/토픽에 새 AuthorizationRule을 추가합니다.
+    - Get-AzureRmServiceBusAuthorizationRule - 기존 ServiceBus NameSpace/큐/토픽에 대한 AuthorizationRule / AuthorizationRule 목록을 가져옵니다.
+    - Set-AzureRmServiceBusAuthorizationRule - ServiceBus NameSpace/큐/토픽의 기존 AuthorizationRule 속성을 업데이트합니다.
+    - New-AzureRmServiceBusKey - 기존 ServiceBus NameSpace/큐/토픽의 AuthorizationRule에 대한 새로운 주/보조 키를 생성합니다.
+    - Get-AzureRmServiceBusKey - 기존 ServiceBus NameSpace/큐/토픽의 AuthorizationRule에 대한 주/보조 키를 가져옵니다.
+    - Remove-AzureRmServiceBusNamespaceAuthorizationRule - ServiceBus NameSpace/큐/토픽의 기존 AuthorizationRule을 삭제합니다.
+  * 리소스 그룹 속성이 NamespceAttributes에 추가됨
+
 * Sql
     * 암호화 보호기 유형이 AzureKeyVault로 설정되어 있는 경우 경고를 표시하고 확인을 요구하도록 Set-AzureRmSqlServerTransparentDataEncryptionProtector 업데이트 중
     * 감사 설정을 위해 업데이트된 새 cmdlet 추가 중
@@ -297,15 +298,16 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 ## <a name="20170717---version-421"></a>2017.07.17 - 버전 4.2.1
 * 컴퓨팅
-    - VM 디스크/VM 디스크 스냅숏 만들기 및 업데이트 cmdlet 관련 문제 수정(링크)[https://github.com/azure/azure-powershell/issues/4309]
-      - New-AzureRmDisk
-      - New-AzureRmSnapshot
-      - Update-AzureRmDisk
-      - Update-AzureRmSnapshot
+  - VM 디스크/VM 디스크 스냅숏 만들기 및 업데이트 cmdlet 관련 문제 수정(링크)[<https://github.com/azure/azure-powershell/issues/4309>]
+    - New-AzureRmDisk
+    - New-AzureRmSnapshot
+    - Update-AzureRmDisk
+    - Update-AzureRmSnapshot
 * 프로필
-    - RDFE에서 비대화형 사용자 인증 관련 문제 수정(링크)[https://github.com/Azure/azure-powershell/issues/4299]
+  - RDFE에서 비대화형 사용자 인증 관련 문제 수정(링크)[<https://github.com/Azure/azure-powershell/issues/4299>]
+
 * ServiceManagement
-    - 비대화형 사용자 인증 관련 문제 수정(링크)[https://github.com/Azure/azure-powershell/issues/4299]
+  - 비대화형 사용자 인증 관련 문제 수정(링크)[<https://github.com/Azure/azure-powershell/issues/4299>]
 
 ## <a name="2017711---version-420"></a>2017.7.11 - 버전 4.2.0
 * AnalysisServices
@@ -660,7 +662,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * ServiceBus
 
   - 버그 수정: ServiceBus 큐 개체 속성 값이 null로 설정되었으며 해당 개체는 큐 업데이트를 위해 Set-AzureRmServiceBusQueue cmdlet에서 입력 매개 변수로 사용됩니다.
-   - 영향 받는 속성은 LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount 및 MessageCount입니다.
+    - 영향 받는 속성은 LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount 및 MessageCount입니다.
 * ServiceFabric
 
   - Service Fabric에 대한 cmdlet이 추가되었습니다.
