@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 39d9fa6e354c3c3448053c9cdc98fdc7f55b068d
-ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
+ms.openlocfilehash: a9cd0667e098e6b2c8577d11218b842548bee9d3
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51274571"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51212844"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
 
@@ -255,8 +255,8 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - 액세스 토큰을 구성하는 개별 매개 변수는 더 이상 허용되지 않습니다. 대신 명시적 토큰 매개 변수(예: `Service` 또는 `Permissions`)를 다른 곳에 정의된 액세스 토큰 샘플에 해당하는 제네릭 `TemplateUri` 매개 변수(아마도 Storage PowerShell cmdlet을 사용하거나 Storage 설명서에 따라 수동으로 구성됨)로 바꿉니다. `ValidityPeriod` 매개 변수는 계속 유지됩니다.
 
 Azure Storage에 대한 공유 액세스 토큰 구성에 대한 자세한 내용은 다음의 각 설명서 페이지를 참조하세요.
-- [서비스 SAS 생성(영문)](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
-- [계정 SAS 생성(영문)](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
+- [서비스 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
+- [계정 SAS 생성](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell-interactive
 # Old
