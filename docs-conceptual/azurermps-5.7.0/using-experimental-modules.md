@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: ac571363d79c83b268b5c25f65b14f16d4b86e71
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: ff58693c8ec21b7e50e37bd85975a9ae3980a5e7
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323036"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51275727"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 
@@ -63,7 +63,7 @@ Azure CLI 2.0은 최종 사용자가 더 쉽게 시나리오를 “시작”할 
 
 주요 향상된 기능은 “상식”으로 간주되며, 약간의 실험은 이러한 업데이트 구현을 진전시키기 위해 필요합니다.
 
-- 시나리오 기반 cmdlet - **모든* cmdlet은 Azure REST 서비스가 아닌 시나리오로 설계되어야 합니다.
+- 시나리오 기반 cmdlet - <em>*모든</em> cmdlet은 Azure REST 서비스가 아닌 시나리오로 설계되어야 합니다.
 
 - 더 짧은 이름 - cmdlet의 이름(예: `New-AzureRmVM` => `New-AzVm`) 및 매개 변수 이름(예: `-ResourceGroupName` => `-Rg`)를 포함합니다. “이전” cmdlet과의 호환성에 대한 별칭을 사용합니다. _이전 버전과 호환되는_ 매개 변수 집합을 제공합니다.
 
