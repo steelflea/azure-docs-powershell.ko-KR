@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: 18861f0e5232e0b505767aa9609099afe88f9477
-ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
+ms.openlocfilehash: afa83a6258e57e961576b328e67fad634704dddf
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51211165"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51275319"
 ---
 # <a name="azure-stack-module-150"></a>Azure Stack 모듈 1.5.0
 
@@ -46,7 +46,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ```
 
-##<a name="release-notes"></a>릴리스 정보
+## <a name="release-notes"></a>릴리스 정보
 * 모든 Azure Stack Admin 모듈은 AzureRm.Profile 모듈에 대한 종속성 이상으로 업데이트됩니다.
 * 모든 모듈의 중첩된 리소스 이름 처리에 대한 지원
 * ErrorActionPreference를 Stop으로 재정의되는 모든 모듈에서 버그 수정
