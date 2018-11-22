@@ -1,19 +1,18 @@
 ---
-title: Azure PowerShell을 사용하여 Azure 구독 관리 | Microsoft Docs
+title: Azure PowerShell을 사용하여 Azure 구독 관리
 description: Azure PowerShell을 사용하여 Azure 구독 관리
-keywords: Azure PowerShell, 구독
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
-ms.openlocfilehash: 12e304f32f585c1af40d20579cd46999e0a12395
+ms.date: 09/11/2018
+ms.openlocfilehash: a93461af1dafbf8f2c85ef127ecaefadf3be2f52
 ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2018
-ms.locfileid: "52257961"
+ms.locfileid: "52259812"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>여러 Azure 구독 관리
 
@@ -21,7 +20,7 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 1. 계정의 모든 구독 목록을 가져옵니다.
 
-    ```powershell-interactive
+    ```azurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -50,13 +49,13 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
 
 2. 기본 구독을 설정합니다.
 
-    ```powershell-interactive
-    Select-AzureRmSubscription -SubscriptionName "My Demos"
+    ```azurepowershell-interactive
+    Select-AzureRmSubscription -Subscription "My Demos"
     ```
 
 3. `Get-AzureRmContext` cmdlet을 실행하여 변경 내용을 확인합니다.
 
-    ```powershell-interactive
+    ```azurepowershell-interactive
     Get-AzureRmContext
     ```
 
@@ -69,4 +68,4 @@ Azure를 처음 접하는 분들은 아마도 구독을 하나만 갖고 계실 
     CurrentStorageAccount :
     ```
 
-기본 구독을 설정한 이후부터는 모든 Azure PowerShell 명령이 기본 구독에 대해 실행됩니다.
+기본 구독을 설정한 후에는 모든 Azure PowerShell 명령이 기본 구독에 대해 실행됩니다.
