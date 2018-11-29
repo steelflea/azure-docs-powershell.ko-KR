@@ -9,30 +9,30 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: fb892daeafb1365ea62324392ac806cf9f3d39cf
-ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
+ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52257655"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586669"
 ---
-# <a name="azure-stack-module-130"></a><span data-ttu-id="49533-103">Azure Stack 모듈 1.3.0</span><span class="sxs-lookup"><span data-stu-id="49533-103">Azure Stack Module 1.3.0</span></span>
+# <a name="azure-stack-module-130"></a><span data-ttu-id="b9cdc-103">Azure Stack 모듈 1.3.0</span><span class="sxs-lookup"><span data-stu-id="b9cdc-103">Azure Stack Module 1.3.0</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="49533-104">Requirements:</span><span class="sxs-lookup"><span data-stu-id="49533-104">Requirements:</span></span>
-<span data-ttu-id="49533-105">최소 지원 Azure Stack 버전은 1804입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-105">Minimum supported Azure Stack version is 1804.</span></span>
+## <a name="requirements"></a><span data-ttu-id="b9cdc-104">Requirements:</span><span class="sxs-lookup"><span data-stu-id="b9cdc-104">Requirements:</span></span>
+<span data-ttu-id="b9cdc-105">최소 지원 Azure Stack 버전은 1804입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-105">Minimum supported Azure Stack version is 1804.</span></span>
 
-<span data-ttu-id="49533-106">참고: 이전 버전을 사용하는 경우 1.2.11 버전을 설치하세요.</span><span class="sxs-lookup"><span data-stu-id="49533-106">Note: If you are using an earlier version install version 1.2.11</span></span>
+<span data-ttu-id="b9cdc-106">참고: 이전 버전을 사용하는 경우 1.2.11 버전을 설치하세요.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-106">Note: If you are using an earlier version install version 1.2.11</span></span>
 
-## <a name="known-issues"></a><span data-ttu-id="49533-107">알려진 문제:</span><span class="sxs-lookup"><span data-stu-id="49533-107">Known issues:</span></span>
+## <a name="known-issues"></a><span data-ttu-id="b9cdc-107">알려진 문제:</span><span class="sxs-lookup"><span data-stu-id="b9cdc-107">Known issues:</span></span>
 
-- <span data-ttu-id="49533-108">경고 닫기에는 Azure Stack 버전 1803이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-108">Close Alert requires Azure Stack version 1803</span></span>
-- <span data-ttu-id="49533-109">일부 저장소 cmdlet는 Azure Stack 버전 1804가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-109">Some Storage cmdlets do require Azure Stack version 1804</span></span>
-- <span data-ttu-id="49533-110">New-AzsOffer는 상태를 공개하여 제안을 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="49533-110">New-AzsOffer does not allow to create an offer with state public.</span></span> <span data-ttu-id="49533-111">상태를 변경하려면 Set-AzsOffer cmdlet을 나중에 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-111">The Set-AzsOffer cmdlet needs to be called afterwards to change the state.</span></span>
-- <span data-ttu-id="49533-112">재배포하지 않고는 IP 풀을 제거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="49533-112">An IP Pool cannot be removed without a redeployment</span></span>
+- <span data-ttu-id="b9cdc-108">경고 닫기에는 Azure Stack 버전 1803이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-108">Close Alert requires Azure Stack version 1803</span></span>
+- <span data-ttu-id="b9cdc-109">일부 저장소 cmdlet는 Azure Stack 버전 1804가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-109">Some Storage cmdlets do require Azure Stack version 1804</span></span>
+- <span data-ttu-id="b9cdc-110">New-AzsOffer는 상태를 공개하여 제안을 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-110">New-AzsOffer does not allow to create an offer with state public.</span></span> <span data-ttu-id="b9cdc-111">상태를 변경하려면 Set-AzsOffer cmdlet을 나중에 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-111">The Set-AzsOffer cmdlet needs to be called afterwards to change the state.</span></span>
+- <span data-ttu-id="b9cdc-112">재배포하지 않고는 IP 풀을 제거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-112">An IP Pool cannot be removed without a redeployment</span></span>
 
-## <a name="breaking-changes"></a><span data-ttu-id="49533-113">주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="49533-113">Breaking Changes</span></span>
-<span data-ttu-id="49533-114">1.2.11에서 마이그레이션하는 호환성이 손상되는 변경은 모두 여기 https://aka.ms/azspowershellmigration에 문서화되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49533-114">All breaking changes migrating from 1.2.11 are documented here https://aka.ms/azspowershellmigration</span></span>
+## <a name="breaking-changes"></a><span data-ttu-id="b9cdc-113">주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="b9cdc-113">Breaking Changes</span></span>
+<span data-ttu-id="b9cdc-114">1.2.11에서 마이그레이션하는 호환성이 손상되는 변경은 모두 여기 https://aka.ms/azspowershellmigration에 문서화되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-114">All breaking changes migrating from 1.2.11 are documented here https://aka.ms/azspowershellmigration</span></span>
 
-## <a name="install"></a><span data-ttu-id="49533-115">설치</span><span class="sxs-lookup"><span data-stu-id="49533-115">Install</span></span>
+## <a name="install"></a><span data-ttu-id="b9cdc-115">설치</span><span class="sxs-lookup"><span data-stu-id="b9cdc-115">Install</span></span>
 ```
 # Remove previous Versions
 Uninstall-Module AzureRM.AzureStackAdmin -Force
@@ -49,70 +49,70 @@ Use-AzureRmProfile -Profile 2017-03-09-profile -Force
 # Install Azure Stack Admin Module
 Install-Module -Name AzureStack -RequiredVersion 1.3.0
 ```
-## <a name="content"></a><span data-ttu-id="49533-116">콘텐츠:</span><span class="sxs-lookup"><span data-stu-id="49533-116">Content:</span></span>
-### <a name="azure-bridge"></a><span data-ttu-id="49533-117">Azure Bridge</span><span class="sxs-lookup"><span data-stu-id="49533-117">Azure Bridge</span></span>
-<span data-ttu-id="49533-118">Azure의 이미지를 배포할 수 있게 해주는 Azure Stack AzureBridge 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-118">Preview release of the Azure Stack AzureBridge administrator module which allows you to syndicate images from Azure.</span></span>
+## <a name="content"></a><span data-ttu-id="b9cdc-116">콘텐츠:</span><span class="sxs-lookup"><span data-stu-id="b9cdc-116">Content:</span></span>
+### <a name="azure-bridge"></a><span data-ttu-id="b9cdc-117">Azure Bridge</span><span class="sxs-lookup"><span data-stu-id="b9cdc-117">Azure Bridge</span></span>
+<span data-ttu-id="b9cdc-118">Azure의 이미지를 배포할 수 있게 해주는 Azure Stack AzureBridge 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-118">Preview release of the Azure Stack AzureBridge administrator module which allows you to syndicate images from Azure.</span></span>
 
-### <a name="backup"></a><span data-ttu-id="49533-119">Backup</span><span class="sxs-lookup"><span data-stu-id="49533-119">Backup</span></span>
-<span data-ttu-id="49533-120">관리자가 다음을 수행할 수 있도록 해주는 Backup 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-120">Preview release of the Backup administrator module that allows administrators to:</span></span>
-- <span data-ttu-id="49533-121">백업이 저장되는 위치 구성</span><span class="sxs-lookup"><span data-stu-id="49533-121">Configure where backups are stored</span></span>
-- <span data-ttu-id="49533-122">백업 수행</span><span class="sxs-lookup"><span data-stu-id="49533-122">Perform backups</span></span>
-- <span data-ttu-id="49533-123">완료된 백업 나열 및 복원</span><span class="sxs-lookup"><span data-stu-id="49533-123">List and restore completed backup</span></span>
+### <a name="backup"></a><span data-ttu-id="b9cdc-119">Backup</span><span class="sxs-lookup"><span data-stu-id="b9cdc-119">Backup</span></span>
+<span data-ttu-id="b9cdc-120">관리자가 다음을 수행할 수 있도록 해주는 Backup 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-120">Preview release of the Backup administrator module that allows administrators to:</span></span>
+- <span data-ttu-id="b9cdc-121">백업이 저장되는 위치 구성</span><span class="sxs-lookup"><span data-stu-id="b9cdc-121">Configure where backups are stored</span></span>
+- <span data-ttu-id="b9cdc-122">백업 수행</span><span class="sxs-lookup"><span data-stu-id="b9cdc-122">Perform backups</span></span>
+- <span data-ttu-id="b9cdc-123">완료된 백업 나열 및 복원</span><span class="sxs-lookup"><span data-stu-id="b9cdc-123">List and restore completed backup</span></span>
 
-### <a name="commerce"></a><span data-ttu-id="49533-124">상거래</span><span class="sxs-lookup"><span data-stu-id="49533-124">Commerce</span></span>
-<span data-ttu-id="49533-125">Azure Stack 시스템의 집계 데이터 사용량을 볼 수 있는 방법을 제공하는 Azure Stack Commerce 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-125">Preview release of the Azure Stack Commerce administrator module which provides a way to view aggregate data usage across your Azure Stack system.</span></span>
+### <a name="commerce"></a><span data-ttu-id="b9cdc-124">상거래</span><span class="sxs-lookup"><span data-stu-id="b9cdc-124">Commerce</span></span>
+<span data-ttu-id="b9cdc-125">Azure Stack 시스템의 집계 데이터 사용량을 볼 수 있는 방법을 제공하는 Azure Stack Commerce 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-125">Preview release of the Azure Stack Commerce administrator module which provides a way to view aggregate data usage across your Azure Stack system.</span></span>
 
-### <a name="compute"></a><span data-ttu-id="49533-126">컴퓨팅</span><span class="sxs-lookup"><span data-stu-id="49533-126">Compute</span></span>
-<span data-ttu-id="49533-127">컴퓨팅 할당량, 플랫폼 이미지 및 가상 컴퓨터 확장을 관리하는 기능을 제공하는 Azure Stack Compute 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-127">Preview release of the Azure Stack Compute administrator module which provides functionality to manage compute quotas, platform images, and virtual machine extensions.</span></span>
+### <a name="compute"></a><span data-ttu-id="b9cdc-126">컴퓨팅</span><span class="sxs-lookup"><span data-stu-id="b9cdc-126">Compute</span></span>
+<span data-ttu-id="b9cdc-127">컴퓨팅 할당량, 플랫폼 이미지 및 가상 컴퓨터 확장을 관리하는 기능을 제공하는 Azure Stack Compute 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-127">Preview release of the Azure Stack Compute administrator module which provides functionality to manage compute quotas, platform images, and virtual machine extensions.</span></span>
 
-### <a name="fabric"></a><span data-ttu-id="49533-128">Fabric</span><span class="sxs-lookup"><span data-stu-id="49533-128">Fabric</span></span>
-<span data-ttu-id="49533-129">관리자가 다음 작업을 위해 인프라 구성 요소를 보고 관리할 수 있게 해주는 Azure Stack Fabric 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-129">Preview release of the Azure Stack Fabric administrator module which allows administrators to view and manage infrastructure components:</span></span>
-- <span data-ttu-id="49533-130">배율 단위 노드의 중지, 시작 및 종료</span><span class="sxs-lookup"><span data-stu-id="49533-130">Stop, Start and Shutdown of scale unit nodes</span></span>
-- <span data-ttu-id="49533-131">FRU 관련 활동에 대한 배율 단위 노드의 배출 및 재개</span><span class="sxs-lookup"><span data-stu-id="49533-131">Drain and Resume of scale unit nodes for FRU related activities</span></span>
-- <span data-ttu-id="49533-132">배율 단위 노드의 복구</span><span class="sxs-lookup"><span data-stu-id="49533-132">Repair of scale unit nodes</span></span>
-- <span data-ttu-id="49533-133">인프라 역할의 다시 시작</span><span class="sxs-lookup"><span data-stu-id="49533-133">Restart of Infrastructure role</span></span>
-- <span data-ttu-id="49533-134">인프라 역할 인스턴스의 중지, 시작 및 종료</span><span class="sxs-lookup"><span data-stu-id="49533-134">Stop, Start and Shutdown of Infrastructure role instances</span></span>
-- <span data-ttu-id="49533-135">새 IP 풀 만들기</span><span class="sxs-lookup"><span data-stu-id="49533-135">Create new IP Pools</span></span>
+### <a name="fabric"></a><span data-ttu-id="b9cdc-128">Fabric</span><span class="sxs-lookup"><span data-stu-id="b9cdc-128">Fabric</span></span>
+<span data-ttu-id="b9cdc-129">관리자가 다음 작업을 위해 인프라 구성 요소를 보고 관리할 수 있게 해주는 Azure Stack Fabric 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-129">Preview release of the Azure Stack Fabric administrator module which allows administrators to view and manage infrastructure components:</span></span>
+- <span data-ttu-id="b9cdc-130">배율 단위 노드의 중지, 시작 및 종료</span><span class="sxs-lookup"><span data-stu-id="b9cdc-130">Stop, Start and Shutdown of scale unit nodes</span></span>
+- <span data-ttu-id="b9cdc-131">FRU 관련 활동에 대한 배율 단위 노드의 배출 및 재개</span><span class="sxs-lookup"><span data-stu-id="b9cdc-131">Drain and Resume of scale unit nodes for FRU related activities</span></span>
+- <span data-ttu-id="b9cdc-132">배율 단위 노드의 복구</span><span class="sxs-lookup"><span data-stu-id="b9cdc-132">Repair of scale unit nodes</span></span>
+- <span data-ttu-id="b9cdc-133">인프라 역할의 다시 시작</span><span class="sxs-lookup"><span data-stu-id="b9cdc-133">Restart of Infrastructure role</span></span>
+- <span data-ttu-id="b9cdc-134">인프라 역할 인스턴스의 중지, 시작 및 종료</span><span class="sxs-lookup"><span data-stu-id="b9cdc-134">Stop, Start and Shutdown of Infrastructure role instances</span></span>
+- <span data-ttu-id="b9cdc-135">새 IP 풀 만들기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-135">Create new IP Pools</span></span>
 
 
-### <a name="gallery"></a><span data-ttu-id="49533-136">갤러리</span><span class="sxs-lookup"><span data-stu-id="49533-136">Gallery</span></span>
-<span data-ttu-id="49533-137">Azure Stack Marketplace에서 갤러리 항목을 관리하는 기능을 제공하는 Azure Stack Gallery 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-137">Preview release of the Azure Stack Gallery administrator module which provides functionality to manage gallery items in the Azure Stack marketplace.</span></span>
+### <a name="gallery"></a><span data-ttu-id="b9cdc-136">갤러리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-136">Gallery</span></span>
+<span data-ttu-id="b9cdc-137">Azure Stack Marketplace에서 갤러리 항목을 관리하는 기능을 제공하는 Azure Stack Gallery 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-137">Preview release of the Azure Stack Gallery administrator module which provides functionality to manage gallery items in the Azure Stack marketplace.</span></span>
 
-### <a name="infrastructure-insights"></a><span data-ttu-id="49533-138">Infrastructure Insights</span><span class="sxs-lookup"><span data-stu-id="49533-138">Infrastructure Insights</span></span>
-<span data-ttu-id="49533-139">관리자가 다음을 수행할 수 있는 Infrastructure Insight 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-139">Preview release of the Infrastructure Insights administrator module which allows administrators:</span></span>
-- <span data-ttu-id="49533-140">Azure Stack 스탬프 리소스의 상태 보기</span><span class="sxs-lookup"><span data-stu-id="49533-140">View the health of their Azure Stack stamp resources</span></span>
-- <span data-ttu-id="49533-141">경고 보기 및 관리</span><span class="sxs-lookup"><span data-stu-id="49533-141">View and manage alerts</span></span>
+### <a name="infrastructure-insights"></a><span data-ttu-id="b9cdc-138">Infrastructure Insights</span><span class="sxs-lookup"><span data-stu-id="b9cdc-138">Infrastructure Insights</span></span>
+<span data-ttu-id="b9cdc-139">관리자가 다음을 수행할 수 있는 Infrastructure Insight 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-139">Preview release of the Infrastructure Insights administrator module which allows administrators:</span></span>
+- <span data-ttu-id="b9cdc-140">Azure Stack 스탬프 리소스의 상태 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-140">View the health of their Azure Stack stamp resources</span></span>
+- <span data-ttu-id="b9cdc-141">경고 보기 및 관리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-141">View and manage alerts</span></span>
 
-### <a name="keyvault"></a><span data-ttu-id="49533-142">KeyVault</span><span class="sxs-lookup"><span data-stu-id="49533-142">KeyVault</span></span>
-<span data-ttu-id="49533-143">관리자가 KeyVault 할당량을 볼 수 있는 Azure Stack KeyVault 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-143">Preview release of the Azure Stack KeyVault administrator module which allows administrator to view KeyVault quotas.</span></span>
+### <a name="keyvault"></a><span data-ttu-id="b9cdc-142">KeyVault</span><span class="sxs-lookup"><span data-stu-id="b9cdc-142">KeyVault</span></span>
+<span data-ttu-id="b9cdc-143">관리자가 KeyVault 할당량을 볼 수 있는 Azure Stack KeyVault 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-143">Preview release of the Azure Stack KeyVault administrator module which allows administrator to view KeyVault quotas.</span></span>
 
-### <a name="network"></a><span data-ttu-id="49533-144">네트워크</span><span class="sxs-lookup"><span data-stu-id="49533-144">Network</span></span>
-<span data-ttu-id="49533-145">다음을 수행할 수 있는 Network 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-145">Preview release of the Network administrator module which allows:</span></span>
-- <span data-ttu-id="49533-146">네트워크 할당량 관리</span><span class="sxs-lookup"><span data-stu-id="49533-146">Management of network quotas</span></span>
-- <span data-ttu-id="49533-147">공용 IP 주소, 가상 네트워크, 부하 분산 장치와 같은 할당된 네트워크 리소스 보기</span><span class="sxs-lookup"><span data-stu-id="49533-147">View allocated network resources such as public IP addresses, virtual networks, load balancers</span></span>
-- <span data-ttu-id="49533-148">관리자 개요를 표시하는 cmdlet을 제공</span><span class="sxs-lookup"><span data-stu-id="49533-148">Provides a cmdlet which displays an administrator overview</span></span>
+### <a name="network"></a><span data-ttu-id="b9cdc-144">네트워크</span><span class="sxs-lookup"><span data-stu-id="b9cdc-144">Network</span></span>
+<span data-ttu-id="b9cdc-145">다음을 수행할 수 있는 Network 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-145">Preview release of the Network administrator module which allows:</span></span>
+- <span data-ttu-id="b9cdc-146">네트워크 할당량 관리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-146">Management of network quotas</span></span>
+- <span data-ttu-id="b9cdc-147">공용 IP 주소, 가상 네트워크, 부하 분산 장치와 같은 할당된 네트워크 리소스 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-147">View allocated network resources such as public IP addresses, virtual networks, load balancers</span></span>
+- <span data-ttu-id="b9cdc-148">관리자 개요를 표시하는 cmdlet을 제공</span><span class="sxs-lookup"><span data-stu-id="b9cdc-148">Provides a cmdlet which displays an administrator overview</span></span>
 
-### <a name="storage"></a><span data-ttu-id="49533-149">Storage</span><span class="sxs-lookup"><span data-stu-id="49533-149">Storage</span></span>
-<span data-ttu-id="49533-150">Azure Stack Storage 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-150">Preview release of the Azure Stack Storage administrator module.</span></span>  <span data-ttu-id="49533-151">이 릴리스에서는 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-151">In this release we provide the functionality to:</span></span>
-- <span data-ttu-id="49533-152">저장소 할당량 관리</span><span class="sxs-lookup"><span data-stu-id="49533-152">Manage storage quotas</span></span>
-- <span data-ttu-id="49533-153">삭제된 저장소 리소스 가비지 수집</span><span class="sxs-lookup"><span data-stu-id="49533-153">Garbage collect deleted storage resources</span></span>
-- <span data-ttu-id="49533-154">삭제된 저장소 계정 복원</span><span class="sxs-lookup"><span data-stu-id="49533-154">Restore deleted storage accounts</span></span>
-- <span data-ttu-id="49533-155">한 공유에서 다른 공유로 컨테이너 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="49533-155">Migrate containers from one share to another</span></span>
-- <span data-ttu-id="49533-156">개별 저장소 구성 요소에 대한 정보 보기</span><span class="sxs-lookup"><span data-stu-id="49533-156">View information about the individual storage components</span></span>
-- <span data-ttu-id="49533-157">사용량 및 성능 정보 보기</span><span class="sxs-lookup"><span data-stu-id="49533-157">View usage and performance information</span></span>
+### <a name="storage"></a><span data-ttu-id="b9cdc-149">Storage</span><span class="sxs-lookup"><span data-stu-id="b9cdc-149">Storage</span></span>
+<span data-ttu-id="b9cdc-150">Azure Stack Storage 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-150">Preview release of the Azure Stack Storage administrator module.</span></span>  <span data-ttu-id="b9cdc-151">이 릴리스에서는 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-151">In this release we provide the functionality to:</span></span>
+- <span data-ttu-id="b9cdc-152">저장소 할당량 관리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-152">Manage storage quotas</span></span>
+- <span data-ttu-id="b9cdc-153">삭제된 저장소 리소스 가비지 수집</span><span class="sxs-lookup"><span data-stu-id="b9cdc-153">Garbage collect deleted storage resources</span></span>
+- <span data-ttu-id="b9cdc-154">삭제된 저장소 계정 복원</span><span class="sxs-lookup"><span data-stu-id="b9cdc-154">Restore deleted storage accounts</span></span>
+- <span data-ttu-id="b9cdc-155">한 공유에서 다른 공유로 컨테이너 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="b9cdc-155">Migrate containers from one share to another</span></span>
+- <span data-ttu-id="b9cdc-156">개별 저장소 구성 요소에 대한 정보 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-156">View information about the individual storage components</span></span>
+- <span data-ttu-id="b9cdc-157">사용량 및 성능 정보 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-157">View usage and performance information</span></span>
 
-### <a name="subscription-admin"></a><span data-ttu-id="49533-158">구독 관리자</span><span class="sxs-lookup"><span data-stu-id="49533-158">Subscription Admin</span></span>
-<span data-ttu-id="49533-159">Azure Stack Subscription 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-159">Preview release of the Azure Stack Subscription administrator module.</span></span>  <span data-ttu-id="49533-160">이 모듈은 관리자가 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-160">This module provides functionality for administrators to:</span></span>
-- <span data-ttu-id="49533-161">계획 및 제안 관리</span><span class="sxs-lookup"><span data-stu-id="49533-161">Manage plans and offers</span></span>
-- <span data-ttu-id="49533-162">사용량 및 성능 정보 보기</span><span class="sxs-lookup"><span data-stu-id="49533-162">View usage and performance information</span></span>
-- <span data-ttu-id="49533-163">RBAC 관리</span><span class="sxs-lookup"><span data-stu-id="49533-163">Manage RBAC</span></span>
+### <a name="subscription-admin"></a><span data-ttu-id="b9cdc-158">구독 관리자</span><span class="sxs-lookup"><span data-stu-id="b9cdc-158">Subscription Admin</span></span>
+<span data-ttu-id="b9cdc-159">Azure Stack Subscription 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-159">Preview release of the Azure Stack Subscription administrator module.</span></span>  <span data-ttu-id="b9cdc-160">이 모듈은 관리자가 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-160">This module provides functionality for administrators to:</span></span>
+- <span data-ttu-id="b9cdc-161">계획 및 제안 관리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-161">Manage plans and offers</span></span>
+- <span data-ttu-id="b9cdc-162">사용량 및 성능 정보 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-162">View usage and performance information</span></span>
+- <span data-ttu-id="b9cdc-163">RBAC 관리</span><span class="sxs-lookup"><span data-stu-id="b9cdc-163">Manage RBAC</span></span>
 
-### <a name="subscription"></a><span data-ttu-id="49533-164">구독</span><span class="sxs-lookup"><span data-stu-id="49533-164">Subscription</span></span>
-<span data-ttu-id="49533-165">Azure Stack Subscription 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-165">Preview release of the Azure Stack Subscription module.</span></span>  <span data-ttu-id="49533-166">이 모듈은 사용자가 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="49533-166">This module provides functionality for Users to:</span></span>
-- <span data-ttu-id="49533-167">구독 생성, 삭제 및 업데이트</span><span class="sxs-lookup"><span data-stu-id="49533-167">Create, Delete and Update Subscriptions</span></span>
+### <a name="subscription"></a><span data-ttu-id="b9cdc-164">구독</span><span class="sxs-lookup"><span data-stu-id="b9cdc-164">Subscription</span></span>
+<span data-ttu-id="b9cdc-165">Azure Stack Subscription 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-165">Preview release of the Azure Stack Subscription module.</span></span>  <span data-ttu-id="b9cdc-166">이 모듈은 사용자가 다음을 수행하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-166">This module provides functionality for Users to:</span></span>
+- <span data-ttu-id="b9cdc-167">구독 생성, 삭제 및 업데이트</span><span class="sxs-lookup"><span data-stu-id="b9cdc-167">Create, Delete and Update Subscriptions</span></span>
 
-### <a name="update"></a><span data-ttu-id="49533-168">주 지역에서</span><span class="sxs-lookup"><span data-stu-id="49533-168">Update</span></span>
-<span data-ttu-id="49533-169">Azure Stack Update 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="49533-169">Preview release of the Azure Stack Update administrator module.</span></span>  <span data-ttu-id="49533-170">이 모듈에서 관리자는 다음을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49533-170">In this module administrators can:</span></span>
-- <span data-ttu-id="49533-171">사용 가능한 업데이트 나열 및 설치</span><span class="sxs-lookup"><span data-stu-id="49533-171">List and install available updates</span></span>
-- <span data-ttu-id="49533-172">중단된 업데이트 다시 시작</span><span class="sxs-lookup"><span data-stu-id="49533-172">Resume interrupted updates</span></span>
-- <span data-ttu-id="49533-173">설치된 업데이트 보기</span><span class="sxs-lookup"><span data-stu-id="49533-173">View installed updates</span></span>
+### <a name="update"></a><span data-ttu-id="b9cdc-168">주 지역에서</span><span class="sxs-lookup"><span data-stu-id="b9cdc-168">Update</span></span>
+<span data-ttu-id="b9cdc-169">Azure Stack Update 관리자 모듈의 미리 보기 릴리스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-169">Preview release of the Azure Stack Update administrator module.</span></span>  <span data-ttu-id="b9cdc-170">이 모듈에서 관리자는 다음을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9cdc-170">In this module administrators can:</span></span>
+- <span data-ttu-id="b9cdc-171">사용 가능한 업데이트 나열 및 설치</span><span class="sxs-lookup"><span data-stu-id="b9cdc-171">List and install available updates</span></span>
+- <span data-ttu-id="b9cdc-172">중단된 업데이트 다시 시작</span><span class="sxs-lookup"><span data-stu-id="b9cdc-172">Resume interrupted updates</span></span>
+- <span data-ttu-id="b9cdc-173">설치된 업데이트 보기</span><span class="sxs-lookup"><span data-stu-id="b9cdc-173">View installed updates</span></span>
