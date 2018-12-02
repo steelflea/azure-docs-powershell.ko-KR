@@ -18,4 +18,4 @@ ms.locfileid: "52588267"
 > * [Azure PowerShell Az 모듈 설치](/powershell/azure/install-az-ps)
 > * [새 Azure PowerShell Az 모듈로 마이그레이션](/powershell/azure/migrate-from-azurerm-to-az)
 >
-> 변환할 수 없는 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요.
+> 변환할 수 없는 클래식 배포 모델을 사용해 배포하는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요.
