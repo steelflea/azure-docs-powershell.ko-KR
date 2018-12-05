@@ -17,17 +17,17 @@ ms.locfileid: "52587315"
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
 2018년 11월부터 Azure PowerShell `Az` 모듈을 전체 공개 미리보기로 제공됩니다.
-Az은 짧아진 명령과 향상된 안정성을 제공하며, Windows, macOS 및 Linux를 지원합니다. Az은 또한 AzureRM에서 기능 패리티와 쉬운 마이그레이션 경로를 제공합니다.
+Az은 짧아진 명령과 향상된 안정성을 제공하며, Windows, macOS 및 Linux를 지원합니다. Az은 AzureRM의 동일한 기능을 제공하는 동시에 AzureRM에서 쉬운 마이그레이션 경로를 제공합니다.
 
 Az는 .NET 표준 라이브러리를 사용합니다. 즉, PowerShell 5.x 및 PowerShell 6.x에서 실행됩니다.
 PowerShell 6.x는 Linux, macOS 및 Windows에서 실행할 수 있으므로, Az는 모든 플랫폼에서 사용할 수 있습니다.
 .NET 표준을 사용하면 사용자에게 미치는 영향을 최소화하면서 Azure PowerShell의 코드 기반을 통합할 수 있습니다.
 
-Az는 새로운 모듈이므로 버전이 다시 설정되었습니다. 첫 번째 안정적인 릴리스는 1.0이지만, 모듈은 2018년 11월 현재 AzureRm과 기능 패리티를 유지합니다.
+Az는 새로운 모듈이기 때문에 버전이 다시 설정되었습니다. 가장 안정적인 릴리스는 1.0이지만, 모듈 역시 2018년 11월 현재 AzureRm과 동일한 기능을 유지합니다.
 
 ## <a name="upgrade-to-az"></a>Az로 업그레이드
 
-사용자가 새로운 `Az` 모듈로 업그레이드하는 것이 좋습니다. 이렇게 하려면 다음을 수행합니다.
+새로운 'Az' 모듈로 업그레이드하는 것이 권장되며 업그레이드 절차는 다음과 같습니다.
 
 * [Azure PowerShell AzureRM 모듈 제거](/powershell/azure/uninstall-azurerm-ps)
 * [Azure PowerShell Az 모듈 설치](/powershell/azure/install-az-ps)
