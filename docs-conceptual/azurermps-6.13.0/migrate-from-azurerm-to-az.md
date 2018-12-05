@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/07/2018
-ms.openlocfilehash: 0c73e7ac1d47a2a97b6136fa481d0adce8de33db
-ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
+ms.openlocfilehash: 720387ec1b23f10ddf2b153cf0705b2b6d1b7b82
+ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52259641"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52587706"
 ---
 # <a name="migrate-from-azurerm-to-azure-powershell-az"></a>AzureRM에서 Azure PowerShell Az로 마이그레이션
 
@@ -21,7 +21,7 @@ AzureRM cmdlet용으로 작성된 스크립트는 새 모듈과 자동으로 작
 
 ## <a name="ensure-your-existing-scripts-work-with-the-latest-azurerm-release"></a>기존 스크립트가 최신 AzureRM 릴리스와 함께 작동하는지 확인하세요
 
-가장 중요한 단계입니다! 기존 스크립트를 실행하고 AzureRM(__6.12.0__)의 _최신_ 릴리스와 함께 작동하는지 확인하세요. 스크립트가 작동하지 않으면 [AzureRM 마이그레이션 가이드](migration-guide.6.0.0.md)를 읽으세요.
+가장 중요한 단계입니다! 기존 스크립트를 실행하고 AzureRM(__6.13.0__)의 _최신_ 릴리스와 함께 작동하는지 확인하세요. 스크립트가 작동하지 않으면 [AzureRM 마이그레이션 가이드](migration-guide.6.0.0.md)를 읽으세요.
 
 ## <a name="install-the-azure-powershell-az-module"></a>Azure PowerShell Az 모듈 설치
 

@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/16/2018
-ms.openlocfilehash: 32e96c6459c9db0c4b9eda0cc170c85ba99a22ca
-ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
+ms.date: 11/26/2018
+ms.openlocfilehash: 3d52b18750341f220dc8e10d6bf89796457c5a10
+ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52259797"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52588182"
 ---
 # <a name="install-the-azure-powershell-az-module"></a>Azure PowerShell ‘Az’ 모듈 설치
 
@@ -32,7 +32,9 @@ $PSVersionTable.PSVersion
 
 > [!IMPORTANT]
 >
-> 한 시스템에 `AzureRM` 및 `Az` 모듈을 동시에 설치하지 않아야 합니다. `Az` 모듈을 설치하려면 `AzureRM`을 제거해야 합니다. 이를 수행하는 방법에 대한 지침은 [Azure PowerShell 모듈(AzureRM) 제거](uninstall-azurerm-ps.md)를 참조하세요.
+> `AzureRM` 및 `Az` 모듈을 동시에 설치할 수 있습니다. 모듈을 모두 설치한 후 __별칭을 사용 않 함으로 설정__합니다.
+> 별칭을 사용하도록 설정하면 `AzureRM` cmdlet 및 `Az` 명령 별칭 간의 충돌이 발생하여 예기치 않은 동작이 발생할 수 있습니다.
+> `Az` 모듈을 설치하기 전에 `AzureRM`을 제거하는 것이 좋습니다. 항상 `AzureRM`을 제거할 수 있으며 또는 언제든지 별칭을 사용하도록 설정할 수 있습니다. 제거 방법은 [Azure PowerShell 모듈(AzureRM) 제거](uninstall-azurerm-ps.md)를 참조하세요. 
 
 모듈을 전역 범위에 설치하려면 상승된 권한으로 PowerShell 갤러리에서 모듈을 설치해야 합니다. Azure PowerShell을 설치하려면 상승된 세션에서 다음 명령을 실행합니다(Windows에서는 "관리자 권한으로 실행", macOS 또는 Linux에서는 슈퍼 사용자 권한으로 실행).
 
