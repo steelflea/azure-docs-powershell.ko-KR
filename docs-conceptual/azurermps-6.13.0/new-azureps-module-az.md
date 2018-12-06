@@ -27,7 +27,7 @@ Az는 새로운 모듈이기 때문에 버전이 다시 설정되었습니다. �
 
 ## <a name="upgrade-to-az"></a>Az로 업그레이드
 
-새로운 'Az' 모듈로 업그레이드하는 것이 권장되며 업그레이드 절차는 다음과 같습니다.
+사용자가 새로운 `Az` 모듈로 업그레이드하는 것이 좋습니다. 이렇게 하려면 다음을 수행합니다.
 
 * [Azure PowerShell AzureRM 모듈 제거](/powershell/azure/uninstall-azurerm-ps)
 * [Azure PowerShell Az 모듈 설치](/powershell/azure/install-az-ps)
