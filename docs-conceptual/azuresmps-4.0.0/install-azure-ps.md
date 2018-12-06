@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 21b61a2f91b4f6211fbeec8ba234782355b9a4b3
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 6cc6d9984e49c0cbc23c7ef3a77b98c0b7f3a8e0
+ms.sourcegitcommit: 93f93b90ef88c2659be95f3acaba514fe9639169
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024769"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52828334"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -85,7 +85,8 @@ Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법�
 |PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
-### Azure PowerShell 버전 확인
+
+### <a name="checking-the-version-of-azure-powershell"></a>Azure PowerShell 버전 확인
 
 가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
 

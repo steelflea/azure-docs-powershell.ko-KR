@@ -8,11 +8,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: d3e467714b1a9e4840f2a34b57eabfa5a2c6eaec
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 93f93b90ef88c2659be95f3acaba514fe9639169
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586499"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52827448"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -29,7 +29,7 @@ Connect-AzureRmAccount
 실행되는 경우 이 cmdlet은 귀하의 Azure 계정과 연결된 이메일 주소와 암호를 묻는 대화 상자를 표시합니다. 인증될 때, 현재 PowerShell 세션에 해당 정보가 저장됩니다. 대화 상자가 닫히고 모든 Azure PowerShell cmdlet에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
-> Azure PowerShell 6.3.0부터는 Windows에 로그인이 유지되는 한, 여러 PowerShell 세션에서 자격 증명을 공유할 수 있습니다. 자세한 내용은 [영구 자격 증명](context-persistence.md)에 대한 아티클을 참조합니다.
+> Azure PowerShell 6.3.0부터는 Windows에 로그인한 상태를 유지하는 한, 여러 PowerShell 세션에서 자격 증명을 공유할 수 있습니다. 자세한 내용은 [영구 자격 증명](context-persistence.md)에 대한 아티클을 참조합니다.
 
 ## <a name="sign-in-with-a-service-principal"></a>서비스 주체를 사용하여 로그인
 
