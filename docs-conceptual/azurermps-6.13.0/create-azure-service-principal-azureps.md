@@ -9,18 +9,18 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
 ms.openlocfilehash: 2db1ada32e5a9285c27ec3f569b622c9c33a06b0
-ms.sourcegitcommit: 93f93b90ef88c2659be95f3acaba514fe9639169
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52826632"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53216146"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
 Azure PowerShell을 사용하여 앱 또는 서비스를 관리하려는 경우 소유한 자격 증명 대신 AAD(Azure Active Directory) 서비스 주체에서 실행해야 합니다. 이 문서에서는 Azure PowerShell을 사용하여 보안 주체를 만드는 과정을 설명합니다.
 
 > [!NOTE]
-> Azure Portal을 통해 서비스 주체를 만들 수도 있습니다. 자세한 내용은 [포털을 사용하여 리소스에 액세스할 수 있는 Azure AD 응용 프로그램 및 서비스 주체 만들기](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 참조하세요.
+> Azure Portal을 통해 서비스 주체를 만들 수도 있습니다. 자세한 내용은 [포털을 사용하여 리소스에 액세스할 수 있는 Active Directory 응용 프로그램 및 서비스 주체 만들기](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 참조하세요.
 
 ## <a name="what-is-a-service-principal"></a>'서비스 주체'란?
 
@@ -37,7 +37,7 @@ Azure 서비스 주체는 특정 Azure 리소스에 액세스하기 위해 사�
 Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다음 방법 중 하나로 배포된 앱을 식별해야 합니다.
 
 * 다음 예제처럼 "MyDemoWebApp"와 같은 배포된 앱의 고유 이름
-* 배포된 앱이나 서비스, 개체와 관련된 고유 GUID인 응용 프로그램 ID  
+* 배포된 앱이나 서비스, 개체와 관련된 고유 GUID인 응용 프로그램 ID
 
 ### <a name="get-information-about-your-application"></a>응용 프로그램에 대한 정보 가져오기
 
@@ -105,7 +105,7 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
+축하합니다! 이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
 
 ## <a name="managing-roles"></a>역할 관리
 
@@ -168,7 +168,7 @@ ObjectType         : ServicePrincipal
 
 ## <a name="change-the-credentials-of-the-security-principal"></a>보안 주체의 자격 증명 변경
 
-보안을 향상 시키려면 사용 권한을 검토하고 암호를 정기적으로 업데이트하는 것이 좋습니다. 앱이 변경될때 보안 자격 증명을 관리하고 수정할 수도 있습니다. 예를 들어, 새 암호를 만들고 이전 암호를 제거하여 서비스 주체의 암호를 변경할 수 있습니다.
+보안을 향상시키려면 사용 권한을 검토하고 암호를 정기적으로 업데이트하는 것이 좋습니다. 앱이 변경될 때 보안 자격 증명을 관리하고 수정할 수도 있습니다. 예를 들어, 새 암호를 만들고 이전 암호를 제거하여 서비스 주체의 암호를 변경할 수 있습니다.
 
 ### <a name="add-a-new-password-for-the-service-principal"></a>서비스 주체의 새 암호 추가
 

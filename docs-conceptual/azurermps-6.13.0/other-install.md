@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.openlocfilehash: b442da364a01cd6022c14cbb32a9b633676ca8c7
-ms.sourcegitcommit: 93f93b90ef88c2659be95f3acaba514fe9639169
+ms.openlocfilehash: 0976fd51b26010702d200cee445d93269405416c
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52828861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53216932"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>MSI로 Windows에 Azure PowerShell 설치
 
@@ -26,7 +26,7 @@ Linux 또는 macOS 환경에 설치하려면 [macOS 또는 Linux에 Azure PowerS
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>MSI 패키지를 사용하여 Windows에 설치 및 업데이트
 
-Azure PowerShell은 [GitHub](https://github.com/Azure/azure-powershell/releases/latest)에서 사용할 수 있는 MSI 파일을 사용하여 설치할 수 있습니다. 이전 버전의 Azure 모듈이 MSI로 설치된 경우 설치 관리자에서 자동으로 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다. `AzureRM` 및 `Azure` 모듈 모두 설치됩니다.
+Windows PowerShell 5.x용 Azure PowerShell은 [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018)에서 사용할 수 있는 MSI 파일을 사용하여 설치할 수 있습니다. 이전 버전의 Azure 모듈이 MSI로 설치된 경우 설치 관리자에서 자동으로 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다. `AzureRM` 및 `Azure` 모듈 모두 설치됩니다.
 
 > [!NOTE]
 > Azure 클래식 배포 모델을 사용하는 경우 `Azure` 모듈만 사용합니다.
