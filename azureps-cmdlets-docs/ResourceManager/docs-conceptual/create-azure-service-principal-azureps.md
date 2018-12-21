@@ -2,18 +2,21 @@
 title: Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 description: Azure PowerShell을 사용하여 앱 또는 서비스의 서비스 주체를 만드는 방법을 알아봅니다.
 keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
-author: sptramer
-ms.author: sttramer
+services: azure
+author: sdwheeler
+ms.author: sewhee
 manager: carmonm
+ms.product: azure
+ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 19379a57e2ed369f75b2f02c73c00c1fbe02213e
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 6eda2d2a729331b212938aa2681d0188a25b734a
+ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217714"
+ms.lasthandoff: 06/29/2017
+ms.locfileid: "20246571"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -39,15 +42,15 @@ Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다
 * 다음 예제에서 "MyDemoWebApp"와 같은 배포된 앱의 고유 이름 또는
 * 응용 프로그램 ID, 배포된 앱, 서비스 또는 개체와 관련된 고유 GUID
 
-### <a name="get-information-about-your-application"></a>애플리케이션에 대한 정보 가져오기
+### <a name="get-information-about-your-application"></a>응용 프로그램에 대한 정보 가져오기
 
 `Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 검색할 수 있습니다.
 
-```powershell-interactive
+```powershell
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
-```output
+```
 DisplayName             : MyDemoWebApp
 ObjectId                : 775f64cd-0ec8-4b9b-b69a-8b8946022d9f
 IdentifierUris          : {http://MyDemoWebApp}
@@ -63,13 +66,13 @@ ReplyUrls               : {}
 
 `New-AzureRmADServicePrincipal` cmdlet을 사용하여 서비스 주체를 만듭니다.
 
-```powershell-interactive
+```powershell
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $password
 ```
 
-```output
+```
 DisplayName                    Type                           ObjectId
 -----------                    ----                           --------
 MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738-a866-b4e3081a69e4
@@ -77,12 +80,12 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 
 ### <a name="get-information-about-the-service-principal"></a>서비스 주체에 대한 정보 가져오기
 
-```powershell-interactive
+```powershell
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
 
-```output
+```
 ServicePrincipalNames : {http://MyDemoWebApp, 00c01aaa-1603-49fc-b6df-b78c4e5138b4}
 ApplicationId         : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
 DisplayName           : MyDemoWebApp
@@ -94,14 +97,14 @@ Type                  : ServicePrincipal
 
 이제 제공한 *appId* 및 *암호*를 사용하여 앱에 새로운 서비스 주체로 로그인할 수 있습니다. 계정에 테넌트 ID를 제공해야 합니다. 개인 자격 증명을 사용하여 Azure에 로그인하는 경우 테넌트 ID가 표시됩니다.
 
-```powershell-interactive
+```powershell
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
 Login-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 새 PowerShell 세션에서 이 명령을 실행합니다. 성공적으로 로그인한 후에 다음과 같은 출력이 표시됩니다.
 
-```output
+```
 Environment           : AzureCloud
 Account               : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
 TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -110,12 +113,12 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-축하합니다! 이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
+축하합니다. 이러한 자격 증명을 사용하여 앱을 실행할 수 있습니다. 다음으로 서비스 주체의 사용 권한을 조정해야 합니다.
 
 ## <a name="managing-roles"></a>역할 관리
 
 > [!NOTE]
-> Azure 역할 기반 Access Control(RBAC)은 사용자 및 서비스 주체에 대한 역할을 정의하고 관리하기 위한 모델입니다. 역할에는 그와 관련된 일련의 사용 권한이 있으며 여기서 주체가 읽고 액세스하고 쓰고 관리할 수 있는 리소스를 결정합니다. RBAC와 역할에 대한 자세한 내용은 [RBAC: 기본 제공 역할](/azure/active-directory/role-based-access-built-in-roles)을 참조하세요.
+> Azure RBAC(역할 기반 액세스 제어)는 사용자 및 서비스 주체에 대한 역할을 정의하고 관리하기 위한 모델입니다. 역할에는 그와 관련된 일련의 사용 권한이 있으며 여기서 주체가 읽고 액세스하고 쓰고 관리할 수 있는 리소스를 결정합니다. RBAC와 역할에 대한 자세한 내용은 [RBAC: 기본 제공 역할](/azure/active-directory/role-based-access-built-in-roles)을 참조하세요.
 
 Azure PowerShell은 역할 할당을 관리하는 다음과 같은 cmdlet을 제공합니다.
 
@@ -128,11 +131,11 @@ Azure PowerShell은 역할 할당을 관리하는 다음과 같은 cmdlet을 제
 
 이 예제에서는 **판독기** 역할을 이전 예제에 추가하고 **참가자** 역할을 삭제합니다.
 
-```powershell-interactive
+```powershell
 New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
-```output
+```
 RoleAssignmentId   : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG/providers/Microsoft.Authorization/roleAssignments/818892f2-d075-46a1-a3a2-3a4e1a12fcd5
 Scope              : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG
 DisplayName        : MyDemoWebApp
@@ -143,17 +146,17 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-```powershell-interactive
+```powershell
 Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 현재 할당된 역할을 보려면:
 
-```powershell-interactive
+```powershell
 Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
-```output
+```
 RoleAssignmentId   : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG/providers/Microsoft.Authorization/roleAssignments/0906bbd8-9982-4c03-8dae-aeaae8b13f9e
 Scope              : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG
 DisplayName        : MyDemoWebApp
@@ -177,12 +180,12 @@ ObjectType         : ServicePrincipal
 
 ### <a name="add-a-new-password-for-the-service-principal"></a>서비스 주체의 새 암호 추가
 
-```powershell-interactive
+```powershell
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
 
-```output
+```
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
@@ -190,11 +193,11 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="get-a-list-of-credentials-for-the-service-principal"></a>서비스 주체의 자격 증명 목록 가져오기
 
-```powershell-interactive
+```powershell
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
-```output
+```
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
@@ -203,11 +206,11 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="remove-the-old-password-from-the-service-principal"></a>서비스 주체에게서 이전 암호 제거
 
-```powershell-interactive
+```powershell
 Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
-```output
+```
 Confirm
 Are you sure you want to remove credential with keyId '6f801c3e-6fcd-42b9-be8e-320b17ba1d36' for
 service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
@@ -216,11 +219,11 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 
 ### <a name="verify-the-list-of-credentials-for-the-service-principal"></a>서비스 주체의 자격 증명 목록 확인
 
-```powershell-interactive
+```powershell
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
-```output
+```
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password

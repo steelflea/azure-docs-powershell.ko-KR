@@ -39,7 +39,7 @@ Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다
 * 다음 예제에서 "MyDemoWebApp"와 같은 배포된 앱의 고유 이름 또는
 * 응용 프로그램 ID, 배포된 앱, 서비스 또는 개체와 관련된 고유 GUID
 
-### <a name="get-information-about-your-application"></a>응용 프로그램에 대한 정보 가져오기
+### <a name="get-information-about-your-application"></a>애플리케이션에 대한 정보 가져오기
 
 `Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 검색할 수 있습니다.
 

@@ -8,12 +8,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 19379a57e2ed369f75b2f02c73c00c1fbe02213e
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: bc6cfb64568df3446df924a5df76b6bb84dba2d0
+ms.sourcegitcommit: 5a5b6dd216d5f805204244146cf6f88ad2f34fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217714"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36237914"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -43,7 +43,7 @@ Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다
 
 `Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 검색할 수 있습니다.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
@@ -63,10 +63,11 @@ ReplyUrls               : {}
 
 `New-AzureRmADServicePrincipal` cmdlet을 사용하여 서비스 주체를 만듭니다.
 
-```powershell-interactive
+```azurepowershell-interactive
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
-New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $password
+$securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
+New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
 ```
 
 ```output
@@ -77,7 +78,7 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 
 ### <a name="get-information-about-the-service-principal"></a>서비스 주체에 대한 정보 가져오기
 
-```powershell-interactive
+```azurepowershell-interactive
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
@@ -94,9 +95,9 @@ Type                  : ServicePrincipal
 
 이제 제공한 *appId* 및 *암호*를 사용하여 앱에 새로운 서비스 주체로 로그인할 수 있습니다. 계정에 테넌트 ID를 제공해야 합니다. 개인 자격 증명을 사용하여 Azure에 로그인하는 경우 테넌트 ID가 표시됩니다.
 
-```powershell-interactive
+```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
-Login-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 새 PowerShell 세션에서 이 명령을 실행합니다. 성공적으로 로그인한 후에 다음과 같은 출력이 표시됩니다.
@@ -128,11 +129,11 @@ Azure PowerShell은 역할 할당을 관리하는 다음과 같은 cmdlet을 제
 
 이 예제에서는 **판독기** 역할을 이전 예제에 추가하고 **참가자** 역할을 삭제합니다.
 
-```powershell-interactive
+```azurepowershell-interactive
 New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
-```output
+```
 RoleAssignmentId   : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG/providers/Microsoft.Authorization/roleAssignments/818892f2-d075-46a1-a3a2-3a4e1a12fcd5
 Scope              : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myRG
 DisplayName        : MyDemoWebApp
@@ -143,13 +144,13 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-```powershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 현재 할당된 역할을 보려면:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
@@ -177,7 +178,7 @@ ObjectType         : ServicePrincipal
 
 ### <a name="add-a-new-password-for-the-service-principal"></a>서비스 주체의 새 암호 추가
 
-```powershell-interactive
+```azurepowershell-interactive
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
@@ -190,11 +191,11 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="get-a-list-of-credentials-for-the-service-principal"></a>서비스 주체의 자격 증명 목록 가져오기
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
-```output
+```
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
@@ -203,7 +204,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="remove-the-old-password-from-the-service-principal"></a>서비스 주체에게서 이전 암호 제거
 
-```powershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
@@ -216,7 +217,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 
 ### <a name="verify-the-list-of-credentials-for-the-service-principal"></a>서비스 주체의 자격 증명 목록 확인
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
