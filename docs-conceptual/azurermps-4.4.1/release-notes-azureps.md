@@ -181,7 +181,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - zip 파일 URI를 사용하거나 mainTemplate 및 createUiDefinition json 파일을 사용하여 관리되는 응용 프로그램 정의를 만드는 New-AzureRmManagedApplicationDefinition cmdlet
     - 리소스 그룹에서 모든 관리되는 응용 프로그램 정의를 나열하거나 관리되는 특정 응용 프로그램 정의를 가져오는 Get-AzureRmManagedApplicationDefinition cmdlet
     - 관리되는 응용 프로그램 정의를 삭제하는 Remove-AzureRmManagedApplicationDefinition cmdlet
-    - 기존의 관리되는 응용 프로그램 정의를 업데이트하는 Set-AzureRmManagedApplicationDefinition cmdlet
+    - 기존의 관리되는 애플리케이션 정의를 업데이트하는 Set-AzureRmManagedApplicationDefinition cmdlet
 * Sql
   * Virtual Network 규칙에 대한 지원 추가
     - Azure SQL Server에서 가상 네트워크 규칙의 목록 또는 특정 규칙 이름에 의해 가상 네트워크 규칙을 가져오는 Get-AzureRmSqlServerVirtualNetworkRule cmdlet 추가.
