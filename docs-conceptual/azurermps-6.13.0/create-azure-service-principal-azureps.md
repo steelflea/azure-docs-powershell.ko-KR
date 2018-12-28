@@ -59,7 +59,7 @@ AppPermissions          :
 ReplyUrls               : {}
 ```
 
-### <a name="create-a-service-principal-for-your-application"></a>응용 프로그램의 서비스 주체 만들기
+### <a name="create-a-service-principal-for-your-application"></a>애플리케이션의 서비스 주체 만들기
 
 `New-AzureRmADServicePrincipal` cmdlet을 사용하여 서비스 주체를 만듭니다.
 
