@@ -400,7 +400,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* MarketPlace에서 관리되는 응용 프로그램 생성 시의 문제 해결.
+* MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
 * 해결된 문제
@@ -439,7 +439,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* MarketPlace에서 관리되는 응용 프로그램 생성 시의 문제 해결.
+* MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
 * 문제 해결

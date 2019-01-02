@@ -131,7 +131,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - 업데이트된 Add-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
     - 업데이트된 New-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
     - 업데이트된 Set-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
-  * 응용 프로그램 보안 그룹에 대한 지원 추가됨
+  * 애플리케이션 보안 그룹에 대한 지원 추가됨
     - New-AzureRmApplicationSecurityGroup 추가됨
     - Get-AzureRmApplicationSecurityGroup 추가됨
     - Remove-AzureRmApplicationSecurityGroup 추가됨
@@ -173,14 +173,14 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   * PSRoleAssignment 개체를 사용하여 roleassignment 제거를 위한 지원 추가
     - 사용자는 이제 Remove-AzureRMRoleAssignment commandlet과 함께 PSRoleassignmnet inputobject를 사용하여 roleassignment를 제거할 수 있습니다.
   * ManagedApplication cmdlet 추가
-    - 관리되는 응용 프로그램을 만드는 New-AzureRmManagedApplication cmdlet
-    - 구독에서 모든 관리되는 응용 프로그램을 나열하거나 관리되는 특정 응용 프로그램을 가져오는 Get-AzureRmManagedApplication cmdlet
-    - 관리되는 응용 프로그램을 삭제하는 Remove-AzureRmManagedApplication cmdlet
-    - 기존의 관리되는 응용 프로그램을 업데이트하는 Set-AzureRmManagedApplication cmdlet
+    - 관리되는 애플리케이션을 만드는 New-AzureRmManagedApplication cmdlet
+    - 구독에서 모든 관리되는 애플리케이션을 나열하거나 관리되는 특정 애플리케이션을 가져오는 Get-AzureRmManagedApplication cmdlet
+    - 관리되는 애플리케이션을 삭제하는 Remove-AzureRmManagedApplication cmdlet
+    - 기존의 관리되는 애플리케이션을 업데이트하는 Set-AzureRmManagedApplication cmdlet
   * ManagedApplicationDefinition cmdlet 추가
-    - zip 파일 URI를 사용하거나 mainTemplate 및 createUiDefinition json 파일을 사용하여 관리되는 응용 프로그램 정의를 만드는 New-AzureRmManagedApplicationDefinition cmdlet
-    - 리소스 그룹에서 모든 관리되는 응용 프로그램 정의를 나열하거나 관리되는 특정 응용 프로그램 정의를 가져오는 Get-AzureRmManagedApplicationDefinition cmdlet
-    - 관리되는 응용 프로그램 정의를 삭제하는 Remove-AzureRmManagedApplicationDefinition cmdlet
+    - zip 파일 URI를 사용하거나 mainTemplate 및 createUiDefinition json 파일을 사용하여 관리되는 애플리케이션 정의를 만드는 New-AzureRmManagedApplicationDefinition cmdlet
+    - 리소스 그룹에서 모든 관리되는 애플리케이션 정의를 나열하거나 관리되는 특정 애플리케이션 정의를 가져오는 Get-AzureRmManagedApplicationDefinition cmdlet
+    - 관리되는 애플리케이션 정의를 삭제하는 Remove-AzureRmManagedApplicationDefinition cmdlet
     - 기존의 관리되는 애플리케이션 정의를 업데이트하는 Set-AzureRmManagedApplicationDefinition cmdlet
 * Sql
   * Virtual Network 규칙에 대한 지원 추가
@@ -666,7 +666,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * ServiceFabric
 
   - Service Fabric에 대한 cmdlet이 추가되었습니다.
-    + Add-AzureRmServiceFabricApplicationCertificate       응용 프로그램 인증서로 사용할 인증서 추가
+    + Add-AzureRmServiceFabricApplicationCertificate       애플리케이션 인증서로 사용할 인증서 추가
     + Add-AzureRmServiceFabricClientCertificate       클라이언트 인증을 위해 일반 이름 또는 지문을 클러스터 설정에 추가
     + Add-AzureRmServiceFabricClusterCertificate       기존 인증서를 롤오버하기 위해 클러스터에 보조 클러스터 인증서 추가
     + Add-AzureRmServiceFabricNodes       클러스터에 특정 노드 형식의 노드/VM 추가
