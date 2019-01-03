@@ -7,17 +7,29 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: a35814f4411dd9cab75fa36bd13ff087cdec8f9b
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 7456e45fe9a94d3c1e809dfd075a090448001607
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217068"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53982828"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
 
 이 문서에서는 Azure PowerShell의 이전 버전을 제거하거나 시스템에서 완전히 제거하는 방법을 알려줍니다. Azure PowerShell을 완전히 제거하기로 한 경우 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 통해 몇 가지 피드백을 보내주세요.
 버그가 발생한 경우 [GitHub 문제를 제출](https://github.com/azure/azure-powershell/issues)해주시면 감사하겠습니다.
+
+
+## <a name="uninstall-msi"></a>MSI 제거
+
+MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
+
+| 플랫폼 | 지침 |
+|----------|--------------|
+| 윈도우 10 | 시작 > 설정 > 앱 |
+| Windows 7 </br>Windows 8 | 시작>제어판 > 프로그램 > 프로그램 제거 |
+
+이 화면의 프로그램 목록에서 "Azure PowerShell"이 보여야 여기에서 제거할 수 있습니다.
 
 ## <a name="uninstall-from-powershell"></a>PowerShell에서 제거하기
 
@@ -109,14 +121,3 @@ Uninstalling Azure.AnalysisServices version 0.4.7
 $versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)
 $versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
 ```
-
-## <a name="uninstall-msi"></a>MSI 제거
-
-MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
-
-| 플랫폼 | 지침 |
-|----------|--------------|
-| 윈도우 10 | 시작 > 설정 > 앱 |
-| Windows 7 </br>Windows 8 | 시작>제어판 > 프로그램 > 프로그램 제거 |
-
-이 화면의 프로그램 목록에서 "Azure PowerShell"이 보여야 여기에서 제거할 수 있습니다.

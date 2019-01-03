@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: 5f7f65aa25d86feb77a85fc28d122118216542cc
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 5561fd7a1b2018c126da26eaad7d51049497ec8e
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217374"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53983014"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -20,14 +20,12 @@ ms.locfileid: "53217374"
 
 Azure PowerShell을 다른 플랫폼에서 설치하는 지침에 대해서는, [macOS 및 Linux에서 Azure PowerShell 설치 및 구성](install-azurermps-maclinux.md)을 참조하세요.
 
-Azure 클래식 배포 모델은 본 버전의 Azure PowerShell에서 지원되지 않습니다. 클래식 배포에 대한 지원은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps) 지침을 참조합니다.
-
 ## <a name="requirements"></a>요구 사항
 
 Azure PowerShell을 설치하려면, PowerShellGet 버전 1.1.2.0 이상이 필요합니다. 귀하의 시스템에서 가능한지 확인하려면 다음 명령을 실행합니다:
 
 ```powershell-interactive
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule -Name PowerShellGet -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
 다음과 비슷하게 표시됩니다.

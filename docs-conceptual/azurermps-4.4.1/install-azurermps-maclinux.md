@@ -7,23 +7,18 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
-ms.openlocfilehash: 47611281f67d68c9fc2686e0c6156b060a225158
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 936bb24eecb4077080e172bf0d29fe57ec652187
+ms.sourcegitcommit: 797c18f93aaa495ef005993b2e202d7378588dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217527"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53594457"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>macOS 또는 Linux에 Azure PowerShell 설치
 
 Windows 이외의 플랫폼에서도 PowerShell Core v6에서 Azure PowerShell을 실행할 수 있게 되었습니다. 본 버전의 PowerShell은 .NET Core를 지원하는 모든 플랫폼에서 사용할 수 있도록 빌드되었습니다. 이러한 플랫폼에서 작동하기 위해, Azure PowerShell의 특별 .NET Core 버전이 사용 가능합니다.
 
-> [!NOTE]
-> 이때 PowerShell Core v6과 .NET Core용 Azure PowerShell은 아직 베타 버전입니다.
-> 이러한 제품에 대한 지원은 제한됩니다. 문제가 있거나 버그를 발견한 경우 GitHub에서 문제를 제출하십시오.
->
-> * [PowerShell Core v6에 대한 문제](https://github.com/PowerShell/PowerShell/issues)
-> * [Azure PowerShell에 대한 문제](https://github.com/azure/azure-docs-powershell/issues)
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## <a name="install-powershell-core"></a>PowerShell Core 설치
 

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017
-ms.openlocfilehash: 838a50627e1d51221724515dfacd58ab9469b005
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: d45ef549eaf33359d2e91e85e135e365c1737deb
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217612"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53982963"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -42,7 +42,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
 
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-InstalledModule AzureRM -AllVersions` 명령을 실행합니다.
 
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
 

@@ -8,14 +8,16 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
-ms.openlocfilehash: ff5ee02b11b6f0649e20b056c14fc8a9b3ba6276
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 5ee8572ccb8e9fc2de11c2253a1815a666e038a7
+ms.sourcegitcommit: 4acddc7026522c4fe39de2c4424917d88ee01b7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024701"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53736498"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
+
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) 모델을 사용하는 cmdlet 집합을 제공합니다. [Azure Cloud Shell](/azure/cloud-shell/overview)과 함께 브라우저에서 사용하거나 로컬 컴퓨터에 설치하여 PowerShell 세션에서 사용할 수 있습니다.
 
@@ -28,9 +30,6 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-> [!NOTE]
-> 변환할 수 없는 클래식 배포 모델을 사용하는 배포가 있는 경우 Azure PowerShell의 Service Management 버전을 설치할 수 있습니다. 자세한 내용은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps)를 참조하세요.
-
 ## <a name="learn-powershell-basics"></a>PowerShell 기본 사항 알아보기
 
 PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 수 있습니다.
@@ -38,7 +37,7 @@ PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 �
 * [PowerShell 설치](/powershell/scripting/installing-windows-powershell)
 * [PowerShell 스크립팅](/powershell/scripting/scripting-with-windows-powershell)
 
-[PowerShell 기본 사항: (1부) PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) 비디오를 시청할 수도 있습니다.
+이 비디오를 시청할 수도 있습니다. [PowerShell 기본 사항: (파트 1)PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1)
 
 또는 Microsoft Virtual Academy의 [PowerShell 시작](https://mva.microsoft.com/liveevents/powershell-jumpstart)에 참석합니다.
 

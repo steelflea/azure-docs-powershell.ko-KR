@@ -7,19 +7,19 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018
-ms.openlocfilehash: f9293d2715b36161c3e6d0d9469b6f18ab35d6c8
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 30f7a01b941bb2861b1652fa30ea002d40c80a80
+ms.sourcegitcommit: 797c18f93aaa495ef005993b2e202d7378588dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53216333"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53594576"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi-or-web-platform-installer"></a>MSI 또는 웹 플랫폼 설치 관리자를 사용하여 Windows에 Azure PowerShell 설치
 
 이 문서에서는 MSI 또는 웹 플랫폼 설치 관리자(WebPI)를 사용하여 Azure PowerShell을 Windows에 설치하는 방법에 대해 설명합니다.  
 시스템에 필요한 경우에만 이러한 설치 방법을 사용합니다. Windows에 Azure PowerShell 설치에는 PowerShellGet을 사용하는 방법이 권장됩니다. PowerShellGet을 사용하여 Azure PowerShell을 설치하는 방법은 [PowerShellGet으로 Azure PowerShell 설치하기](install-azurerm-ps.md)를 참조합니다.
 
-Linux 또는 macOS 환경에 설치하려면 [macOS 또는 Linux에 Azure PowerShell 설치](install-azurermps-maclinux.md)를 참조합니다.
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>MSI 패키지를 사용하여 Windows에 설치 및 업데이트
 

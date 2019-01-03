@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: ef796bcb81e24b1942c644aad2b4ec7705916b02
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: fac77e88612091c09106dffea6aa6d3765c1416b
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217748"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53982997"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell 설치 및 구성
 
@@ -21,12 +21,14 @@ macOS 또는 Linux에서 Azure PowerShell을 사용하려는 경우 다음 아�
 
 PowerShell 갤러리에서 Azure PowerShell을 설치하는 것이 기본적인 설치 방법입니다.
 
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+
 ## <a name="step-1-install-powershellget"></a>1단계: PowerShellGet 설치
 
 PowerShell 갤러리에서 항목을 설치하려면 PowerShellGet 모듈이 필요합니다. 적절한 버전의 PowerShellGet 및 다른 시스템 요구 사항이 있는지 확인합니다. PowerShellGet이 시스템에 설치되어 있는지 확인하려면 다음 명령을 실행합니다.
 
 ```powershell-interactive
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 다음과 비슷하게 표시됩니다.
@@ -114,10 +116,10 @@ Azure PowerShell을 사용하는 방법에 대한 자세한 내용은 다음 문
 
 ### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Azure PowerShell 버전 확인
 
-가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
+가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-InstalledModule AzureRM`을 실행합니다.
 
 ```powershell-interactive
-Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule AzureRM -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
 ### <a name="support-for-classic-deployment-methods"></a>클래식 배포 방법에 대한 지원
