@@ -695,7 +695,7 @@ Update-Module -Name AzureRM
   - 문제 https://github.com/Azure/azure-powershell/issues/5046 해결
     - 감사 cmdlet의 AuditAction 매개 변수가 더 이상 무시되지 않습니다.
   - '보조' StorageKeyType이 제공된 경우 감사 cmdlet에서 문제가 해결되었습니다.
-    - Blob 감사를 설정할 때, StorageKeyType 매개 변수에 '보조' 값을 제공할 때 보조 키 대신, 주 저장소 계정 키가 사용되었습니다.
+    - Blob 감사를 설정할 때, StorageKeyType 매개 변수에 '보조' 값을 제공할 때 보조 키 대신, 주 스토리지 계정 키가 사용되었습니다.
   - Set-AzureRmSqlServerTransparentDataEncryptionProtector에서 확인 메시지의 문구 변경
 * Azure(RDFE)
     - 모든 RemoteApp Cmdlet 제거
