@@ -7,12 +7,12 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: cff9a6ef64907c7ff493dbc9c83dd20a82f297d9
-ms.sourcegitcommit: 797c18f93aaa495ef005993b2e202d7378588dfa
+ms.openlocfilehash: d08bca962b6ff65d25135150824b7c24fbd20103
+ms.sourcegitcommit: 007a733342f37894d4aaec7a859dc1ca93c00c92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53594874"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012349"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
@@ -42,4 +42,4 @@ Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었
 
 ## <a name="the-future-of-support-for-azurerm"></a>AzureRM에 대한 향후 지원
 
-기존 AzureRM 모듈은 새 cmdlet 또는 기능을 더 이상 받을 수 없습니다. 그러나 AzureRM은 공식적으로 유지되며 버그 수정도 이루어집니다. 최신 Azure 서비스 및 기능을 유지하기 위해서는 Az 모듈로 전환해야 합니다.
+기존 AzureRM 모듈은 새 cmdlet 또는 기능을 더 이상 받을 수 없습니다. 그러나 AzureRM은 공식적으로 유지되며 2020년 12월까지 버그 수정도 이루어집니다. 최신 Azure 서비스 및 기능을 유지하기 위해서는 Az 모듈로 전환해야 합니다.
