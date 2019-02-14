@@ -8,18 +8,18 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
 ms.openlocfilehash: a07b5fe8cd532f99038d7f0ce10b3b891c896da1
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52587774"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53216435"
 ---
 # <a name="persist-user-credentials-across-powershell-sessions"></a>PowerShell 세션간에 사용자 자격 증명 유지
 
 Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
 
 - 새 PowerShell 세션에서 다시 사용하기 위한 로그인 정보 보존.
-- 장기 실행 cmdlet을 실행하기 위한 더 쉬운 백그라운드 작업 사용.
+- 오랫동안 수행되는 cmdlet을 실행하기 위한 더 쉬운 백그라운드 작업 사용.
 - 별도 로그인 없이 계정, 구독 및 환경 간 전환.
 - 동일한 PowerShell 세션에서 다른 자격 증명 및 구독을 동시에 사용하여 작업 실행.
 
@@ -40,14 +40,14 @@ Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하�
 
 버전 6.3.0 이상에서 Azure PowerShell은 세션 간에 자동으로 컨텍스트 정보를 유지합니다. PowerShell이 사용자의 컨텍스트 및 자격 증명을 기억하지 않도록 설정하려면 `Disable-AzureRmContextAutoSave`를 사용합니다. PowerShell 세션을 열 때마다 Azure에 로그인해야 합니다.
 
-Azure PowerShell이 PowerShell 세션을 닫은 후 사용자의 컨텍스트를 기억하도록 하려면 `Enable-AzureRmContextAutosave`를 사용합니다. 컨텍스트 및 자격 증명 정보는 사용자 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 숨겨진 특수 폴더에 자동으로 저장됩니다.
+Azure PowerShell이 PowerShell 세션을 닫은 후 사용자의 컨텍스트를 기억하도록 하려면 `Enable-AzureRmContextAutosave`를 사용합니다. 컨텍스트 및 자격 증명 정보는 사용자 디렉터리의 숨겨진 특수 폴더(`%AppData%\Roaming\Windows Azure PowerShell`)에 자동으로 저장됩니다.
 새로운 PowerShell 세션마다 마지막 세션에 사용된 컨텍스트가 대상으로 지정됩니다.
 
 Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 제어가 가능합니다. 변경 내용을 현재 PowerShell 세션(`Process` 범위)에만 적용하거나 또는 모든 PowerShell 세션(`CurrentUser` 범위)에 적용하려는 경우가 있습니다. 이러한 옵션은 [컨텍스트 범위 사용](#Using-Context-Scopes)에서 자세히 설명합니다.
 
 ## <a name="running-azure-powershell-cmdlets-as-background-jobs"></a>Azure PowerShell cmdlet을 백그라운드 작업으로 실행
 
-**Azure 컨텍스트 자동 저장** 기능을 사용하면 PowerShell 백그라운드 작업으로 컨텍스트를 공유할 수 있습니다. PowerShell을 사용하면 장기 실행 작업을 작업이 완료될 때까지 기다리지 않고 백그라운드 작업으로 시작하고 모니터링할 수 있습니다. 두 가지 방법으로 백그라운드 작업으로 자격 증명을 공유할 수 있습니다.
+**Azure 컨텍스트 자동 저장** 기능을 사용하면 PowerShell 백그라운드 작업으로 컨텍스트를 공유할 수 있습니다. PowerShell을 사용하면 장기 실행 작업을 작업이 완료될 때까지 기다리지 않고 백그라운드 작업으로 시작하고 모니터링할 수 있습니다. 두 가지 방법을 통해 백그라운드 작업으로 자격 증명을 공유할 수 있습니다.
 
 - 컨텍스트를 인수로 전달
 
@@ -77,7 +77,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
 ```
 
-앞의 예제는 현재 자격 증명을 사용하여 새 컨텍스트 대상인 ‘Contoso 구독 1’을 추가합니다. 새 컨텍스트는 ‘Contoso1’이라고 합니다. 컨텍스트에 대한 이름을 제공하지 않은 경우 계정 ID 및 구독 ID를 사용하는 기본 이름이 사용됩니다.
+앞의 예제는 현재 자격 증명을 사용하여 새 컨텍스트 대상인 ‘Contoso Subscription 1’을 추가합니다. 새 컨텍스트는 ‘Contoso1’이라고 합니다. 컨텍스트에 대한 이름을 제공하지 않은 경우 계정 ID 및 구독 ID를 사용하는 기본 이름이 사용됩니다.
 
 기존 컨텍스트 이름을 바꾸려면 `Rename-AzureRmContext` cmdlet을 사용합니다. 예: 
 
@@ -85,7 +85,7 @@ PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
 ```
 
-이 예제에서는 자동 이름 `[user1@contoso.org; 123456-7890-1234-564321]`을 사용하는 컨텍스트 이름을 간단한 이름인 ‘Contoso2’로 바꿉니다. 또한 컨텍스트를 관리하는 cmdlet은 신속하게 컨텍스트를 선택할 수 있도록 탭 완성 기능을 사용합니다.
+이 예제에서는 자동 이름 `[user1@contoso.org; 123456-7890-1234-564321]`을 사용하는 컨텍스트 이름을 간단한 이름인 ‘Contoso2’로 바꿉니다. 또한 컨텍스트를 관리하는 cmdlet에서 탭 완성 기능을 사용하면 컨텍스트를 빠르게 선택할 수 있습니다.
 
 마지막으로, 컨텍스트를 제거하려면 `Remove-AzureRmContext` cmdlet을 사용합니다.  예: 
 
@@ -97,7 +97,7 @@ PS C:\> Remove-AzureRmContext Contoso2
 
 ## <a name="removing-credentials"></a>자격 증명 제거
 
-`Disconnect-AzureRmAccount`(`Logout-AzureRmAccount`라고도 함)를 사용하여 사용자 또는 서비스 주체에 대한 모든 자격 증명 및 연결된 컨텍스트를 제거할 수 있습니다. 매개 변수 없이 실행될 때 `Disconnect-AzureRmAccount` cmdlet은 현재 컨텍스트에서 사용자 또는 서비스 주체에 연결된 모든 자격 증명 및 컨텍스트를 제거합니다. 사용자 이름, 서비스 주체 이름 또는 컨텍스트를 특정 보안 주체를 대상으로 전달할 수 있습니다.
+`Disconnect-AzureRmAccount`(`Logout-AzureRmAccount`라고도 함)를 사용하여 사용자 또는 서비스 주체에 대한 모든 자격 증명 및 연결된 컨텍스트를 제거할 수 있습니다. `Disconnect-AzureRmAccount` cmdlet을 매개 변수 없이 실행하면 현재 컨텍스트에서 사용자 또는 서비스 주체에 연결된 모든 자격 증명 및 컨텍스트를 제거합니다. 사용자 이름, 서비스 주체 이름 또는 컨텍스트를 특정 보안 주체를 대상으로 전달할 수 있습니다.
 
 ```azurepowershell-interactive
 Disconnect-AzureRmAccount user1@contoso.org
@@ -105,7 +105,7 @@ Disconnect-AzureRmAccount user1@contoso.org
 
 ## <a name="using-context-scopes"></a>컨텍스트 범위 사용
 
-경우에 따라 다른 세션에 영향을 주지 않고 PowerShell 세션에서 컨텍스트를 선택, 변경 또는 제거할 수도 있습니다. 컨텍스트 cmdlet의 기본 동작을 변경하려면 `Scope` 매개 변수를 사용합니다. `Process` 범위는 현재 세션에만 적용되도록 하여 기본 동작을 재정의합니다. 반대로 `CurrentUser` 범위는 현재 세션만이 아닌 모든 세션의 컨텍스트를 변경합니다.
+경우에 따라 다른 세션에 영향을 주지 않고 PowerShell 세션에서 컨텍스트를 선택, 변경 또는 제거할 수도 있습니다. 컨텍스트 cmdlet의 기본 동작을 변경하려면 `Scope` 매개 변수를 사용합니다. `Process` 범위는 현재 세션에만 적용되도록 기본 동작을 재정의합니다. 반대로 `CurrentUser` 범위는 현재 세션만이 아닌 모든 세션의 컨텍스트를 변경합니다.
 
 예를 들어, 다른 창에 영향을 주지 않고 현재 PowerShell 세션의 기본 컨텍스트 또는 다음에 세션을 열 때 사용되는 컨텍스트를 변경하려면 다음을 사용합니다.
 
@@ -115,7 +115,7 @@ PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 
 ## <a name="how-the-context-autosave-setting-is-remembered"></a>컨텍스트 자동 저장 설정이 기억되는 방식
 
-컨텍스트 자동 저장 설정은 사용자 Azure PowerShell 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 저장됩니다. 일부 종류의 컴퓨터 계정은 이 디렉터리에 액세스하지 못할 수도 있습니다. 이러한 시나리오에서 환경 변수를 사용할 수 있습니다.
+컨텍스트 자동 저장 설정은 사용자 Azure PowerShell 디렉터리(`%AppData%\Roaming\Windows Azure PowerShell`)에 저장됩니다. 컴퓨터 계정 중 일부 유형은 이 디렉터리에 액세스하지 못할 수도 있습니다. 이러한 시나리오에서 환경 변수를 사용할 수 있습니다.
 
 ```azurepowershell-interactive
 $env:AzureRmContextAutoSave="true" | "false"

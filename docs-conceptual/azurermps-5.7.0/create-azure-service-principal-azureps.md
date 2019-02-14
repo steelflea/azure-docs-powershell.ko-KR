@@ -20,7 +20,7 @@ ms.locfileid: "39025212"
 Azure PowerShell을 사용하여 앱 또는 서비스를 관리하려는 경우 고유한 자격 증명 대신 AAD(Azure Active Directory) 서비스 주체에서 실행해야 합니다. 이 항목에서는 Azure PowerShell을 사용하여 보안 주체를 만드는 과정을 설명합니다.
 
 > [!NOTE]
-> Azure Portal을 통해 서비스 주체를 만들 수도 있습니다. 자세한 내용은 [포털을 사용하여 리소스에 액세스할 수 있는 Active Directory 응용 프로그램 및 서비스 주체 만들기](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 참조하세요.
+> Azure Portal을 통해 서비스 주체를 만들 수도 있습니다. 자세한 내용은 [포털을 사용하여 리소스에 액세스할 수 있는 Active Directory 애플리케이션 및 서비스 주체 만들기](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 참조하세요.
 
 ## <a name="what-is-a-service-principal"></a>'서비스 주체'란?
 
@@ -37,9 +37,9 @@ Azure 서비스 주체는 특정 Azure 리소스에 액세스하기 위해 사�
 Azure 계정에 로그인하면 서비스 주체를 만들 수 있습니다. 다음 방법 중 하나로 배포된 앱을 식별해야 합니다.
 
 * 다음 예제에서 "MyDemoWebApp"와 같은 배포된 앱의 고유 이름 또는
-* 응용 프로그램 ID, 배포된 앱, 서비스 또는 개체와 관련된 고유 GUID
+* 애플리케이션 ID, 배포된 앱, 서비스 또는 개체와 관련된 고유 GUID
 
-### <a name="get-information-about-your-application"></a>응용 프로그램에 대한 정보 가져오기
+### <a name="get-information-about-your-application"></a>애플리케이션에 대한 정보 가져오기
 
 `Get-AzureRmADApplication` cmdlet을 사용하여 응용 프로그램에 대한 정보를 검색할 수 있습니다.
 
@@ -59,7 +59,7 @@ AppPermissions          :
 ReplyUrls               : {}
 ```
 
-### <a name="create-a-service-principal-for-your-application"></a>응용 프로그램의 서비스 주체 만들기
+### <a name="create-a-service-principal-for-your-application"></a>애플리케이션의 서비스 주체 만들기
 
 `New-AzureRmADServicePrincipal` cmdlet을 사용하여 서비스 주체를 만듭니다.
 

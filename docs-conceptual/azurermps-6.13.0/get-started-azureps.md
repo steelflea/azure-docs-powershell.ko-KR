@@ -5,14 +5,14 @@ author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 5378cdb9d70aa0d2dc617d06d3c887ec20eb7767
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.openlocfilehash: 36a689dcfbd311871fe8638a0e56b037f6d0292a
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52587094"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53983031"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -24,7 +24,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 1. [Azure PowerShell 설치](install-azurerm-ps.md)
 
-2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-Module AzureRM -ListAvailable` 명령을 실행합니다.
+2. 설치가 완료되었는지 확인하려면 명령줄에서 `Get-InstalledModule AzureRM -AllVersions` 명령을 실행합니다.
 
 ## <a name="azure-cloud-shell"></a>Azure Cloud Shell
 
@@ -151,7 +151,7 @@ Id        :
 
 ### <a name="create-a-resource-group"></a>리소스 그룹 만들기
 
-이 예제에 리소스 그룹을 만들려고 합니다. Azure의 리소스 그룹은 논리적으로 그룹화하려는 여러 리소스를 관리하는 방법을 제공합니다. 예를 들어 응용 프로그램 또는 프로젝트에 대한 리소스 그룹을 만들고 그 안에 가상 컴퓨터, 데이터베이스 및 CDN 서비스를 추가할 수 있습니다.
+이 예제에 리소스 그룹을 만들려고 합니다. Azure의 리소스 그룹은 논리적으로 그룹화하려는 여러 리소스를 관리하는 방법을 제공합니다. 예를 들어 애플리케이션 또는 프로젝트에 대한 리소스 그룹을 만들고 그 안에 가상 머신, 데이터베이스 및 CDN 서비스를 추가할 수 있습니다.
 
 Azure의 westeurope 지역에 "MyResourceGroup"이라는 이름의 리소스 그룹을 만듭니다. 이렇게 하려면 다음 명령을 입력합니다.
 

@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
 ms.openlocfilehash: 7f517f0b3768a2075557b131158ee1264ea9ab3f
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52587842"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218224"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -139,7 +139,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 복구 서비스에 Azure 파일 공유 지원 추가.
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* https://github.com/Azure/azure-powershell/issues/7402에 대한 수정
+*  https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정
     - 'Get-AzureRmResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
@@ -168,7 +168,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * Virtual Network 규칙에 대한 지원 추가
     - Get-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 가져오거나 나열합니다.
     - Add-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 가상 네트워크 규칙을 추가합니다.
-    - Set-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에서 지정된 가상 네트워크 규칙을 수정합니다.
+    - Set-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 지정된 가상 네트워크 규칙을 수정합니다.
     - Remove-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 삭제합니다.
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
@@ -223,8 +223,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 #### <a name="azurermwebsites"></a>AzureRM.Websites
 * 새 cmdlet Get-AzureRMWebAppContainerContinuousDeploymentUrl - 컨테이너 지속적인 배포 Webhook URL을 가져옵니다.
-* 새 cmdlet 
-New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.
+* 새 cmdlet New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.
 
 ## <a name="690---september-2018"></a>6.9.0 - 2018년 9월
 #### <a name="general"></a>일반
@@ -365,7 +364,7 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
     - Lock-AzureRmStorageContainerImmutabilityPolicy
 
 #### <a name="azurermwebsites"></a>AzureRM.Websites
-* 두 개의 새로운 cmdlet 추가: Get-AzureRmDeletedWebApp 및 Restore-AzureRmDeletedWebApp
+* 두 개의 새로운 cmdlet이 추가되었습니다. Get-AzureRmDeletedWebApp 및 Restore-AzureRmDeletedWebApp
 * New-AzureRmAppServicePlan -HyperV 스위치가 창 컨테이너가 있는 앱 서비스 계획 작성용으로 추가되었습니다.
 * New-AzureRmWebApp/New-AzureRmWebAppSlot/Set-AzureRmWebApp/ Set-AzureRmWebAppSlot - Windows 컨테이너 앱을 만들고 관리하기 위한 새 매개 변수(-ContainerRegistryUser 문자열 -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment)가 추가되었습니다.
 
@@ -401,7 +400,7 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
 
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* MarketPlace에서 관리되는 응용 프로그램 생성 시의 문제 해결.
+* MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
 * 해결된 문제
@@ -440,7 +439,7 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
 * 일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* MarketPlace에서 관리되는 응용 프로그램 생성 시의 문제 해결.
+* MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
 * 문제 해결
@@ -777,9 +776,9 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * Set/Add-AzureRmVirtualNetworkPeering에 대한 여러 테넌트의 가상 네트워크에서 피어링을 사용하도록 설정
 * Application Gateway에 대한 아래 cmdlet 업데이트
-    - New-AzureRmApplicationGateway: EnableFIPS 플래그 및 영역 지원 추가
-    - New-AzureRmApplicationGatewaySku: 새 sku Standard_v2 및 WAF_v2 추가
-    - Set-AzureRmApplicationGatewaySku: 새 sku Standard_v2 및 WAF_v2 추가
+    - New-AzureRmApplicationGateway : EnableFIPS 플래그 및 영역 지원이 추가됨
+    - New-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가
+    - Set-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가
 * 최신 생성기를 사용하여 RouteTable cmdlet을 재생성
 
 #### <a name="azurermrelay"></a>AzureRM.Relay
@@ -853,7 +852,7 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * 영역 중복 VirtualNetworkGateways에 대한 새 Sku를 노출합니다.
-* 기능에 대한 새 명령이 추가됨: ARM을 통한 ExpressRoute Partner APIs
+* 기능에 대한 새로운 명령이 추가됨: ARM을 통한 ExpressRoute 파트너 API
     - Get- AzureRmExpressRouteCrossConnection 추가
     - Set-AzureRmExpressRouteCrossConnection 추가
     - Add-AzureRmExpressRouteCrossConnectionPeering 추가
@@ -1007,7 +1006,7 @@ New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  window
 * 개인 CA가 발급한 인증서를 루트 또는 CA로 설치하는 지원 추가됨
 * KeyVault 및 다중 프록시 호스트 이름을 통한 사용자 정의 SSL 인증서를 수락하는 지원 추가됨
 * MSI ID에 대한 지원 추가됨
-* URL을 통한 정책을 수락하는 지원 추가됨 참고: 다음 cmdlet은 이후 릴리스에서 더 이상 사용되지 않습니다.
+* URL을 통해 정책을 수용하기 위한 지원이 추가되었습니다. 참고: 다음 cmdlet은 이후 릴리스에서 사용되지 않을 예정입니다.
    - Import-AzureRmApiManagementHostnameCertificate
    - New-AzureRmApiManagementHostnameConfiguration
    - Set-AzureRmApiManagementHostnames

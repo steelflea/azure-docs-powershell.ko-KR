@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 21b61a2f91b4f6211fbeec8ba234782355b9a4b3
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: b7283e4a54cd423282141c07750630050799d59c
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53982793"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -23,7 +23,7 @@ ms.locfileid: "39024769"
 PowerShell 갤러리에서 항목을 설치하려면 PowerShellGet 모듈이 필요합니다. 적절한 버전의 PowerShellGet 및 다른 시스템 요구 사항이 있는지 확인합니다. PowerShellGet이 시스템에 설치되어 있는지 확인하려면 다음 명령을 실행합니다.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-InstalledModule PowerShellGet -AllVersions | Select-Object Name,Version,Path
 ```
 
 다음과 비슷하게 표시됩니다.
@@ -36,7 +36,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 PowerShellGet을 설치하지 않은 경우 [PowerShellGet을 가져오는 방법](#how-to-get-powershellget)을 참조하세요.
 
-## <a name="step-2-install-azure-powershell"></a>2단계: Azure PowerShell 설치
+## <a name="step-2-install-azure-powershell"></a>2단계: Azure Powershell 설치
 
 관리자 권한으로 실행하는 Windows PowerShell 콘솔에서 다음 명령을 실행합니다.
 
@@ -70,7 +70,7 @@ Azure PowerShell에서는 Azure에 로그인한 후에 지정된 세션에 대�
 
 ## <a name="azure-service-management-cmdlets"></a>Azure Service Management cmdlet
 
-Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은 cmdlet 또는 매개 변수가 온라인 cmdlet 도움말에 포함되는 경우 최신 버전의 모듈을 다운로드하고 설치합니다. 모듈의 버전을 찾으려면 `(Get-Module Azure).Version`을 입력합니다.
+Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은 cmdlet 또는 매개 변수가 온라인 cmdlet 도움말에 포함되는 경우 최신 버전의 모듈을 다운로드하고 설치합니다. 모듈의 버전을 찾으려면 `(Get-InstalledModule Azure).Version`을 입력합니다.
 
 Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](http://www.windowsazure.com/documentation/scripts/)를 참조하세요.
 
@@ -85,10 +85,11 @@ Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법�
 |PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
-### Azure PowerShell 버전 확인
 
-가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-Module AzureRM`을 실행합니다.
+### <a name="checking-the-version-of-azure-powershell"></a>Azure PowerShell 버전 확인
+
+가능한 한 빨리 최신 버전으로 업그레이드하는 것이 좋지만 여러 버전의 Azure PowerShell이 지원됩니다. 설치한 Azure PowerShell의 버전을 확인하려면 명령줄에서 `Get-InstalledModule Azure`을 실행합니다.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-InstalledModule Azure -AllVersions | Select-Object Name,Version,Path
 ```
